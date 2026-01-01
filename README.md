@@ -4,7 +4,7 @@ Site web professionnel pour EBE Consulting, cabinet d'accompagnement des dirigea
 
 ## 🚀 Technologies
 
-- **Next.js 14** (App Router) avec TypeScript
+- **Next.js 15** (App Router) avec TypeScript
 - **Tailwind CSS** pour le styling
 - **Framer Motion** pour les animations
 - **next-seo** pour l'optimisation SEO
@@ -86,12 +86,16 @@ ebe-consulting/
 │   ├── Card.tsx
 │   ├── ContactForm.tsx
 │   ├── FAQ.tsx
+│   ├── Hero.tsx
+│   ├── SocialLinks.tsx
 │   ├── StructuredData.tsx
 │   └── FAQSchema.tsx
 ├── lib/                   # Utilitaires et configuration
 │   ├── content.ts         # Contenu centralisé
 │   └── theme.ts           # Configuration du thème
 ├── public/                # Fichiers statiques
+│   └── image/
+│       └── logo.PNG       # Logo de l'entreprise
 └── package.json
 ```
 
@@ -150,7 +154,7 @@ Le site est entièrement responsive (mobile-first) avec des breakpoints :
 
 ### Vercel (recommandé)
 
-1. Connecter votre repository GitHub/GitLab
+1. Connecter votre repository GitHub
 2. Importer le projet sur Vercel
 3. Les variables d'environnement seront demandées lors du déploiement
 
@@ -166,8 +170,9 @@ Le site peut être déployé sur :
 
 - **Mentions légales** : Compléter les informations dans `app/mentions-legales/page.tsx` (raison sociale, adresse, SIRET, etc.)
 - **Politique de confidentialité** : Vérifier et compléter `app/confidentialite/page.tsx`
-- **Logo** : Ajouter le logo dans `/public/logo.png` et mettre à jour les références dans le code
+- **Logo** : Le logo se trouve dans `/public/image/logo.PNG`
 - **Email** : Configurer le service d'email pour le formulaire de contact
+- **Réseaux sociaux** : Mettre à jour les URLs dans `components/SocialLinks.tsx`
 
 ## 🐛 Dépannage
 
@@ -189,4 +194,3 @@ Propriétaire - EBE Consulting
 ## 👤 Support
 
 Pour toute question technique, contactez : contact@ebe-consulting.fr
-
