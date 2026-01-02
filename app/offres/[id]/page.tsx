@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { content } from "@/lib/content";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 import Card from "@/components/Card";
+import PageHero from "@/components/PageHero";
+import OfferDetailCards from "@/components/OfferDetailCards";
 
 interface OfferDetailPageProps {
   params: Promise<{
@@ -40,24 +42,27 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
     notFound();
   }
 
+  // Images selon le type d'offre
+  const offerImages: Record<string, string> = {
+    clarifier: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070",
+    structurer: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084",
+    comprendre: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070",
+    securiser: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
+  };
+
+  const imageUrl = offerImages[id] || "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070";
+
   return (
-    <div className="pt-32 pb-16">
-      {/* Header */}
-      <section className="section-padding bg-gradient-to-b from-white to-neutral-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-4">
-              <span className="text-sm font-semibold text-accent-600 uppercase tracking-wide">
-                {offer.subtitle}
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
-              {offer.title}
-            </h1>
-            <p className="text-xl text-neutral-700">{offer.description}</p>
-          </div>
-        </div>
-      </section>
+    <div>
+      {/* Hero avec image selon l'offre */}
+      <PageHero
+        title={offer.title}
+        subtitle={`${offer.subtitle} — ${offer.description}`}
+        imageUrl={imageUrl}
+        overlayOpacity={0.35}
+      />
+
+      <div className="pb-16">
 
       {/* Objectives */}
       <section className="section-padding bg-white">
@@ -97,20 +102,10 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
             <h2 className="text-3xl font-bold text-primary-900 mb-8">
               Livrables
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {offer.deliverables.map((deliverable, index) => (
-                <Card key={index}>
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 rounded-full bg-primary-900 text-white flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <p className="text-neutral-700 font-medium">
-                      {deliverable}
-                    </p>
-                  </div>
-                </Card>
-              ))}
-            </div>
+            <OfferDetailCards
+              deliverables={offer.deliverables}
+              benefits={[]}
+            />
           </div>
         </div>
       </section>
@@ -122,27 +117,10 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
             <h2 className="text-3xl font-bold text-primary-900 mb-8">
               Bénéfices
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {offer.benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-start p-6 bg-green-50 rounded-lg border border-green-200"
-                >
-                  <svg
-                    className="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M5 13l4 4L19 7" />
-                  </svg>
-                  <p className="text-green-900 font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
+            <OfferDetailCards
+              deliverables={[]}
+              benefits={offer.benefits}
+            />
           </div>
         </div>
       </section>
@@ -205,6 +183,7 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

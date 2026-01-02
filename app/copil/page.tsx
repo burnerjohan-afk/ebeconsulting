@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 import { content } from "@/lib/content";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 import Card from "@/components/Card";
+import PageHero from "@/components/PageHero";
+import { COPILMissions, COPILBenefits, COPILValue } from "@/components/COPILPageCards";
 
 export const metadata: Metadata = {
   title: "Appui au Comité de Pilotage — 3 000 € HT/mois",
@@ -16,41 +18,24 @@ export const metadata: Metadata = {
 
 export default function COPILPage() {
   return (
-    <div className="pt-32 pb-16">
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900 to-primary-800 text-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {content.copil.title}
-            </h1>
-            <p className="text-2xl text-primary-100 mb-4">
-              {content.copil.subtitle}
-            </p>
-            <p className="text-lg text-primary-200">
-              {content.copil.description}
-            </p>
-          </div>
-        </div>
-      </section>
+    <div>
+      {/* Hero avec image comité de direction */}
+      <PageHero
+        title={content.copil.title}
+        subtitle={`${content.copil.subtitle} — ${content.copil.description}`}
+        imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070"
+        overlayOpacity={0.4}
+      />
 
-      {/* Missions */}
+      <div className="pb-16">
+        {/* Missions */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
               Missions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.copil.missions.map((mission, index) => (
-                <Card key={index} className="border-2 border-primary-200">
-                  <h3 className="text-xl font-bold text-primary-900 mb-3">
-                    {mission.title}
-                  </h3>
-                  <p className="text-neutral-700">{mission.description}</p>
-                </Card>
-              ))}
-            </div>
+            <COPILMissions missions={content.copil.missions} />
           </div>
         </div>
       </section>
@@ -62,27 +47,7 @@ export default function COPILPage() {
             <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
               Bénéfices pour le Directeur Général
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.copil.benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-start p-6 bg-white rounded-lg shadow-md"
-                >
-                  <svg
-                    className="w-6 h-6 text-accent-600 mr-4 flex-shrink-0 mt-0.5"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <p className="text-neutral-700 font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
+            <COPILBenefits benefits={content.copil.benefits} />
           </div>
         </div>
       </section>
@@ -139,18 +104,7 @@ export default function COPILPage() {
             <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
               {content.copil.valueProposition.title}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.copil.valueProposition.points.map((point, index) => (
-                <Card key={index}>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-primary-900 text-white flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <p className="text-neutral-700 font-medium">{point}</p>
-                  </div>
-                </Card>
-              ))}
-            </div>
+            <COPILValue />
           </div>
         </div>
       </section>
@@ -213,6 +167,7 @@ export default function COPILPage() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

@@ -1,27 +1,33 @@
 export const theme = {
   colors: {
+    // Couleurs officielles EBE selon la charte graphique
+    ebe: {
+      gray: "#3E4A4F", // Gris EBE - Texte / silhouette
+      orange: "#F2A12C", // Orange EBE - Accent / étoile / 2e E
+      offWhite: "#F7F4EF", // Blanc cassé - Fond
+    },
     primary: {
-      dark: "#102a43", // Bleu nuit
-      main: "#334e68",
-      light: "#627d98",
+      dark: "#262E32",
+      main: "#3E4A4F", // Gris EBE
+      light: "#4B5563",
     },
     accent: {
-      dark: "#78350f", // Or doux foncé
-      main: "#d97706", // Or doux
-      light: "#fbbf24", // Or doux clair
+      dark: "#C28123",
+      main: "#F2A12C", // Orange EBE
+      light: "#F7AF37",
     },
     neutral: {
       white: "#ffffff",
-      offWhite: "#fafafa",
-      light: "#f5f5f5",
-      medium: "#737373",
-      dark: "#262626",
-      black: "#171717",
+      offWhite: "#F7F4EF", // Blanc cassé EBE
+      light: "#EFE8DF",
+      medium: "#6B7280",
+      dark: "#3E4A4F", // Gris EBE
+      black: "#262E32",
     },
   },
   typography: {
-    fontSans: "var(--font-inter)",
-    fontSerif: "var(--font-serif)",
+    fontSans: "var(--font-montserrat), var(--font-open-sans)",
+    fontSerif: "var(--font-playfair)",
   },
   spacing: {
     xs: "0.5rem",

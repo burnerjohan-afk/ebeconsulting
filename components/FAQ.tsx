@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { content } from "@/lib/content";
+import { icons } from "@/lib/icons";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -30,22 +31,17 @@ export default function FAQ() {
                 onClick={() => toggleQuestion(index)}
                 aria-expanded={openIndex === index}
               >
-                <span className="font-semibold text-primary-900 pr-8">
-                  {item.question}
-                </span>
-                <svg
-                  className={`w-5 h-5 text-primary-900 flex-shrink-0 transition-transform ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M19 9l-7 7-7-7" />
-                </svg>
+                <div className="flex items-center gap-3 flex-1">
+                  <icons.faq.chevron
+                    className={`w-5 h-5 text-[#F2A12C] flex-shrink-0 transition-transform ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                  />
+                  <span className="font-semibold text-primary-900">
+                    {item.question}
+                  </span>
+                </div>
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4 text-neutral-700">

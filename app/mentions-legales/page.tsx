@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { content } from "@/lib/content";
+import { legalConfig } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Mentions légales | EBE Consulting",
@@ -29,18 +30,34 @@ export default function LegalPage() {
                   Le site <strong>ebe-consulting.fr</strong> est édité par :
                 </p>
                 <p className="pl-4">
-                  <strong>{content.company.name}</strong>
+                  <strong>{legalConfig.company.legalName}</strong>
                   <br />
-                  [Raison sociale]
+                  {legalConfig.company.address}
                   <br />
-                  [Adresse complète]
+                  SIRET : {legalConfig.company.siret}
+                  {legalConfig.company.rcs && (
+                    <>
+                      <br />
+                      RCS : {legalConfig.company.rcs}
+                    </>
+                  )}
                   <br />
-                  [Numéro SIRET]
-                  <br />
-                  [Numéro RCS]
+                  Email :{" "}
+                  <a
+                    href={`mailto:${legalConfig.company.email}`}
+                    className="text-primary-900 hover:text-accent-600"
+                  >
+                    {legalConfig.company.email}
+                  </a>
+                  {legalConfig.company.phone && (
+                    <>
+                      <br />
+                      Téléphone : {legalConfig.company.phone}
+                    </>
+                  )}
                 </p>
                 <p>
-                  Directeur de publication : [Nom du directeur de publication]
+                  Directeur de publication : {legalConfig.company.publicationDirector}
                 </p>
               </section>
 
@@ -51,9 +68,9 @@ export default function LegalPage() {
                 <p>
                   Le site est hébergé par :
                   <br />
-                  [Nom de l'hébergeur]
+                  {legalConfig.hosting.name}
                   <br />
-                  [Adresse de l'hébergeur]
+                  {legalConfig.hosting.address}
                 </p>
               </section>
 
@@ -113,9 +130,15 @@ export default function LegalPage() {
                   5. Cookies
                 </h2>
                 <p>
-                  Ce site utilise des cookies pour améliorer l'expérience
-                  utilisateur. En continuant à naviguer sur ce site, vous
-                  acceptez l'utilisation de cookies.
+                  Ce site utilise des cookies pour améliorer l'expérience utilisateur. 
+                  Vous pouvez gérer vos préférences de cookies à tout moment en visitant notre{" "}
+                  <a
+                    href="/cookies"
+                    className="text-primary-900 hover:text-accent-600"
+                  >
+                    page de gestion des cookies
+                  </a>
+                  .
                 </p>
               </section>
 

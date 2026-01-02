@@ -21,6 +21,7 @@ export default function ContactForm() {
       ? `Bonjour,\n\nJe suis intéressé(e) par l'offre suivante : ${urlSubject || "Demande de devis"}.\n\nPourriez-vous me faire parvenir un devis personnalisé ?\n\nMerci par avance.`
       : "",
     honeypot: "", // Anti-spam
+    rgpdConsent: false, // Consentement RGPD
   });
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -50,6 +51,12 @@ export default function ContactForm() {
       return;
     }
 
+    // RGPD consent check
+    if (!formData.rgpdConsent) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("idle");
 
     try {
@@ -75,6 +82,7 @@ export default function ContactForm() {
           subject: "",
           message: "",
           honeypot: "",
+          rgpdConsent: false,
         });
       } else {
         // Fallback to mailto if API fails
@@ -256,9 +264,44 @@ export default function ContactForm() {
 
       {status === "error" && (
         <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-          {content.contact.form.error}
+          {!formData.rgpdConsent 
+            ? "Vous devez accepter l'utilisation de vos données pour envoyer le formulaire."
+            : content.contact.form.error}
         </div>
       )}
+
+      {/* Consentement RGPD */}
+      <div className="space-y-3">
+        <div className="flex items-start gap-3">
+          <input
+            type="checkbox"
+            id="rgpdConsent"
+            name="rgpdConsent"
+            required
+            checked={formData.rgpdConsent}
+            onChange={(e) =>
+              setFormData({ ...formData, rgpdConsent: e.target.checked })
+            }
+            className="mt-1 w-4 h-4 text-[#3E4A4F] border-[#3E4A4F]/30 rounded focus:ring-2 focus:ring-[#3E4A4F]"
+          />
+          <label htmlFor="rgpdConsent" className="text-sm text-[#3E4A4F] leading-relaxed">
+            J'accepte que mes données personnelles soient utilisées pour traiter ma demande de contact.{" "}
+            <a
+              href="/confidentialite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#F2A12C] hover:underline font-medium"
+            >
+              En savoir plus
+            </a>
+            .
+          </label>
+        </div>
+        <p className="text-xs text-[#3E4A4F]/70 italic">
+          Les informations collectées sont utilisées uniquement pour répondre à votre demande. 
+          Vous pouvez exercer vos droits (accès, rectification, suppression, opposition) à tout moment en nous contactant.
+        </p>
+      </div>
 
       <button type="submit" className="btn btn-primary w-full md:w-auto">
         {content.contact.form.submit}

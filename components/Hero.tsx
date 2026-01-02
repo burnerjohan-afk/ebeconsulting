@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Button from "./Button";
+import Image from "next/image";
 import { content } from "@/lib/content";
+import CTAGroup from "./ui/CTAGroup";
+import { icons } from "@/lib/icons";
 
 const words = content.hero.title.split(".").filter((word) => word.trim());
 
@@ -12,22 +14,20 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
+        staggerChildren: 0.12,
+        delayChildren: 0.3,
       },
     },
   };
 
   const wordVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.8 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
       },
     },
   };
@@ -38,8 +38,9 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.8,
-        duration: 0.6,
+        delay: 0.9,
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
       },
     },
   };
@@ -50,64 +51,49 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 1.2,
-        duration: 0.6,
+        delay: 1.3,
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
       },
     },
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      {/* Background gradient avec effet animé */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50 opacity-50" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(51,78,104,0.1),transparent_50%)]" />
-      
-      <div className="container-custom relative z-10">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grain">
+      {/* Image de fond premium */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950" />
+        {/* Image de fond - dirigeant en réflexion stratégique */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center bg-no-repeat" />
+        {/* Overlay réduit pour voir plus l'image */}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/20 via-transparent to-primary-900/40" />
+      </div>
+
+      <div className="container-custom relative z-10 py-32 md:py-40">
         <div className="max-w-5xl mx-auto text-center">
           {/* Titre principal avec animation */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="mb-8"
+            className="mb-10"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4">
-              <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4 lg:gap-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white leading-tight">
+              <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
                     variants={wordVariants}
                     className="relative inline-block"
                   >
-                    <motion.span
-                      className="relative z-10 inline-block"
-                      whileHover={{ scale: 1.1, y: -5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <span className="relative z-10 bg-gradient-to-r from-primary-900 via-primary-700 to-primary-900 bg-clip-text text-transparent drop-shadow-sm">
-                        {word.trim()}
-                      </span>
-                      <motion.span
-                        className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent-400 to-transparent opacity-0"
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </motion.span>
+                    <span className="relative z-10 text-white drop-shadow-2xl">
+                      {word.trim()}
+                    </span>
                     {index < words.length - 1 && (
-                      <motion.span
-                        initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                        transition={{ 
-                          delay: 0.5 + index * 0.15, 
-                          duration: 0.4,
-                          type: "spring",
-                          stiffness: 200
-                        }}
-                        className="inline-flex items-center justify-center mx-3 md:mx-4"
-                      >
-                        <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-accent-500 shadow-lg shadow-accent-500/50" />
-                        <span className="w-8 h-px md:w-12 bg-gradient-to-r from-accent-400 to-transparent mx-1" />
-                      </motion.span>
+                      <span className="inline-block mx-2 md:mx-4 text-accent-500 text-3xl md:text-4xl font-light">
+                        •
+                      </span>
                     )}
                   </motion.span>
                 ))}
@@ -120,11 +106,9 @@ export default function Hero() {
             variants={subtitleVariants}
             initial="hidden"
             animate="visible"
-            className="text-xl md:text-2xl lg:text-3xl text-neutral-700 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+            className="text-xl md:text-2xl lg:text-3xl text-neutral-200 mb-8 max-w-3xl mx-auto font-light leading-relaxed font-serif italic"
           >
-            <span className="italic text-primary-800">
-              {content.hero.subtitle}
-            </span>
+            {content.hero.subtitle}
           </motion.p>
 
           {/* Boutons CTA avec animation */}
@@ -132,33 +116,40 @@ export default function Hero() {
             variants={buttonVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex justify-center"
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button href="/contact" variant="primary" className="text-lg px-8 py-4 shadow-lg">
-                {content.hero.ctaPrimary}
-              </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button href="/offres" variant="secondary" className="text-lg px-8 py-4">
-                {content.hero.ctaSecondary}
-              </Button>
-            </motion.div>
+            <CTAGroup
+              primary={{
+                label: "Discutons de votre situation",
+                href: "/contact",
+                icon: icons.cta.message,
+              }}
+              secondary={{
+                label: "Planifier un échange",
+                href: "/contact",
+                icon: icons.cta.calendar,
+              }}
+              className="[&_button]:bg-white/95 [&_button]:text-[#3E4A4F] [&_button:hover]:bg-white [&_button:last-child]:bg-white/10 [&_button:last-child]:text-white [&_button:last-child]:border-white/30 [&_button:last-child]:hover:bg-white/20"
+            />
           </motion.div>
         </div>
       </div>
 
-      {/* Éléments décoratifs animés */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-accent-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
-      <div className="absolute top-40 right-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" />
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2"
+        >
+          <div className="w-1 h-3 bg-white/50 rounded-full" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
-

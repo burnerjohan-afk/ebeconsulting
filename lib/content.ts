@@ -18,7 +18,7 @@ export const content = {
       description: "Commerce • Exploitation • Finance • Qualité",
     },
     {
-      title: "Expertise certifiée",
+      title: "Auditeur interne",
       description: "ISO 9001 & APSAD",
     },
     {
@@ -28,6 +28,10 @@ export const content = {
     {
       title: "Expérience directionnelle",
       description: "Antilles-Guyane",
+    },
+    {
+      title: "Référent handicap",
+      description: "Accompagnement inclusif",
     },
   ],
   method: {
@@ -246,9 +250,10 @@ export const content = {
       title: "Valeur ajoutée EBE Consulting",
       points: [
         "Vision globale commerce/exploitation/finance/qualité",
-        "Expertise ISO 9001 & APSAD",
+        "Auditeur interne",
         "Expérience directionnelle Antilles-Guyane",
         "Accompagnement managérial structurant",
+        "Référent handicap",
       ],
     },
   },
@@ -440,5 +445,19 @@ export const content = {
       privacy: "Politique de confidentialité",
     },
   },
+  testimonials: [
+    {
+      company: "Neodisplay",
+      quote: "L'accompagnement d'EBE Consulting nous a permis de structurer notre organisation et d'améliorer significativement notre performance opérationnelle. L'approche terrain et la compréhension de nos enjeux ont fait toute la différence.",
+      author: "Direction Générale",
+      role: "Neodisplay",
+    },
+    {
+      company: "SELECT Service",
+      quote: "Grâce à l'expertise d'EBE Consulting, nous avons pu clarifier nos processus et renforcer notre management. L'accompagnement a été structurant et nous a permis de prendre du recul sur notre organisation.",
+      author: "Direction",
+      role: "SELECT Service",
+    },
+  ],
 };
 
