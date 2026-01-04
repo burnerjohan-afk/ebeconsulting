@@ -5,13 +5,17 @@ import PageHero from "@/components/PageHero";
 import OffersPageCards from "@/components/OffersPageCards";
 
 export const metadata: Metadata = {
-  title: "Nos offres d'accompagnement",
+  title: "Offres d'accompagnement dirigeant - EBE Consulting",
   description:
-    "Découvrez nos 4 offres d'accompagnement pour dirigeants TPE/PME : clarifier pour décider, structurer pour faire grandir, comprendre, sécuriser.",
+    "4 offres d'accompagnement pour dirigeants TPE/PME : clarifier pour décider, structurer pour grandir, comprendre, sécuriser. Solutions sur mesure.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/offres",
+  },
   openGraph: {
-    title: "Nos offres d'accompagnement | EBE Consulting",
+    title: "Offres d'accompagnement dirigeant | EBE Consulting",
     description:
-      "Des solutions adaptées aux besoins des dirigeants TPE/PME en croissance ou transformation.",
+      "4 offres d'accompagnement pour dirigeants TPE/PME : clarifier pour décider, structurer pour grandir, comprendre, sécuriser. Solutions sur mesure.",
+    url: "https://ebeconsulting.fr/offres",
   },
 };
 

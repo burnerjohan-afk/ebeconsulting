@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   title: "Questions fréquentes | EBE Consulting",
   description:
     "Réponses aux questions fréquentes sur l'accompagnement EBE Consulting : durée, déroulé, livrables, tarifs, zone géographique.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/faq",
+  },
   openGraph: {
     title: "FAQ | EBE Consulting",
     description:
       "Toutes les réponses à vos questions sur notre accompagnement organisationnel et managérial.",
+    url: "https://ebeconsulting.fr/faq",
   },
 };
 

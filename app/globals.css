@@ -4,19 +4,22 @@
 
 @layer base {
   :root {
+    --font-inter: "Inter", system-ui, sans-serif;
     --font-montserrat: "Montserrat", system-ui, sans-serif;
-    --font-open-sans: "Open Sans", system-ui, sans-serif;
     --font-playfair: "Playfair Display", Georgia, serif;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply bg-[#F7F4EF] text-[#3E4A4F];
-    font-family: var(--font-open-sans), system-ui, sans-serif;
+    @apply bg-white text-[#1D1D1F];
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 400;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
@@ -25,28 +28,33 @@
   h4,
   h5,
   h6 {
-    @apply font-sans font-semibold;
-    letter-spacing: -0.02em;
+    @apply font-sans;
+    letter-spacing: -0.03em;
+    font-weight: 700;
   }
 
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: -0.04em;
   }
 
   h2 {
     @apply text-3xl md:text-4xl lg:text-5xl;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 
   h3 {
     @apply text-2xl md:text-3xl lg:text-4xl;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   h4 {
     @apply text-xl md:text-2xl;
     font-weight: 600;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -64,23 +72,23 @@
   }
 
   .btn-primary {
-    @apply bg-[#3E4A4F] text-white hover:bg-[#323C40] focus:ring-[#3E4A4F] shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply bg-[#1D1D1F] text-white hover:bg-black focus:ring-[#1D1D1F] shadow-lg hover:shadow-xl transition-all duration-300 font-semibold;
   }
 
   .btn-secondary {
-    @apply bg-white text-[#3E4A4F] border border-[#3E4A4F]/20 hover:border-[#3E4A4F]/30 hover:bg-[#F7F4EF] focus:ring-[#3E4A4F] shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white text-[#1D1D1F] border-2 border-[#1D1D1F] hover:bg-[#F5F5F7] focus:ring-[#1D1D1F] shadow-md hover:shadow-lg transition-all duration-300 font-semibold;
   }
 
   .btn-accent {
-    @apply bg-[#F2A12C] text-white hover:bg-[#C28123] focus:ring-[#F2A12C] shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply bg-[#FF9500] text-white hover:bg-[#E68500] focus:ring-[#FF9500] shadow-lg hover:shadow-xl transition-all duration-300 font-semibold;
   }
 
   .card {
-    @apply bg-white/95 backdrop-blur-sm rounded-lg border border-[#3E4A4F]/10 shadow-sm hover:shadow-lg transition-all duration-300 p-6;
+    @apply bg-white rounded-lg border border-[#E5E5EA] shadow-md hover:shadow-xl transition-all duration-300 p-6;
   }
 
   .card-premium {
-    @apply bg-white/80 backdrop-blur-md rounded-xl border border-[#3E4A4F]/15 shadow-lg hover:shadow-2xl hover:border-[#F2A12C]/30 transition-all duration-500 p-8;
+    @apply bg-white rounded-xl border border-[#D1D1D6] shadow-lg hover:shadow-2xl transition-all duration-500 p-8;
   }
 
   .glass-card {
@@ -92,7 +100,7 @@
   }
 
   .overlay-gradient {
-    @apply absolute inset-0 bg-gradient-to-br from-[#3E4A4F]/80 via-[#323C40]/70 to-[#3E4A4F]/80;
+    @apply absolute inset-0 bg-gradient-to-br from-[#1D1D1F]/80 via-black/70 to-[#1D1D1F]/80;
   }
 
   .gradient-text {

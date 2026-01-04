@@ -47,15 +47,17 @@ export default function FinalCTA() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <Button
+              <motion.button
                 onClick={() => setIsFormOpen(true)}
-                variant="primary"
-                icon={icons.cta.message}
-                iconPosition="right"
-                className="text-lg px-10 py-4 bg-white/95 text-[#3E4A4F] hover:bg-white shadow-xl"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold bg-white text-[#1D1D1F] hover:bg-white shadow-xl hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                Ouvrir le formulaire de contact
-              </Button>
+                <span>Ouvrir le formulaire de contact</span>
+                {icons.cta.message && (
+                  <icons.cta.message className="w-5 h-5" aria-hidden="true" />
+                )}
+              </motion.button>
             </motion.div>
           ) : (
             <motion.div
@@ -67,7 +69,7 @@ export default function FinalCTA() {
               <div className="flex justify-end mb-4">
                 <button
                   onClick={() => setIsFormOpen(false)}
-                  className="text-[#3E4A4F]/70 hover:text-[#3E4A4F] transition-colors"
+                  className="text-[#1D1D1F]/70 hover:text-[#1D1D1F] transition-colors"
                   aria-label="Fermer le formulaire"
                 >
                   <svg

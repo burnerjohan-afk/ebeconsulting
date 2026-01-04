@@ -17,7 +17,7 @@ const clients = [
 
 export default function ClientsSection() {
   return (
-    <section className="section-padding bg-[#F7F4EF]">
+    <section className="section-padding bg-white" aria-labelledby="clients-heading">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,10 +26,10 @@ export default function ClientsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-[#3E4A4F] mb-2">
+          <h2 id="clients-heading" className="text-2xl md:text-3xl font-bold text-[#1D1D1F] mb-2">
             Ils nous font confiance
           </h2>
-          <p className="text-sm text-[#3E4A4F]/70">
+          <p className="text-sm text-[#1D1D1F]/70">
             Entreprises pour lesquelles nous avons effectué des prestations
           </p>
         </motion.div>
@@ -47,7 +47,7 @@ export default function ClientsSection() {
             >
               <Image
                 src={client.logo}
-                alt={`Logo ${client.name}`}
+                alt={`Logo client ${client.name} - Entreprise accompagnée par EBE Consulting`}
                 width={150}
                 height={80}
                 className="h-full w-auto object-contain"

@@ -35,11 +35,11 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#F2A12C] text-[#3E4A4F] hover:bg-[#C28123] hover:text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:ring-[#F2A12C]",
+      "bg-[#FF9500] text-white hover:bg-[#E68500] shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus:ring-[#FF9500] font-bold",
     secondary:
-      "bg-[#3E4A4F] text-white border border-[#F2A12C]/30 hover:bg-[#323C40] hover:border-[#F2A12C]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:ring-[#3E4A4F]",
+      "bg-[#1D1D1F] text-white border-2 border-[#1D1D1F] hover:bg-black hover:border-black shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus:ring-[#1D1D1F] font-bold",
     ghost:
-      "bg-transparent text-[#3E4A4F] border border-[#3E4A4F]/20 hover:bg-[#3E4A4F]/5 hover:border-[#3E4A4F]/40 focus:ring-[#3E4A4F]",
+      "bg-transparent text-[#1D1D1F] border border-[#1D1D1F] hover:bg-[#F5F5F7] hover:border-[#1D1D1F] focus:border-[#1D1D1F] focus:ring-0 font-semibold",
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

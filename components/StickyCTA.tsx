@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function StickyCTA() {
@@ -17,16 +17,16 @@ export default function StickyCTA() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (!isVisible) return null;
+
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden"
-        >
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100, opacity: 0 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden"
+    >
           <Link
             href="/contact?subject=Demande de devis"
             className="flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-700 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:from-accent-700 hover:to-accent-800 transition-all transform hover:scale-105"
@@ -44,9 +44,7 @@ export default function StickyCTA() {
             </svg>
             <span>Demander un devis</span>
           </Link>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    </motion.div>
   );
 }
 

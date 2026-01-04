@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { COOKIE_CONSENT_KEY, saveConsent, getConsent, type CookieConsent } from "@/lib/legal";
 import Link from "next/link";
 
@@ -50,14 +50,13 @@ export default function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 100, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-[#3E4A4F]/20 shadow-lg"
-      >
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 100, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-[#3E4A4F]/20 shadow-lg"
+    >
         <div className="container-custom py-4 md:py-6">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
             <div className="flex-1">
@@ -65,7 +64,7 @@ export default function CookieBanner() {
                 Ce site utilise des cookies pour améliorer votre expérience de navigation. 
                 Certains cookies sont essentiels au fonctionnement du site, d'autres nous aident à analyser l'utilisation du site. 
                 Vous pouvez accepter tous les cookies, les refuser, ou{" "}
-                <Link href="/cookies" className="text-[#F2A12C] hover:underline font-medium">
+                <Link href="/cookies" className="text-[#FF9500] hover:underline font-medium">
                   personnaliser vos préférences
                 </Link>
                 .{" "}
@@ -97,8 +96,7 @@ export default function CookieBanner() {
             </div>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+    </motion.div>
   );
 }
 

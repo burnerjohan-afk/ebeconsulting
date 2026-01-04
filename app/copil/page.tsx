@@ -6,13 +6,17 @@ import PageHero from "@/components/PageHero";
 import { COPILMissions, COPILBenefits, COPILValue } from "@/components/COPILPageCards";
 
 export const metadata: Metadata = {
-  title: "Appui au Comité de Pilotage — 3 000 € HT/mois",
+  title: "Appui Comité de Pilotage - 3000€ HT/mois",
   description:
-    "Accompagnement stratégique mensuel du Comité de Pilotage. Sécurisation des décisions, anticipation des impacts, traduction stratégie→terrain.",
+    "Appui stratégique mensuel au Comité de Pilotage : sécurisation décisions, anticipation impacts, traduction stratégie→terrain. Forfait 3000€ HT/mois.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/copil",
+  },
   openGraph: {
-    title: "Appui COPIL | EBE Consulting",
+    title: "Appui Comité de Pilotage | EBE Consulting",
     description:
-      "Forfait mensuel 3 000 € HT. Accompagnement stratégique du Comité de Pilotage pour une performance durable.",
+      "Appui stratégique mensuel au Comité de Pilotage : sécurisation décisions, anticipation impacts, traduction stratégie→terrain. Forfait 3000€ HT/mois.",
+    url: "https://ebeconsulting.fr/copil",
   },
 };
 
@@ -22,7 +26,7 @@ export default function COPILPage() {
       {/* Hero avec image comité de direction */}
       <PageHero
         title={content.copil.title}
-        subtitle={`${content.copil.subtitle} — ${content.copil.description}`}
+        subtitle={content.copil.description}
         imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070"
         overlayOpacity={0.4}
       />
@@ -100,12 +104,10 @@ export default function COPILPage() {
       {/* Value Proposition */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
-              {content.copil.valueProposition.title}
-            </h2>
-            <COPILValue />
-          </div>
+          <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
+            {content.copil.valueProposition.title}
+          </h2>
+          <COPILValue />
         </div>
       </section>
 
@@ -122,7 +124,7 @@ export default function COPILPage() {
             <Button
               href="/contact?subject=Appui COPIL&offer=copil"
               variant="primary"
-              className="text-lg px-10 py-5 bg-white text-accent-700 hover:bg-neutral-100 shadow-xl transform hover:scale-105 transition-all"
+              className="text-lg px-10 py-5 !bg-white !text-accent-700 hover:!bg-neutral-100 hover:!text-accent-800 shadow-xl transform hover:scale-105 transition-all font-bold"
             >
               <svg
                 className="w-5 h-5 mr-2 inline"

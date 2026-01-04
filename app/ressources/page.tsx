@@ -6,10 +6,14 @@ export const metadata: Metadata = {
   title: "Ressources | EBE Consulting",
   description:
     "Retrouvez nos articles, insights et ressources sur l'accompagnement organisationnel, le management et la performance durable.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/ressources",
+  },
   openGraph: {
     title: "Ressources | EBE Consulting",
     description:
       "Articles et insights sur la structuration organisationnelle et la performance durable.",
+    url: "https://ebeconsulting.fr/ressources",
   },
 };
 

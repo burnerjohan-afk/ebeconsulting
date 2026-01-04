@@ -30,9 +30,6 @@ export default function COPILSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {content.copil.title}
             </h2>
-            <p className="text-2xl text-neutral-200 mb-4 font-semibold">
-              {content.copil.subtitle}
-            </p>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
               {content.copil.description}
             </p>
@@ -58,8 +55,8 @@ export default function COPILSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#F2A12C]/10 flex items-center justify-center">
-                    <icons.copil.check className="w-5 h-5 text-[#F2A12C]" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#FF9500]/10 flex items-center justify-center">
+                    <icons.copil.check className="w-5 h-5 text-[#FF9500]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-primary-900 mb-2">

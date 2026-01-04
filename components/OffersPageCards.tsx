@@ -22,27 +22,31 @@ export default function OffersPageCards() {
         >
           <div className="card-premium h-full group">
             <div className="mb-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[#3E4A4F]/5 flex items-center justify-center group-hover:bg-[#F2A12C]/10 transition-colors">
-                {offer.id === "clarifier" && (
-                  <icons.offers.clarifier className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                )}
-                {offer.id === "structurer" && (
-                  <icons.offers.structurer className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                )}
-                {offer.id === "comprendre" && (
-                  <icons.offers.comprendre className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                )}
-                {offer.id === "securiser" && (
-                  <icons.offers.securiser className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                )}
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black text-white flex items-center justify-center shadow-lg group-hover:from-[#FF9500] group-hover:to-[#E68500] transition-all duration-300">
+                  {offer.id === "clarifier" && (
+                    <icons.offers.clarifier className="w-6 h-6" />
+                  )}
+                  {offer.id === "structurer" && (
+                    <icons.offers.structurer className="w-6 h-6" />
+                  )}
+                  {offer.id === "comprendre" && (
+                    <icons.offers.comprendre className="w-6 h-6" />
+                  )}
+                  {offer.id === "securiser" && (
+                    <icons.offers.securiser className="w-6 h-6" />
+                  )}
+                </div>
               </div>
-              <span className="text-xs font-semibold text-[#F2A12C] uppercase tracking-wider">
-                {offer.subtitle}
-              </span>
+              <div className="flex-1">
+                <span className="text-xs font-semibold text-[#FF9500] uppercase tracking-wider block mb-1">
+                  {offer.subtitle}
+                </span>
+                <h2 className="text-2xl font-bold text-primary-900">
+                  {offer.title}
+                </h2>
+              </div>
             </div>
-            <h2 className="text-2xl font-bold text-primary-900 mb-4">
-              {offer.title}
-            </h2>
             <p className="text-neutral-700 mb-6 leading-relaxed">{offer.description}</p>
 
             {/* Objectifs en encarts */}
@@ -54,10 +58,10 @@ export default function OffersPageCards() {
                 {offer.objectives.slice(0, 3).map((obj, objIndex) => (
                   <div
                     key={objIndex}
-                    className="flex items-start p-3 bg-[#3E4A4F]/5 rounded-lg border border-[#3E4A4F]/10 group-hover:border-[#F2A12C]/20 transition-colors"
+                    className="flex items-start p-3 bg-[#1D1D1F]/5 rounded-lg border border-[#1D1D1F]/10 transition-colors"
                   >
                     <svg
-                      className="w-4 h-4 text-[#F2A12C] mr-3 flex-shrink-0 mt-0.5"
+                      className="w-4 h-4 text-[#FF9500] mr-3 flex-shrink-0 mt-0.5"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"

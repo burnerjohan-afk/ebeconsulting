@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function MethodSection() {
   return (
-    <section className="relative section-padding overflow-hidden">
+    <section className="relative section-padding overflow-hidden" aria-labelledby="method-heading">
       {/* Background abstrait */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-100" />
@@ -32,7 +32,7 @@ export default function MethodSection() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+          <h2 id="method-heading" className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
             {content.method.title}
           </h2>
           <p className="text-xl text-neutral-600 font-serif italic leading-relaxed">
@@ -54,7 +54,7 @@ export default function MethodSection() {
               <div className="glass-card p-8 h-full hover:bg-white/20 transition-all duration-500">
                 <div className="flex items-start gap-6 mb-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#3E4A4F] to-[#323C40] text-white flex items-center justify-center shadow-lg group-hover:from-[#F2A12C] group-hover:to-[#C28123] transition-all duration-300">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black text-white flex items-center justify-center shadow-lg group-hover:from-[#FF9500] group-hover:to-[#E68500] transition-all duration-300">
                       {index === 0 && <icons.method.comprendre className="w-8 h-8" />}
                       {index === 1 && <icons.method.decider className="w-8 h-8" />}
                       {index === 2 && <icons.method.structurer className="w-8 h-8" />}
@@ -78,7 +78,7 @@ export default function MethodSection() {
                       key={detailIndex}
                       className="flex items-start text-neutral-600 group-hover:text-neutral-800 transition-colors"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-[#F2A12C] mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-[#FF9500] mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{detail}</span>
                     </li>
                   ))}

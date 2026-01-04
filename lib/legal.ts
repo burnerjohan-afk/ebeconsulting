@@ -6,18 +6,15 @@
 export const legalConfig = {
   company: {
     name: "EBE Consulting",
-    legalName: "[À compléter - Raison sociale complète]",
-    address: "[À compléter - Adresse complète]",
-    siret: "[À compléter - Numéro SIRET]",
-    rcs: "[À compléter - Numéro RCS si applicable]",
-    publicationDirector: "[À compléter - Nom du directeur de publication]",
+    legalName: "SELECT SERVICES",
+    address: "BATIMENT HORIZON - BOITE 7\n4 RUE DE L'ASTROLABE\n97354 REMIRE-MONTJOLY",
+    siret: "92881565300011",
     email: "contact@ebe-consulting.fr",
-    rgpdEmail: "contact@ebe-consulting.fr", // Email pour exercer les droits RGPD
-    phone: "[À compléter - Téléphone]",
+    rgpdEmail: "contact@select.fr", // Email pour exercer les droits RGPD
   },
   hosting: {
-    name: "[À compléter - Nom de l'hébergeur, ex: Vercel, OVH, etc.]",
-    address: "[À compléter - Adresse de l'hébergeur]",
+    name: "OVH",
+    address: "2 rue Kellermann\n59100 Roubaix\nFrance",
   },
   cookies: {
     consentDuration: 6, // Durée du consentement en mois (recommandé 6 mois en France)
@@ -43,7 +40,7 @@ export const legalConfig = {
     prospects: "3 ans maximum après dernier contact",
     technicalLogs: "12 mois maximum",
   },
-  lastUpdate: "[À compléter - Date de dernière mise à jour, ex: 15 janvier 2025]",
+  lastUpdate: "3 janvier 2026",
 };
 
 export type CookieConsent = {

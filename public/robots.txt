@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ebeconsulting.fr/sitemap.xml
+
+# Pages à ne pas indexer
+Disallow: /api/
+Disallow: /_next/
+

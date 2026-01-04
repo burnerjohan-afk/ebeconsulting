@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 import Card from "@/components/Card";
 import PageHero from "@/components/PageHero";
 import OfferDetailCards from "@/components/OfferDetailCards";
+import BackButton from "@/components/BackButton";
 
 interface OfferDetailPageProps {
   params: Promise<{
@@ -27,9 +28,13 @@ export async function generateMetadata({
   return {
     title: `${offer.title} | ${offer.subtitle}`,
     description: offer.description,
+    alternates: {
+      canonical: `https://ebeconsulting.fr/offres/${id}`,
+    },
     openGraph: {
       title: `${offer.title} | EBE Consulting`,
       description: offer.description,
+      url: `https://ebeconsulting.fr/offres/${id}`,
     },
   };
 }
@@ -53,7 +58,10 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
   const imageUrl = offerImages[id] || "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070";
 
   return (
-    <div>
+    <div className="relative">
+      {/* Bouton de retour flottant */}
+      <BackButton href="/offres" label="Retour aux offres" />
+
       {/* Hero avec image selon l'offre */}
       <PageHero
         title={offer.title}
@@ -63,7 +71,6 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
       />
 
       <div className="pb-16">
-
       {/* Objectives */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -138,7 +145,7 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
             <Button
               href={`/contact?subject=${encodeURIComponent(`Demande de devis - ${offer.title}`)}&offer=${offer.id}`}
               variant="primary"
-              className="text-lg px-10 py-5 bg-white text-accent-700 hover:bg-neutral-100 shadow-xl transform hover:scale-105 transition-all"
+              className="text-lg px-10 py-5 !bg-white !text-accent-700 hover:!bg-neutral-100 hover:!text-accent-800 shadow-xl transform hover:scale-105 transition-all font-bold"
             >
               <svg
                 className="w-5 h-5 mr-2 inline"

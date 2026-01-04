@@ -5,15 +5,36 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: content.company.name,
+    legalName: "SELECT SERVICES",
     description: content.company.description,
-    url: "https://ebe-consulting.fr",
-    logo: "https://ebe-consulting.fr/image/logo.PNG",
+    url: "https://ebeconsulting.fr",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://ebeconsulting.fr/image/logo.PNG",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "BATIMENT HORIZON - BOITE 7, 4 RUE DE L'ASTROLABE",
+      addressLocality: "REMIRE-MONTJOLY",
+      postalCode: "97354",
+      addressCountry: "FR",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      email: "contact@ebe-consulting.fr",
+      email: "eb@ebeconsulting.fr",
+      availableLanguage: "French",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.linkedin.com/company/ebe-consulting",
+      "https://www.facebook.com/ebeconsulting",
+      "https://www.instagram.com/ebeconsulting",
+    ],
+    foundingDate: "2024",
+    areaServed: {
+      "@type": "Country",
+      name: "France",
+    },
   };
 
   const professionalServiceSchema = {
@@ -21,16 +42,32 @@ export default function StructuredData() {
     "@type": "ProfessionalService",
     name: content.company.name,
     description: content.company.description,
+    provider: {
+      "@type": "Organization",
+      name: content.company.name,
+    },
     serviceType: [
       "Accompagnement dirigeant",
       "Audit organisationnel",
       "Structuration managériale",
       "Conseil en management",
       "Accompagnement qualité ISO 9001",
+      "Appui Comité de Pilotage",
+      "Conseil stratégique",
     ],
-    areaServed: {
-      "@type": "Country",
-      name: "France",
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "France",
+      },
+      {
+        "@type": "State",
+        name: "Antilles-Guyane",
+      },
+    ],
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: "https://ebeconsulting.fr/contact",
     },
   };
 

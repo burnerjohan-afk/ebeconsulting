@@ -73,10 +73,10 @@ export default function CookiePreferences() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-[#F7F4EF] border border-[#3E4A4F]/10 rounded-lg p-4">
+      <div className="bg-[#F5F5F7] border border-[#1D1D1F]/10 rounded-lg p-4">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-[#3E4A4F] flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-[#3E4A4F]">
+          <Info className="w-5 h-5 text-[#1D1D1F] flex-shrink-0 mt-0.5" />
+          <div className="text-sm text-[#1D1D1F]">
             <p className="font-medium mb-1">Gestion de vos préférences cookies</p>
             <p>
               Vous pouvez à tout moment modifier vos préférences. Les cookies essentiels ne peuvent pas être désactivés car ils sont nécessaires au fonctionnement du site.
@@ -86,20 +86,20 @@ export default function CookiePreferences() {
       </div>
 
       {/* Cookies essentiels */}
-      <div className="border border-[#3E4A4F]/10 rounded-lg p-6">
+      <div className="border border-[#1D1D1F]/10 rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className="text-lg font-bold text-[#3E4A4F] mb-1">Cookies essentiels</h3>
-            <p className="text-sm text-[#3E4A4F]/70">
+            <h3 className="text-lg font-bold text-[#1D1D1F] mb-1">Cookies essentiels</h3>
+            <p className="text-sm text-[#1D1D1F]/70">
               Nécessaires au fonctionnement du site. Ils ne peuvent pas être désactivés.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-[#3E4A4F]">
+          <div className="flex items-center gap-2 text-[#1D1D1F]">
             <CheckCircle2 className="w-6 h-6" />
             <span className="font-medium">Toujours actifs</span>
           </div>
         </div>
-        <div className="mt-4 text-sm text-[#3E4A4F]/70">
+        <div className="mt-4 text-sm text-[#1D1D1F]/70">
           <p className="mb-2">Ces cookies permettent :</p>
           <ul className="list-disc list-inside space-y-1 ml-2">
             <li>La mémorisation de vos préférences de cookies</li>
@@ -110,18 +110,18 @@ export default function CookiePreferences() {
       </div>
 
       {/* Analytics */}
-      <div className="border border-[#3E4A4F]/10 rounded-lg p-6">
+      <div className="border border-[#1D1D1F]/10 rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-[#3E4A4F] mb-1">Mesure d'audience</h3>
-            <p className="text-sm text-[#3E4A4F]/70">
+            <h3 className="text-lg font-bold text-[#1D1D1F] mb-1">Mesure d'audience</h3>
+            <p className="text-sm text-[#1D1D1F]/70">
               Ces cookies nous aident à comprendre comment les visiteurs utilisent notre site.
             </p>
           </div>
           <button
             onClick={() => handleToggle("analytics")}
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-              preferences.analytics ? "bg-[#F2A12C]" : "bg-[#3E4A4F]/20"
+              preferences.analytics ? "bg-[#FF9500]" : "bg-[#1D1D1F]/20"
             }`}
           >
             <span
@@ -135,7 +135,7 @@ export default function CookiePreferences() {
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            className="mt-4 text-sm text-[#3E4A4F]/70"
+            className="mt-4 text-sm text-[#1D1D1F]/70"
           >
             <p className="mb-2">Ces cookies collectent :</p>
             <ul className="list-disc list-inside space-y-1 ml-2">
@@ -148,38 +148,38 @@ export default function CookiePreferences() {
       </div>
 
       {/* Marketing */}
-      <div className="border border-[#3E4A4F]/10 rounded-lg p-6">
+      <div className="border border-[#1D1D1F]/10 rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-[#3E4A4F] mb-1">Marketing</h3>
-            <p className="text-sm text-[#3E4A4F]/70">
+            <h3 className="text-lg font-bold text-[#1D1D1F] mb-1">Marketing</h3>
+            <p className="text-sm text-[#1D1D1F]/70">
               Ces cookies permettent d'afficher des publicités personnalisées (actuellement non utilisés).
             </p>
           </div>
           <button
             onClick={() => handleToggle("marketing")}
             disabled
-            className="relative inline-flex h-6 w-11 items-center rounded-full bg-[#3E4A4F]/10 cursor-not-allowed opacity-50"
+            className="relative inline-flex h-6 w-11 items-center rounded-full bg-[#1D1D1F]/10 cursor-not-allowed opacity-50"
           >
             <span className="inline-block h-4 w-4 transform rounded-full bg-white translate-x-1" />
           </button>
         </div>
-        <p className="text-xs text-[#3E4A4F]/60 italic">Non utilisé actuellement</p>
+        <p className="text-xs text-[#1D1D1F]/60 italic">Non utilisé actuellement</p>
       </div>
 
       {/* Fonctionnels */}
-      <div className="border border-[#3E4A4F]/10 rounded-lg p-6">
+      <div className="border border-[#1D1D1F]/10 rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex-1">
-            <h3 className="text-lg font-bold text-[#3E4A4F] mb-1">Cookies fonctionnels</h3>
-            <p className="text-sm text-[#3E4A4F]/70">
+            <h3 className="text-lg font-bold text-[#1D1D1F] mb-1">Cookies fonctionnels</h3>
+            <p className="text-sm text-[#1D1D1F]/70">
               Ces cookies améliorent les fonctionnalités du site (préférences, vidéos, etc.).
             </p>
           </div>
           <button
             onClick={() => handleToggle("functional")}
             className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-              preferences.functional ? "bg-[#F2A12C]" : "bg-[#3E4A4F]/20"
+              preferences.functional ? "bg-[#FF9500]" : "bg-[#1D1D1F]/20"
             }`}
           >
             <span
@@ -195,19 +195,19 @@ export default function CookiePreferences() {
       <div className="flex flex-col sm:flex-row gap-4 pt-4">
         <button
           onClick={handleRejectAll}
-          className="px-6 py-3 text-sm font-medium text-[#3E4A4F] bg-white border border-[#3E4A4F]/30 rounded-lg hover:bg-[#3E4A4F]/5 transition-colors"
+          className="px-6 py-3 text-sm font-medium text-[#1D1D1F] bg-white border border-[#1D1D1F]/30 rounded-lg hover:bg-[#1D1D1F]/5 transition-colors"
         >
           Tout refuser
         </button>
         <button
           onClick={handleAcceptAll}
-          className="px-6 py-3 text-sm font-medium text-[#3E4A4F] bg-white border border-[#3E4A4F]/30 rounded-lg hover:bg-[#3E4A4F]/5 transition-colors"
+          className="px-6 py-3 text-sm font-medium text-[#1D1D1F] bg-white border border-[#1D1D1F]/30 rounded-lg hover:bg-[#1D1D1F]/5 transition-colors"
         >
           Tout accepter
         </button>
         <button
           onClick={handleSave}
-          className="px-6 py-3 text-sm font-medium text-white bg-[#3E4A4F] rounded-lg hover:bg-[#2A3438] transition-colors flex-1 sm:flex-initial"
+          className="px-6 py-3 text-sm font-medium text-white bg-[#1D1D1F] rounded-lg hover:bg-[#2A3438] transition-colors flex-1 sm:flex-initial"
         >
           {saved ? "✓ Préférences enregistrées" : "Enregistrer mes préférences"}
         </button>

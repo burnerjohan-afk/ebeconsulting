@@ -5,13 +5,17 @@ import PageHero from "@/components/PageHero";
 import ContactPageInfo from "@/components/ContactPageInfo";
 
 export const metadata: Metadata = {
-  title: "Contact | EBE Consulting",
+  title: "Contact EBE Consulting - Demander un devis",
   description:
-    "Contactez EBE Consulting pour échanger sur vos enjeux organisationnels, managériaux et opérationnels. Réponse sous 24h.",
+    "Contactez EBE Consulting pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/contact",
+  },
   openGraph: {
-    title: "Contact | EBE Consulting",
+    title: "Contact EBE Consulting - Demander un devis",
     description:
-      "Parlez-nous de votre situation. Échangeons sur vos enjeux et définissons ensemble la meilleure approche.",
+      "Contactez EBE Consulting pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
+    url: "https://ebeconsulting.fr/contact",
   },
 };
 

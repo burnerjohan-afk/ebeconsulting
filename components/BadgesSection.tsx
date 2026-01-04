@@ -16,7 +16,7 @@ export default function BadgesSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-white via-[#F7F4EF] to-white">
+    <section className="section-padding bg-gradient-to-b from-white via-white to-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {content.badges.map((badge, index) => {
@@ -29,33 +29,29 @@ export default function BadgesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.03, y: -6 }}
+                whileHover={{ scale: 1.02, y: -4 }}
                 className="group relative"
               >
-                <div className="relative h-full bg-white rounded-xl p-6 border border-[#3E4A4F]/10 shadow-sm hover:shadow-lg hover:border-[#F2A12C]/30 transition-all duration-300 overflow-hidden">
-                  {/* Gradient overlay au hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#F2A12C]/0 to-[#F2A12C]/0 group-hover:from-[#F2A12C]/5 group-hover:to-transparent transition-all duration-300" />
-                  
+                <div className="relative h-full bg-white rounded-xl p-6 border border-[#E5E5EA] shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
                   {/* Contenu */}
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col items-center text-center">
                     {/* Icône */}
-                    <div className="mb-4 flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-[#3E4A4F]/10 to-[#3E4A4F]/5 group-hover:from-[#F2A12C]/15 group-hover:to-[#F2A12C]/5 transition-all duration-300">
-                      <Icon className="w-7 h-7 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors duration-300" aria-hidden="true" />
+                    <div className="mb-4 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black text-white flex items-center justify-center shadow-lg group-hover:from-[#FF9500] group-hover:to-[#E68500] transition-all duration-300">
+                        <Icon className="w-6 h-6" aria-hidden="true" />
+                      </div>
                     </div>
                     
                     {/* Titre */}
-                    <h3 className="text-base font-bold text-[#3E4A4F] mb-2 group-hover:text-[#3E4A4F] transition-colors">
+                    <h3 className="text-base font-bold text-[#1D1D1F] mb-2 transition-colors leading-tight">
                       {badge.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="text-sm text-[#3E4A4F]/70 leading-relaxed">
+                    <p className="text-sm text-[#1D1D1F]/70 leading-relaxed">
                       {badge.description}
                     </p>
                   </div>
-                  
-                  {/* Ligne décorative en bas */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3E4A4F]/10 to-transparent group-hover:via-[#F2A12C]/30 transition-all duration-300" />
                 </div>
               </motion.div>
             );

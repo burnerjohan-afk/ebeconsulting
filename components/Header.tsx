@@ -35,28 +35,30 @@ export default function Header() {
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20 md:h-24">
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group">
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity group -ml-8 md:-ml-6 lg:-ml-10">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="flex-shrink-0"
             >
               <Image
                 src="/image/logo.PNG"
-                alt={`${content.company.name} - Logo`}
-                width={240}
-                height={80}
-                className="h-14 md:h-18 w-auto object-contain"
+                alt="EBE Consulting - Cabinet conseil accompagnement dirigeants TPE/PME"
+                width={320}
+                height={120}
+                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
                 priority
                 unoptimized
+                aria-label="EBE Consulting - Retour à l'accueil"
               />
             </motion.div>
-            <span className="text-lg md:text-xl font-bold text-primary-900 hidden lg:block group-hover:text-accent-600 transition-colors">
+            <span className="text-base md:text-lg font-bold text-primary-900 hidden xl:block group-hover:text-accent-600 transition-colors whitespace-nowrap">
               {content.company.name}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2 ml-6">
+          <div className="hidden lg:flex items-center gap-1 ml-8">
             <NavLink href="/" isActive={isActive("/")} icon={icons.navigation.home}>
               Accueil
             </NavLink>
@@ -75,10 +77,10 @@ export default function Header() {
             <NavLink href="/faq" isActive={isActive("/faq")} icon={icons.faq.file}>
               FAQ
             </NavLink>
-            <Button href="/contact" variant="primary" icon={icons.navigation.contact} iconPosition="right" className="ml-2">
+            <Button href="/contact" variant="primary" icon={icons.navigation.contact} iconPosition="right" className="ml-3">
               Contact
             </Button>
-            <div className="ml-4 pl-4 border-l border-neutral-200">
+            <div className="ml-3 pl-3 border-l border-neutral-200">
               <SocialLinks variant="header" />
             </div>
           </div>

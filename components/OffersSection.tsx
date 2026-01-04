@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function OffersSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white" aria-labelledby="offers-heading">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ export default function OffersSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+          <h2 id="offers-heading" className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
             {content.offers.title}
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
@@ -39,27 +39,31 @@ export default function OffersSection() {
             >
               <div className="card-premium h-full group">
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#3E4A4F]/5 flex items-center justify-center group-hover:bg-[#F2A12C]/10 transition-colors">
-                    {offer.id === "clarifier" && (
-                      <icons.offers.clarifier className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                    )}
-                    {offer.id === "structurer" && (
-                      <icons.offers.structurer className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                    )}
-                    {offer.id === "comprendre" && (
-                      <icons.offers.comprendre className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                    )}
-                    {offer.id === "securiser" && (
-                      <icons.offers.securiser className="w-6 h-6 text-[#3E4A4F] group-hover:text-[#F2A12C] transition-colors" />
-                    )}
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black text-white flex items-center justify-center shadow-lg group-hover:from-[#FF9500] group-hover:to-[#E68500] transition-all duration-300">
+                      {offer.id === "clarifier" && (
+                        <icons.offers.clarifier className="w-6 h-6" />
+                      )}
+                      {offer.id === "structurer" && (
+                        <icons.offers.structurer className="w-6 h-6" />
+                      )}
+                      {offer.id === "comprendre" && (
+                        <icons.offers.comprendre className="w-6 h-6" />
+                      )}
+                      {offer.id === "securiser" && (
+                        <icons.offers.securiser className="w-6 h-6" />
+                      )}
+                    </div>
                   </div>
-                  <span className="text-xs font-semibold text-[#F2A12C] uppercase tracking-wider">
-                    {offer.subtitle}
-                  </span>
+                  <div className="flex-1">
+                    <span className="text-xs font-semibold text-[#FF9500] uppercase tracking-wider block mb-1">
+                      {offer.subtitle}
+                    </span>
+                    <h3 className="text-2xl font-bold text-primary-900">
+                      {offer.title}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                  {offer.title}
-                </h3>
                 <p className="text-neutral-700 mb-6 leading-relaxed">
                   {offer.description}
                 </p>

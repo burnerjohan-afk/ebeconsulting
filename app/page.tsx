@@ -15,13 +15,17 @@ import TargetAudienceSection from "@/components/TargetAudienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 export const metadata: Metadata = {
-  title: "Accueil",
+  title: "Accompagnement dirigeant TPE/PME - EBE Consulting",
   description:
-    "EBE Consulting accompagne les dirigeants TPE/PME dans la structuration organisationnelle. La performance durable se construit avant les chiffres.",
+    "Accompagnement dirigeants TPE/PME : structuration organisationnelle, pilotage stratégique et performance durable. Immersion terrain, décisions sécurisées.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr",
+  },
   openGraph: {
     title: "EBE Consulting | Accompagnement dirigeants TPE/PME",
     description:
-      "La performance durable se construit avant les chiffres. Comprendre. Décider. Structurer. Sécuriser.",
+      "Accompagnement dirigeants TPE/PME : structuration organisationnelle, pilotage stratégique et performance durable. Immersion terrain, décisions sécurisées.",
+    url: "https://ebeconsulting.fr",
   },
 };
 

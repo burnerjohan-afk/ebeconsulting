@@ -9,53 +9,53 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Couleurs officielles EBE selon la charte graphique
+        // Couleurs premium vives inspirées d'Apple
         ebe: {
-          gray: "#3E4A4F", // Gris EBE - Texte / silhouette
-          orange: "#F2A12C", // Orange EBE - Accent / étoile / 2e E
-          offWhite: "#F7F4EF", // Blanc cassé - Fond
+          gray: "#1D1D1F", // Noir Apple pour texte
+          orange: "#FF9500", // Orange vif et saturé (style Apple)
+          offWhite: "#FFFFFF", // Blanc pur
         },
-        // Palette étendue basée sur les couleurs officielles
+        // Palette premium avec couleurs vives
         primary: {
-          50: "#F7F4EF", // Blanc cassé EBE
-          100: "#EFE8DF",
-          200: "#DFD1BF",
-          300: "#CFBA9F",
-          400: "#BFA37F",
-          500: "#3E4A4F", // Gris EBE
-          600: "#323C40",
-          700: "#262E32",
-          800: "#323C40", // Pour compatibilité
-          900: "#3E4A4F", // Gris EBE - pour compatibilité avec ancien code
-          950: "#262E32",
+          50: "#FFFFFF", // Blanc pur
+          100: "#F5F5F7", // Gris très clair Apple
+          200: "#E5E5EA",
+          300: "#D1D1D6",
+          400: "#C7C7CC",
+          500: "#1D1D1F", // Noir Apple
+          600: "#000000", // Noir pur
+          700: "#1D1D1F",
+          800: "#000000",
+          900: "#1D1D1F",
+          950: "#000000",
         },
         accent: {
-          50: "#FEF5E6",
-          100: "#FDEBCD",
-          200: "#FBD79B",
-          300: "#F9C369",
-          400: "#F7AF37",
-          500: "#F2A12C", // Orange EBE
-          600: "#C28123", // Pour compatibilité
-          700: "#92611A",
-          800: "#614012",
-          900: "#312009",
+          50: "#FFF5E6",
+          100: "#FFEACC",
+          200: "#FFD599",
+          300: "#FFC066",
+          400: "#FFAB33",
+          500: "#FF9500", // Orange vif Apple-style
+          600: "#E68500",
+          700: "#CC7500",
+          800: "#B36500",
+          900: "#995500",
         },
         neutral: {
-          50: "#F7F4EF", // Blanc cassé EBE
-          100: "#EFE8DF",
-          200: "#DFD1BF",
-          300: "#CFBA9F",
-          400: "#9CA3AF",
-          500: "#6B7280",
-          600: "#4B5563",
-          700: "#3E4A4F", // Gris EBE
-          800: "#323C40",
-          900: "#262E32",
+          50: "#FFFFFF", // Blanc pur
+          100: "#F5F5F7", // Gris très clair Apple
+          200: "#E5E5EA",
+          300: "#D1D1D6",
+          400: "#C7C7CC",
+          500: "#8E8E93",
+          600: "#636366",
+          700: "#48484A",
+          800: "#3A3A3C",
+          900: "#1D1D1F", // Noir Apple
         },
       },
       fontFamily: {
-        sans: ["var(--font-montserrat)", "var(--font-open-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "var(--font-montserrat)", "system-ui", "sans-serif"],
         serif: ["var(--font-playfair)", "Georgia", "serif"],
       },
       fontWeight: {

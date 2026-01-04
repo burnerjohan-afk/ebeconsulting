@@ -7,35 +7,9 @@ import { icons } from "@/lib/icons";
 export default function ImpactSection() {
   return (
     <section className="relative section-padding overflow-hidden">
-      {/* Background abstrait "chaos → structure" */}
+      {/* Background simple */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-50 via-white to-neutral-50" />
-        {/* Pattern abstrait */}
-        <div className="absolute left-0 top-0 bottom-0 w-1/2 opacity-5">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="chaos" width="60" height="60" patternUnits="userSpaceOnUse">
-                <circle cx="30" cy="30" r="2" fill="currentColor" className="text-primary-900" />
-                <circle cx="10" cy="20" r="1.5" fill="currentColor" className="text-primary-900" />
-                <circle cx="50" cy="40" r="1.5" fill="currentColor" className="text-primary-900" />
-                <circle cx="20" cy="50" r="1" fill="currentColor" className="text-primary-900" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#chaos)" />
-          </svg>
-        </div>
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-5">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="structure" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 0 0 L 40 0 L 40 40 L 0 40 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary-900" />
-                <path d="M 0 0 L 40 40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary-900" />
-                <path d="M 40 0 L 0 40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary-900" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#structure)" />
-          </svg>
-        </div>
       </div>
 
       <div className="container-custom relative z-10">

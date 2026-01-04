@@ -47,21 +47,20 @@ export default function PrivacyPage() {
                 <p className="pl-4">
                   <strong>{legalConfig.company.legalName}</strong>
                   <br />
-                  {legalConfig.company.address}
+                  {legalConfig.company.address.split('\n').map((line, index, array) => (
+                    <span key={index}>
+                      {line}
+                      {index < array.length - 1 && <br />}
+                    </span>
+                  ))}
                   <br />
                   Email :{" "}
                   <a
-                    href={`mailto:${legalConfig.company.rgpdEmail}`}
+                    href="mailto:contact@select.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    {legalConfig.company.rgpdEmail}
+                    contact@select.fr
                   </a>
-                  {legalConfig.company.phone && (
-                    <>
-                      <br />
-                      Téléphone : {legalConfig.company.phone}
-                    </>
-                  )}
                 </p>
                 <p className="mt-2 text-sm text-neutral-600">
                   <em>Note : Pour toute question relative à la protection des données personnelles, vous pouvez également contacter notre DPO (Délégué à la Protection des Données) si désigné.</em>
@@ -198,10 +197,10 @@ export default function PrivacyPage() {
                 <p className="mt-4">
                   Pour exercer ces droits, contactez-nous par email à :{" "}
                   <a
-                    href={`mailto:${legalConfig.company.rgpdEmail}`}
+                    href="mailto:contact@select.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    {legalConfig.company.rgpdEmail}
+                    contact@select.fr
                   </a>
                   {" "}en précisant votre demande et en joignant une copie de votre pièce d'identité.
                 </p>
@@ -275,14 +274,14 @@ export default function PrivacyPage() {
                   vous pouvez nous contacter à :
                 </p>
                 <p className="pl-4">
-                  <strong>{legalConfig.company.legalName}</strong>
+                  Site web : <strong>ebeconsulting.fr</strong>
                   <br />
                   Email :{" "}
                   <a
-                    href={`mailto:${legalConfig.company.rgpdEmail}`}
+                    href="mailto:eb@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    {legalConfig.company.rgpdEmail}
+                    eb@ebeconsulting.fr
                   </a>
                 </p>
               </section>

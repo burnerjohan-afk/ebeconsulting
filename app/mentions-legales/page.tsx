@@ -27,37 +27,19 @@ export default function LegalPage() {
                   1. Éditeur du site
                 </h2>
                 <p>
-                  Le site <strong>ebe-consulting.fr</strong> est édité par :
+                  Le site <strong>ebeconsulting.fr</strong> est édité par :
                 </p>
                 <p className="pl-4">
                   <strong>{legalConfig.company.legalName}</strong>
                   <br />
-                  {legalConfig.company.address}
+                  {legalConfig.company.address.split('\n').map((line, index, array) => (
+                    <span key={index}>
+                      {line}
+                      {index < array.length - 1 && <br />}
+                    </span>
+                  ))}
                   <br />
                   SIRET : {legalConfig.company.siret}
-                  {legalConfig.company.rcs && (
-                    <>
-                      <br />
-                      RCS : {legalConfig.company.rcs}
-                    </>
-                  )}
-                  <br />
-                  Email :{" "}
-                  <a
-                    href={`mailto:${legalConfig.company.email}`}
-                    className="text-primary-900 hover:text-accent-600"
-                  >
-                    {legalConfig.company.email}
-                  </a>
-                  {legalConfig.company.phone && (
-                    <>
-                      <br />
-                      Téléphone : {legalConfig.company.phone}
-                    </>
-                  )}
-                </p>
-                <p>
-                  Directeur de publication : {legalConfig.company.publicationDirector}
                 </p>
               </section>
 
@@ -107,10 +89,10 @@ export default function LegalPage() {
                   Pour exercer ce droit, vous pouvez nous contacter à l'adresse
                   suivante :{" "}
                   <a
-                    href="mailto:contact@ebe-consulting.fr"
+                    href="mailto:eb@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    contact@ebe-consulting.fr
+                    eb@ebeconsulting.fr
                   </a>
                 </p>
                 <p>
@@ -168,9 +150,9 @@ export default function LegalPage() {
                 </h2>
                 <p>
                   Tout litige en relation avec l'utilisation du site{" "}
-                  <strong>ebe-consulting.fr</strong> est soumis au droit français.
+                  <strong>ebeconsulting.fr</strong> est soumis au droit français.
                   Il est fait attribution exclusive de juridiction aux tribunaux
-                  compétents de [Ville].
+                  compétents de Fort-de-France.
                 </p>
               </section>
             </div>

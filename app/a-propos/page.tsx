@@ -5,13 +5,17 @@ import PageHero from "@/components/PageHero";
 import { AboutValues, AboutCapabilities } from "@/components/AboutPageCards";
 
 export const metadata: Metadata = {
-  title: "À propos d'EBE Consulting",
+  title: "EBE Consulting - Expert structuration organisationnelle",
   description:
-    "Découvrez l'approche EBE Consulting : immersion terrain, structuration humaine, vision transverse, expertise certifiée ISO 9001 & APSAD.",
+    "EBE Consulting : expert accompagnement dirigeants TPE/PME. Vision transverse, approche terrain, expertise ISO 9001 & APSAD. Performance durable.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/a-propos",
+  },
   openGraph: {
-    title: "À propos | EBE Consulting",
+    title: "EBE Consulting - Expert structuration organisationnelle",
     description:
-      "La performance durable se construit avant les chiffres. Notre approche unique allie compréhension terrain et structuration organisationnelle.",
+      "EBE Consulting : expert accompagnement dirigeants TPE/PME. Vision transverse, approche terrain, expertise ISO 9001 & APSAD. Performance durable.",
+    url: "https://ebeconsulting.fr/a-propos",
   },
 };
 
@@ -82,8 +86,8 @@ export default function AboutPage() {
             </Button>
             <Button
               href="/contact"
-              variant="secondary"
-              className="text-lg px-8 py-4 bg-white text-primary-900 hover:bg-neutral-100"
+              variant="primary"
+              className="text-lg px-8 py-4 bg-white text-[#3E4A4F] hover:bg-neutral-100"
             >
               Nous contacter
             </Button>

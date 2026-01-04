@@ -1,32 +1,32 @@
 export const theme = {
   colors: {
-    // Couleurs officielles EBE selon la charte graphique
+    // Couleurs premium vives inspirées d'Apple
     ebe: {
-      gray: "#3E4A4F", // Gris EBE - Texte / silhouette
-      orange: "#F2A12C", // Orange EBE - Accent / étoile / 2e E
-      offWhite: "#F7F4EF", // Blanc cassé - Fond
+      gray: "#1D1D1F", // Noir Apple pour texte
+      orange: "#FF9500", // Orange vif et saturé (style Apple)
+      offWhite: "#FFFFFF", // Blanc pur
     },
     primary: {
-      dark: "#262E32",
-      main: "#3E4A4F", // Gris EBE
-      light: "#4B5563",
+      dark: "#000000",
+      main: "#1D1D1F", // Noir Apple
+      light: "#48484A",
     },
     accent: {
-      dark: "#C28123",
-      main: "#F2A12C", // Orange EBE
-      light: "#F7AF37",
+      dark: "#E68500",
+      main: "#FF9500", // Orange vif Apple-style
+      light: "#FFAB33",
     },
     neutral: {
       white: "#ffffff",
-      offWhite: "#F7F4EF", // Blanc cassé EBE
-      light: "#EFE8DF",
-      medium: "#6B7280",
-      dark: "#3E4A4F", // Gris EBE
-      black: "#262E32",
+      offWhite: "#F5F5F7", // Gris très clair Apple
+      light: "#E5E5EA",
+      medium: "#8E8E93",
+      dark: "#1D1D1F", // Noir Apple
+      black: "#000000",
     },
   },
   typography: {
-    fontSans: "var(--font-montserrat), var(--font-open-sans)",
+    fontSans: "var(--font-inter), var(--font-montserrat)",
     fontSerif: "var(--font-playfair)",
   },
   spacing: {
