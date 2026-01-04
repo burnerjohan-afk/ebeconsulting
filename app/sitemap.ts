@@ -1,51 +1,64 @@
 import { MetadataRoute } from "next";
+import { content } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://ebeconsulting.fr";
+  const now = new Date();
 
-  return [
+  // Pages statiques
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      lastModified: now,
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/offres`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      lastModified: now,
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/copil`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      lastModified: now,
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/a-propos`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      lastModified: now,
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      lastModified: now,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/ressources`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.6,
     },
   ];
+
+  // Pages dynamiques des offres
+  const offerPages: MetadataRoute.Sitemap = content.offers.list.map((offer) => ({
+    url: `${baseUrl}/offres/${offer.id}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...offerPages];
 }
 

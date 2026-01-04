@@ -1,16 +1,20 @@
 import { content } from "@/lib/content";
 
 export default function StructuredData() {
+  const baseUrl = "https://ebeconsulting.fr";
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: content.company.name,
     legalName: "SELECT SERVICES",
     description: content.company.description,
-    url: "https://ebeconsulting.fr",
+    url: baseUrl,
     logo: {
       "@type": "ImageObject",
-      url: "https://ebeconsulting.fr/image/logo.PNG",
+      url: `${baseUrl}/image/logo.PNG`,
+      width: 320,
+      height: 120,
     },
     address: {
       "@type": "PostalAddress",
@@ -18,12 +22,14 @@ export default function StructuredData() {
       addressLocality: "REMIRE-MONTJOLY",
       postalCode: "97354",
       addressCountry: "FR",
+      addressRegion: "Guyane",
     },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
       email: "eb@ebeconsulting.fr",
-      availableLanguage: "French",
+      availableLanguage: ["French", "fr"],
+      areaServed: "FR",
     },
     sameAs: [
       "https://www.linkedin.com/company/ebe-consulting",
@@ -31,10 +37,28 @@ export default function StructuredData() {
       "https://www.instagram.com/ebeconsulting",
     ],
     foundingDate: "2024",
-    areaServed: {
-      "@type": "Country",
-      name: "France",
-    },
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "France",
+      },
+      {
+        "@type": "State",
+        name: "Guyane",
+      },
+      {
+        "@type": "State",
+        name: "Antilles",
+      },
+    ],
+    knowsAbout: [
+      "Accompagnement dirigeant",
+      "Audit organisationnel",
+      "Structuration managériale",
+      "ISO 9001",
+      "Conseil en management",
+      "Performance durable",
+    ],
   };
 
   const professionalServiceSchema = {
@@ -62,12 +86,36 @@ export default function StructuredData() {
       },
       {
         "@type": "State",
-        name: "Antilles-Guyane",
+        name: "Guyane",
+      },
+      {
+        "@type": "State",
+        name: "Antilles",
       },
     ],
     availableChannel: {
       "@type": "ServiceChannel",
-      serviceUrl: "https://ebeconsulting.fr/contact",
+      serviceUrl: `${baseUrl}/contact`,
+    },
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: content.company.name,
+    url: baseUrl,
+    description: content.company.description,
+    publisher: {
+      "@type": "Organization",
+      name: content.company.name,
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${baseUrl}/contact?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
     },
   };
 
@@ -83,6 +131,12 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(professionalServiceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>

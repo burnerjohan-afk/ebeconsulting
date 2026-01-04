@@ -15,7 +15,8 @@
     "db:reset": "docker compose down -v && docker compose up -d",
     "db:wait": "node scripts/wait-for-db.js",
     "seed": "node scripts/wait-for-db.js && tsx scripts/seed.ts",
-    "seed:force": "tsx scripts/seed.ts"
+    "seed:force": "tsx scripts/seed.ts",
+    "seo:check": "node scripts/check-seo.js"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.69.0",

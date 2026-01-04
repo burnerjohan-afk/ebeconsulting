@@ -57,6 +57,14 @@ export const metadata: Metadata = {
     title: "EBE Consulting | Accompagnement dirigeants TPE/PME",
     description:
       "La performance durable se construit avant les chiffres. Accompagnement organisationnel, managérial et opérationnel.",
+    images: [
+      {
+        url: "https://ebeconsulting.fr/image/logo.PNG",
+        width: 320,
+        height: 120,
+        alt: "EBE Consulting - Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
