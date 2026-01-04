@@ -4,10 +4,13 @@ import { legalConfig } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Mentions légales | EBE Consulting",
-  description: "Mentions légales d'EBE Consulting",
+  description: "Mentions légales d'EBE Consulting : informations légales, coordonnées, hébergement et conformité RGPD.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/mentions-legales",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

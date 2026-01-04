@@ -5,10 +5,13 @@ import CookiePreferences from "@/components/legal/CookiePreferences";
 
 export const metadata: Metadata = {
   title: "Politique de cookies | EBE Consulting",
-  description: "Gestion de vos préférences de cookies et politique de cookies d'EBE Consulting",
+  description: "Gestion de vos préférences de cookies et politique de cookies d'EBE Consulting. Contrôlez l'utilisation des cookies sur notre site.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/cookies",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

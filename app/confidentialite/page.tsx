@@ -4,10 +4,13 @@ import { legalConfig } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité | EBE Consulting",
-  description: "Politique de confidentialité et protection des données personnelles d'EBE Consulting",
+  description: "Politique de confidentialité et protection des données personnelles d'EBE Consulting. Conformité RGPD et gestion des données.",
+  alternates: {
+    canonical: "https://ebeconsulting.fr/confidentialite",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
