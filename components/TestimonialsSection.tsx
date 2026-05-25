@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 import { content } from "@/lib/content";
+import { testimonialLogos } from "@/lib/client-logos";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -24,10 +25,7 @@ export default function TestimonialsSection() {
   };
 
   // Mapping des logos clients
-  const clientLogos: Record<string, string> = {
-    Neodisplay: "/image/neodisplay.jpg",
-    "SELECT Service": "/image/select logo.png",
-  };
+  const clientLogos = testimonialLogos;
 
   const nextPair = () => {
     setCurrentPairIndex((prev) => (prev + 1) % totalPairs);
@@ -82,7 +80,7 @@ export default function TestimonialsSection() {
   const currentPair = getCurrentPair();
 
   return (
-    <section className="section-padding bg-neutral-50" aria-labelledby="testimonials-heading">
+    <section className="section-padding section-charte-alt section-separator" aria-labelledby="testimonials-heading">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
@@ -168,14 +166,14 @@ export default function TestimonialsSection() {
               <>
                 <button
                   onClick={prevPair}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-[#E5E5EA] shadow-md hover:shadow-lg hover:bg-[#F5F5F7] transition-all duration-300 flex items-center justify-center z-10"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-ebe-anthracite/10 shadow-md hover:shadow-lg hover:bg-ebe-warmWhite transition-all duration-300 flex items-center justify-center z-10"
                   aria-label="Paire précédente"
                 >
                   <ChevronLeft className="w-5 h-5 text-[#1D1D1F]" />
                 </button>
                 <button
                   onClick={nextPair}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-[#E5E5EA] shadow-md hover:shadow-lg hover:bg-[#F5F5F7] transition-all duration-300 flex items-center justify-center z-10"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-ebe-anthracite/10 shadow-md hover:shadow-lg hover:bg-ebe-warmWhite transition-all duration-300 flex items-center justify-center z-10"
                   aria-label="Paire suivante"
                 >
                   <ChevronRight className="w-5 h-5 text-[#1D1D1F]" />

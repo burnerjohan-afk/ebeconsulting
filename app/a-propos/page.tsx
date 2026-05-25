@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <div className="pb-16">
         {/* Approach Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-6 text-center">
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
@@ -87,7 +87,7 @@ export default function AboutPage() {
             <Button
               href="/contact"
               variant="primary"
-              className="text-lg px-8 py-4 bg-white text-[#3E4A4F] hover:bg-neutral-100"
+              className="text-lg px-8 py-4 bg-white text-[#3E4A4F] hover:bg-ebe-warmWhite"
             >
               Nous contacter
             </Button>

@@ -86,7 +86,7 @@ export function AboutCapabilities() {
         transition={{ duration: 0.6 }}
         className="group"
       >
-        <div className="card-premium bg-neutral-50 border-2 border-neutral-200 h-full">
+        <div className="card-premium h-full">
           <div className="mb-6 flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-neutral-200 group-hover:bg-neutral-300 flex items-center justify-center transition-colors">
               <XCircle className="w-6 h-6 text-neutral-600" />

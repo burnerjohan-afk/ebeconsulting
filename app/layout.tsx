@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,27 +14,13 @@ const inter = Inter({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
 export const metadata: Metadata = {
   title: {
     default: "EBE Consulting | Accompagnement dirigeants TPE/PME",
     template: "%s | EBE Consulting",
   },
   description:
-    "Accompagnement des dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle. La performance durable se construit avant les chiffres.",
+    "Management de transition et conseil opérationnel pour dirigeants TPE/PME. J'arrive. J'analyse. J'agis. — organisations plus claires, solides et autonomes.",
   keywords: [
     "accompagnement dirigeant",
     "audit organisationnel",
@@ -84,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${montserrat.variable} ${playfair.variable}`}>
-      <body className="antialiased">
+    <html lang="fr" className={inter.variable}>
+      <body className="font-sans antialiased">
         <StructuredData />
         <Header />
         <main className="min-h-screen pb-20 md:pb-0">{children}</main>

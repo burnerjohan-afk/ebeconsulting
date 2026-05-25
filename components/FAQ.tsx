@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding section-charte">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
@@ -27,7 +27,7 @@ export default function FAQ() {
               className="border border-neutral-200 rounded-lg overflow-hidden"
             >
               <button
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-neutral-50 transition-colors"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-ebe-anthracite/5 transition-colors"
                 onClick={() => toggleQuestion(index)}
                 aria-expanded={openIndex === index}
               >

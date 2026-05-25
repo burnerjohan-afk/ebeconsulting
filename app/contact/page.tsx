@@ -33,7 +33,7 @@ export default function ContactPage() {
       <div className="pb-16">
 
       {/* Contact Form */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <ContactFormWrapper />
@@ -42,7 +42,7 @@ export default function ContactPage() {
       </section>
 
       {/* Additional Info */}
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <ContactPageInfo />

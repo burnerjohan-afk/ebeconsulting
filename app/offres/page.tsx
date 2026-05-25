@@ -7,78 +7,88 @@ import OffersPageCards from "@/components/OffersPageCards";
 export const metadata: Metadata = {
   title: "Offres d'accompagnement dirigeant - EBE Consulting",
   description:
-    "4 offres d'accompagnement pour dirigeants TPE/PME : clarifier pour décider, structurer pour grandir, comprendre, sécuriser. Solutions sur mesure.",
+    "Quatre façons d'intervenir pour une efficacité réelle : diagnostic, structuration, accompagnement dirigeant, management de transition. À partir d'une lecture terrain.",
   alternates: {
     canonical: "https://ebeconsulting.fr/offres",
   },
   openGraph: {
-    title: "Offres d'accompagnement dirigeant | EBE Consulting",
+    title: "Les offres EBE Consulting | EBE Consulting",
     description:
-      "4 offres d'accompagnement pour dirigeants TPE/PME : clarifier pour décider, structurer pour grandir, comprendre, sécuriser. Solutions sur mesure.",
+      "Quatre façons d'intervenir, une seule exigence : l'efficacité réelle. Chaque mission démarre par une lecture terrain.",
     url: "https://ebeconsulting.fr/offres",
   },
 };
 
 export default function OffersPage() {
+  const { offers, copil } = content;
+
   return (
     <div>
-      {/* Hero avec image */}
       <PageHero
-        title={content.offers.title}
-        subtitle={content.offers.subtitle}
+        title={offers.title}
+        subtitle={offers.subtitle}
         imageUrl="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070"
         overlayOpacity={0.35}
       />
 
       <div className="pb-16">
-        {/* Offers Grid */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <OffersPageCards />
+        <section className="section-padding section-charte section-separator">
+          <div className="container-custom">
+            <OffersPageCards />
 
-          {/* COPIL CTA */}
-          <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Appui au Comité de Pilotage</h2>
-            <p className="text-lg text-primary-100 mb-6">
-              Accompagnement stratégique mensuel — Forfait 3 000 € HT/mois
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="/contact?subject=Appui COPIL&offer=copil"
-                variant="primary"
-                className="text-lg px-8 py-4"
-              >
-                Demander un devis
-              </Button>
-              <Button
-                href="/copil"
-                variant="secondary"
-                className="text-lg px-8 py-4 bg-white/10 text-white border-2 border-white hover:bg-white/20"
-              >
-                Découvrir l'appui COPIL
-              </Button>
+            <div className="relative overflow-hidden bg-ebe-anthraciteDark rounded-xl p-8 md:p-10 text-white text-center max-w-5xl mx-auto mt-4">
+              <div
+                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070')] bg-cover bg-center opacity-20"
+                aria-hidden
+              />
+              <div className="absolute inset-0 bg-ebe-anthraciteDark/85" aria-hidden />
+              <div className="relative z-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-3">
+                  Offre complémentaire
+                </p>
+                <h2 className="text-2xl md:text-3xl font-bold mb-3">{copil.title}</h2>
+                <p className="text-base md:text-lg text-white/75 mb-6 max-w-2xl mx-auto">
+                  {copil.description}
+                </p>
+                <p className="text-sm text-ebe-orange font-semibold mb-8">
+                  Forfait {copil.modalities.pricing} · {copil.modalities.billing}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    href="/contact?subject=Appui COPIL&offer=copil"
+                    variant="primary"
+                    className="text-base px-8 py-4"
+                  >
+                    Demander un devis
+                  </Button>
+                  <Button
+                    href="/copil"
+                    variant="secondary"
+                    className="text-base px-8 py-4 bg-white/10 text-white border-2 border-white/30 hover:bg-white/20"
+                  >
+                    Découvrir l&apos;appui COPIL
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold text-primary-900 mb-4">
-            Besoin d'un accompagnement sur mesure ?
-          </h2>
-          <p className="text-lg text-neutral-700 mb-8">
-            Échangeons sur votre situation et définissons ensemble la meilleure
-            approche.
-          </p>
-          <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
-            Parler de votre situation
-          </Button>
-        </div>
-      </section>
+        <section className="section-padding section-charte-alt section-separator">
+          <div className="container-custom text-center">
+            <h2 className="text-3xl font-bold text-ebe-anthraciteDark mb-4">
+              Besoin d&apos;un accompagnement sur mesure ?
+            </h2>
+            <p className="text-lg text-ebe-anthracite/70 mb-8 max-w-2xl mx-auto">
+              Échangeons sur votre situation et définissons ensemble la meilleure
+              approche — à partir du réel, pas d&apos;un catalogue prédéfini.
+            </p>
+            <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
+              Parler de votre situation
+            </Button>
+          </div>
+        </section>
       </div>
     </div>
   );
 }
-

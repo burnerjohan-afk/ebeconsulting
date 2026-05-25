@@ -1,16 +1,99 @@
 export const content = {
   company: {
     name: "EBE Consulting",
-    tagline: "Comprendre. Décider. Structurer. Sécuriser.",
-    mission: "La performance durable se construit avant les chiffres.",
+    tagline: "J'arrive. J'analyse. J'agis.",
+    mission:
+      "Management de transition et conseil opérationnel pour des organisations plus claires, plus solides et plus autonomes.",
     description:
-      "Accompagnement des dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle pour une performance durable.",
+      "EBE Consulting accompagne les dirigeants TPE/PME au cœur du fonctionnement réel de leur organisation : identifier les blocages, clarifier les priorités et remettre les équipes en mouvement — durablement.",
   },
   hero: {
-    title: "Comprendre. Décider. Structurer. Sécuriser.",
-    subtitle: "La performance durable se construit avant les chiffres.",
-    ctaPrimary: "Parler de votre situation",
-    ctaSecondary: "Découvrir les offres",
+    eyebrow: "Management de transition · Conseil opérationnel",
+    title: "Quand l'organisation perd de la clarté, la performance s'essouffle.",
+    titleHighlight: "perd de la clarté",
+    signature: "J'arrive. J'analyse. J'agis.",
+    signatureHighlight: "J'analyse.",
+    signatureSuite:
+      "Pour laisser une organisation plus claire, plus solide et plus autonome.",
+    description:
+      "EBE Consulting intervient au cœur du fonctionnement réel de votre organisation pour identifier ce qui bloque, clarifier ce qui doit l'être, et remettre vos équipes en mouvement — durablement.",
+    ctaPrimary: "Parlons de votre situation",
+    ctaSecondary: "Découvrir l'approche",
+    ctaSecondaryHref: "#methode",
+    stats: [
+      { value: "30+", label: "Ans d'expérience opérationnelle" },
+      { value: "360°", label: "Vision globale de l'organisation" },
+      { value: "Terrain", label: "Lecture directe, pas de théorie" },
+    ],
+  },
+  signaux: {
+    id: "signaux",
+    eyebrow: "Avant que tout ne décroche",
+    title: "Les signaux qui doivent alerter un dirigeant",
+    subtitle:
+      "Une organisation ne s'effondre pas du jour au lendemain. Elle envoie des signaux — souvent discrets, toujours révélateurs.",
+    items: [
+      {
+        title: "Les décisions n'atterrissent plus",
+        description:
+          "Elles sont prises, mais peu suivies, peu comprises ou contournées. Le cap est donné, mais personne ne tient le gouvernail.",
+      },
+      {
+        title: "Les rôles deviennent flous",
+        description:
+          "Chacun agit, mais les responsabilités ne sont plus clairement assumées. La redevabilité disparaît avec les repères.",
+      },
+      {
+        title: "Les tensions remplacent les échanges",
+        description:
+          "La communication devient défensive, émotionnelle ou silencieuse. On évite les sujets qui dérangent.",
+      },
+      {
+        title: "Les managers s'épuisent",
+        description:
+          "Ils portent l'opérationnel, les urgences, les tensions et les contradictions — sans filet, sans cap clair.",
+      },
+      {
+        title: "Le pilotage devient insuffisant",
+        description:
+          "Les indicateurs existent, mais ils ne permettent plus de décider ni d'anticiper. On navigue à vue.",
+      },
+      {
+        title: "Le client ressent les fragilités",
+        description:
+          "Retards, écarts, irritants, perte de fluidité. Les dysfonctionnements internes finissent toujours par se voir à l'extérieur.",
+      },
+    ],
+  },
+  differentiation: {
+    id: "pourquoi",
+    eyebrow: "Pourquoi EBE Consulting ?",
+    title: "Sans dépendance.",
+    titleAccent: "Avec impact.",
+    quote:
+      "EBE intervient quand l'entreprise continue d'avancer, mais que le dirigeant sent que le cadre, les rôles, les décisions ou la dynamique collective ne tiennent plus comme ils devraient.",
+    points: [
+      {
+        title: "Une expérience de direction, pas une posture théorique",
+        description:
+          "Plus de 30 ans passés au cœur des organisations : management d'équipes, qualité, relation client, pilotage opérationnel. Je sais ce que vous vivez parce que je l'ai vécu.",
+      },
+      {
+        title: "Une lecture 360° de l'entreprise",
+        description:
+          "L'intervention relie les enjeux humains, managériaux, organisationnels, commerciaux, qualité et opérationnels. Pas de diagnostic partiel — le fonctionnement réel.",
+      },
+      {
+        title: "Des livrables utiles, pas des rapports décoratifs",
+        description:
+          "Plans d'action, feuille de route, rôles clarifiés, rituels de pilotage, priorités et recommandations directement exploitables dès le lendemain.",
+      },
+      {
+        title: "Une finalité claire : votre autonomie",
+        description:
+          "EBE n'a pas vocation à s'installer dans l'entreprise. L'objectif est de laisser une organisation plus claire, plus solide, capable de fonctionner sans dépendance.",
+      },
+    ],
   },
   badges: [
     {
@@ -35,15 +118,17 @@ export const content = {
     },
   ],
   method: {
-    title: "Notre méthode en 4 étapes",
+    id: "methode",
+    eyebrow: "La méthode EBE",
+    title: "Voir. Comprendre. Structurer. Transmettre.",
     subtitle:
-      "Je n'agis jamais avant de comprendre. Je structure l'humain avant de poser le cadre.",
+      "« Je n'agis jamais avant de comprendre. Je structure l'humain avant de poser le cadre. »",
     steps: [
       {
         number: "01",
-        title: "Comprendre",
+        title: "Voir le réel",
         description:
-          "Immersion terrain pour comprendre le travail réel, les enjeux opérationnels et les dynamiques humaines.",
+          "Immersion terrain, écoute des dirigeants et des équipes, observation des fonctionnements — lecture des écarts entre l'organisation prévue et l'organisation vécue.",
         details: [
           "Observation du travail réel",
           "Entretiens avec les équipes",
@@ -53,46 +138,158 @@ export const content = {
       },
       {
         number: "02",
-        title: "Décider",
+        title: "Comprendre les blocages",
         description:
-          "Clarification des enjeux, définition d'un socle de pilotage solide et mise en place de repères de décision.",
+          "Analyse des rôles, responsabilités, circuits de décision, modes de communication, processus et points de rupture.",
         details: [
           "Cartographie des enjeux stratégiques",
-          "Définition des indicateurs clés",
-          "Mise en place d'un tableau de bord",
-          "Repères de décision partagés",
+          "Analyse des dynamiques humaines",
+          "Repérage des points de rupture",
+          "Priorisation des chantiers",
         ],
       },
       {
         number: "03",
-        title: "Structurer l'humain",
+        title: "Structurer l'action",
         description:
-          "Définition claire des rôles, responsabilités et du sens du travail pour libérer l'autonomie et l'engagement.",
+          "Priorisation des chantiers, clarification des responsabilités, formalisation des modes de fonctionnement et plans d'action utiles.",
         details: [
           "Cartographie des rôles et responsabilités",
-          "Définition des missions et objectifs",
-          "Clarification des relations hiérarchiques",
-          "Renforcement du sens du travail",
+          "Plans d'action priorisés",
+          "Rituels de pilotage",
+          "Cadres de travail partagés",
         ],
       },
       {
         number: "04",
-        title: "Sécuriser",
+        title: "Transmettre pour rendre autonome",
         description:
-          "Mise en place de processus, procédures et cadres de travail pour garantir l'autonomie et la performance durable.",
+          "Accompagnement pour installer des pratiques durables, sans dépendance au consultant. L'objectif : vous laisser plus solide qu'à mon arrivée.",
         details: [
-          "Documentation des processus clés",
-          "Procédures opérationnelles",
-          "Cadres de contrôle et validation",
+          "Transmission à la personne relais",
           "Formation et transfert de compétences",
+          "Installation de pratiques durables",
+          "Autonomie opérationnelle renforcée",
         ],
+      },
+    ],
+    expertises: [
+      {
+        tag: "Expertise 01",
+        title: "Gouvernance managériale & dynamique humaine",
+        trigger: "Quand l'humain, le management ou la confiance freinent l'action.",
+        description:
+          "Restaurer du cadre, de la redevabilité et une dynamique collective. Des rôles clarifiés, des managers renforcés, des équipes remobilisées.",
+      },
+      {
+        tag: "Expertise 02",
+        title: "Organisation, qualité & performance opérationnelle",
+        trigger:
+          "Quand l'entreprise fonctionne, mais avec trop d'écarts ou d'urgences.",
+        description:
+          "Rendre l'organisation plus lisible, plus fiable et plus pilotable. Des processus clarifiés, des pratiques homogènes, une qualité au service des décisions.",
+      },
+      {
+        tag: "Expertise 03",
+        title: "Management de transition & accompagnement dirigeant",
+        trigger: "Quand il faut stabiliser vite et remettre l'entreprise en mouvement.",
+        description:
+          "Sécuriser le fonctionnement, poser les priorités et accompagner les décisions structurantes. Un dirigeant moins isolé, une organisation relancée.",
+      },
+    ],
+  },
+  homepageOffers: {
+    id: "offres",
+    eyebrow: "Les offres EBE Consulting",
+    title: "Quatre façons d'intervenir, une seule exigence :",
+    titleHighlight: "l'efficacité réelle",
+    intro:
+      "Chaque mission démarre par une lecture terrain. Ce qui suit dépend de ce que révèle le réel — pas d'un catalogue prédéfini.",
+    phases: [
+      {
+        id: "diagnostic",
+        number: "01",
+        tag: "Diagnostic",
+        title: "Voir clairement avant d'agir",
+        hook: "Votre organisation dysfonctionne — mais où, exactement, et pourquoi ?",
+        description:
+          "Diagnostic terrain pour comprendre les dysfonctionnements visibles et invisibles : organisation, management, communication, exploitation, qualité, commerce, relation client, dynamique des équipes. Objectif : donner au dirigeant une lecture claire, objective et priorisée de la situation.",
+        deliverables: [
+          "Cartographie des points de tension",
+          "Analyse des rôles et responsabilités",
+          "Lecture des risques humains et opérationnels",
+          "Priorisation des chantiers",
+          "Feuille de route opérationnelle",
+        ],
+        result:
+          "Vous savez ce qui bloque, ce qui est prioritaire et par quoi commencer.",
+        contactOfferId: "comprendre",
+      },
+      {
+        id: "structuration",
+        number: "02",
+        tag: "Structuration",
+        title: "Passer du flou à une organisation claire",
+        hook: "Vos équipes avancent, mais le cadre n'est plus suffisamment posé.",
+        description:
+          "Accompagnement pour clarifier les responsabilités, fluidifier les échanges, structurer les rituels, fiabiliser les processus et renforcer le management. Objectif : redonner un cadre sans rigidifier l'organisation.",
+        deliverables: [
+          "Clarification des rôles et responsabilités",
+          "Rituels de management opérationnel",
+          "Circuits de décision",
+          "Indicateurs de pilotage utiles",
+          "Plan d'action par service ou par sujet",
+        ],
+        result:
+          "L'organisation gagne en lisibilité, en efficacité et en cohérence collective.",
+        contactOfferId: "structurer",
+      },
+      {
+        id: "accompagnement",
+        number: "03",
+        tag: "Accompagnement",
+        title: "Renforcer la posture managériale",
+        hook: "Vous ou vos managers traversez une période de tension, de doute ou de transformation.",
+        description:
+          "Soutien ciblé des dirigeants et managers dans les moments où il faut reprendre de la hauteur, poser le bon cadre et décider avec justesse. Objectif : aider les leaders à agir avec plus de clarté et d'autorité.",
+        deliverables: [
+          "Préparation de prises de parole sensibles",
+          "Soutien dans les situations complexes",
+          "Travail sur la posture managériale",
+          "Clarification des messages",
+          "Suivi des engagements",
+        ],
+        result:
+          "Des dirigeants et managers plus solides, plus clairs et mieux alignés dans l'action.",
+        contactOfferId: "clarifier",
+      },
+      {
+        id: "transition",
+        number: "04",
+        tag: "Management de transition",
+        title: "Stabiliser quand il faut agir vite",
+        hook: "Crise managériale, passage de relais, changement de direction : votre organisation doit tenir.",
+        description:
+          "Intervention opérationnelle pour reprendre les sujets prioritaires, sécuriser l'exploitation, soutenir les équipes et relancer la dynamique de travail. Objectif : remettre l'organisation en état de fonctionner dans une période sensible.",
+        deliverables: [
+          "Diagnostic de démarrage rapide",
+          "Feuille de route priorisée",
+          "Prise en main des urgences opérationnelles",
+          "Soutien des équipes",
+          "Transmission à un successeur",
+        ],
+        result:
+          "Une entreprise stabilisée, des priorités claires et une dynamique relancée.",
+        contactOfferId: "securiser",
       },
     ],
   },
   offers: {
     title: "Nos offres d'accompagnement",
     subtitle:
-      "Des solutions adaptées aux besoins des dirigeants TPE/PME en croissance ou transformation",
+      "Diagnostic, structuration, accompagnement dirigeant et management de transition — à partir d'une lecture terrain de votre organisation.",
+    pageIntro:
+      "Quatre modes d'intervention complémentaires, activés selon ce que révèle le terrain. Retrouvez ci-dessous le détail de chaque phase : livrables, résultats attendus et modalités de prise de contact.",
     list: [
       {
         id: "clarifier",
@@ -367,9 +564,12 @@ export const content = {
     ],
   },
   contact: {
-    title: "Parlez-nous de votre situation",
+    title: "Vous sentez que votre organisation a besoin de clarté ?",
     subtitle:
-      "Échangeons sur vos enjeux et définissons ensemble la meilleure approche pour votre organisation.",
+      "Parlons de ce qui se joue réellement dans votre entreprise — et de ce qu'il faut remettre en mouvement. Un premier échange, sans engagement, pour voir juste.",
+    phone: "06 96 85 73 02",
+    email: "eb@ebeconsulting.fr",
+    zones: "Martinique, Guadeloupe, Guyane & France métropolitaine",
     form: {
       name: "Nom",
       firstName: "Prénom",
@@ -433,8 +633,9 @@ export const content = {
     ],
   },
   footer: {
+    copyright: "© 2026 EBE Consulting · SASU · Martinique · Tous droits réservés",
     description:
-      "EBE Consulting accompagne les dirigeants TPE/PME dans la structuration organisationnelle pour une performance durable.",
+      "Management de transition et conseil opérationnel — organisations plus claires, plus solides et plus autonomes.",
     links: {
       company: "Entreprise",
       offers: "Offres",
@@ -457,6 +658,18 @@ export const content = {
       quote: "Grâce à l'expertise d'EBE Consulting, nous avons pu clarifier nos processus et renforcer notre management. L'accompagnement a été structurant et nous a permis de prendre du recul sur notre organisation.",
       author: "Direction",
       role: "SELECT Service",
+    },
+    {
+      company: "FlowLab",
+      quote: "L'intervention d'EBE Consulting nous a aidés à clarifier nos priorités et à structurer notre organisation. Une approche concrète, ancrée dans le terrain, qui a produit des résultats visibles rapidement.",
+      author: "Direction",
+      role: "FlowLab",
+    },
+    {
+      company: "Evolya",
+      quote: "Un accompagnement exigeant et pragmatique. EBE Consulting a su identifier nos points de blocage et nous accompagner dans une dynamique de progrès durable, avec des livrables directement exploitables.",
+      author: "Direction",
+      role: "Evolya",
     },
   ],
 };

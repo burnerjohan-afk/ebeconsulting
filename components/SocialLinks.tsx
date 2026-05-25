@@ -12,7 +12,7 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/company/ebe-consulting",
+    url: "https://www.linkedin.com/company/ebe-consulting/posts/?feedView=all",
     color: "bg-[#0077b5] hover:bg-[#005885]",
     icon: (
       <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24">

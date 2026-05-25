@@ -2,27 +2,27 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import ContactFormWrapper from "./ContactFormWrapper";
-import Button from "./ui/Button";
-import { icons } from "@/lib/icons";
+import { content } from "@/lib/content";
+import { Phone } from "lucide-react";
 
 export default function FinalCTA() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const { contact } = content;
 
   return (
-    <section className="relative section-padding overflow-hidden">
-      {/* Image de fond sobre */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950" />
-        {/* Image abstraite ou bureau direction */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069')] bg-cover bg-center bg-no-repeat" />
-        {/* Overlay réduit */}
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/40 via-transparent to-primary-900/60" />
-      </div>
+    <section
+      id="contact"
+      className="relative section-padding overflow-hidden bg-ebe-anthraciteDark"
+    >
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-20 bg-ebe-orange"
+        aria-hidden
+      />
 
       <div className="container-custom relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,46 +30,62 @@ export default function FinalCTA() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Parlez-nous de votre situation
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              {contact.title}
             </h2>
-            <p className="text-xl text-neutral-200 leading-relaxed max-w-2xl mx-auto">
-              Échangeons sur vos enjeux et définissons ensemble la meilleure
-              approche pour votre organisation.
+            <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto">
+              {contact.subtitle}
             </p>
           </motion.div>
 
           {!isFormOpen ? (
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center"
             >
-              <motion.button
-                onClick={() => setIsFormOpen(true)}
-                className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold bg-white text-[#1D1D1F] hover:bg-white shadow-xl hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span>Ouvrir le formulaire de contact</span>
-                {icons.cta.message && (
-                  <icons.cta.message className="w-5 h-5" aria-hidden="true" />
-                )}
-              </motion.button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                <button
+                  type="button"
+                  onClick={() => setIsFormOpen(true)}
+                  className="inline-flex items-center justify-center px-10 py-4 text-xs font-semibold uppercase tracking-[0.12em] bg-white text-ebe-anthraciteDark rounded-sm hover:bg-ebe-warmWhite transition-colors"
+                >
+                  Écrire à EBE Consulting
+                </button>
+                <Link
+                  href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                  className="inline-flex items-center justify-center gap-2 px-10 py-4 text-xs font-semibold uppercase tracking-[0.12em] bg-transparent text-white border border-white/30 rounded-sm hover:bg-white/10 transition-colors"
+                >
+                  <Phone className="w-4 h-4" aria-hidden />
+                  {contact.phone}
+                </Link>
+              </div>
+
+              <p className="text-sm text-white/40 tracking-wide">
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="text-ebe-orange hover:underline"
+                >
+                  {contact.email}
+                </a>
+                <span className="mx-2">·</span>
+                {contact.zones}
+              </p>
             </motion.div>
           ) : (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="glass-card bg-white/95 backdrop-blur-lg p-8 md:p-12"
+              className="glass-card bg-white/95 backdrop-blur-lg p-8 md:p-12 rounded"
             >
               <div className="flex justify-end mb-4">
                 <button
+                  type="button"
                   onClick={() => setIsFormOpen(false)}
-                  className="text-[#1D1D1F]/70 hover:text-[#1D1D1F] transition-colors"
+                  className="text-ebe-anthracite/70 hover:text-ebe-anthracite transition-colors"
                   aria-label="Fermer le formulaire"
                 >
                   <svg
@@ -80,6 +96,7 @@ export default function FinalCTA() {
                     strokeWidth="2"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
+                    aria-hidden
                   >
                     <path d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -93,4 +110,3 @@ export default function FinalCTA() {
     </section>
   );
 }
-

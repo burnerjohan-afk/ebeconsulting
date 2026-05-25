@@ -15,7 +15,7 @@ export default function OfferDetailCards({
   return (
     <>
       {deliverables.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {deliverables.map((deliverable, index) => (
             <motion.div
               key={index}
@@ -26,19 +26,19 @@ export default function OfferDetailCards({
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="card-premium">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black group-hover:from-[#FF9500] group-hover:to-[#E68500] text-white flex items-center justify-center font-bold flex-shrink-0 transition-all duration-300">
+              <div className="card-premium h-full">
+                <div className="flex flex-col items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-ebe-anthraciteDark to-black group-hover:from-ebe-orange group-hover:to-ebe-orange/80 text-white flex items-center justify-center font-bold flex-shrink-0 transition-all duration-300">
                     {index + 1}
                   </div>
-                  <div className="flex-1">
-                    <p className="text-neutral-700 font-medium">{deliverable}</p>
-                  </div>
+                  <p className="text-ebe-anthracite/80 font-medium text-sm leading-relaxed">
+                    {deliverable}
+                  </p>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {benefits.length > 0 && (

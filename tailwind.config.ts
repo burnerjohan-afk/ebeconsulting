@@ -11,9 +11,14 @@ const config: Config = {
       colors: {
         // Couleurs premium vives inspirées d'Apple
         ebe: {
-          gray: "#1D1D1F", // Noir Apple pour texte
-          orange: "#FF9500", // Orange vif et saturé (style Apple)
-          offWhite: "#FFFFFF", // Blanc pur
+          gray: "#1D1D1F",
+          anthracite: "#3E4A4F",
+          anthraciteDark: "#2a3338",
+          orange: "#F2A12C",
+          orangeBright: "#FF9500",
+          offWhite: "#FFFFFF",
+          warmWhite: "#F7F4EF",
+          grayLight: "#EBE9E5",
         },
         // Palette premium avec couleurs vives
         primary: {
@@ -55,8 +60,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "var(--font-montserrat)", "system-ui", "sans-serif"],
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       fontWeight: {
         normal: "400",

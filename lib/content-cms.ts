@@ -72,10 +72,14 @@ export async function getContent() {
       hero: hero || content.hero,
       badges: badges.length > 0 ? badges : content.badges,
       method: {
+        ...content.method,
         title: homePage?.methodIntro?.title || content.method.title,
         subtitle: homePage?.methodIntro?.subtitle || content.method.subtitle,
         steps: adaptedSteps.length > 0 ? adaptedSteps : content.method.steps,
       },
+      signaux: content.signaux,
+      differentiation: content.differentiation,
+      homepageOffers: content.homepageOffers,
       offers: {
         title: content.offers.title,
         subtitle: content.offers.subtitle,

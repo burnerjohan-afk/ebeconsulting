@@ -16,7 +16,7 @@ export default function BadgesSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-white via-white to-white">
+    <section className="section-padding bg-ebe-anthraciteDark section-separator">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {content.badges.map((badge, index) => {
@@ -32,7 +32,7 @@ export default function BadgesSection() {
                 whileHover={{ scale: 1.02, y: -4 }}
                 className="group relative"
               >
-                <div className="relative h-full bg-white rounded-xl p-6 border border-[#E5E5EA] shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="relative h-full bg-white rounded-xl p-6 border border-ebe-anthracite/10 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
                   {/* Contenu */}
                   <div className="relative z-10 flex flex-col items-center text-center">
                     {/* Icône */}

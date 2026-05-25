@@ -26,8 +26,8 @@ export const theme = {
     },
   },
   typography: {
-    fontSans: "var(--font-inter), var(--font-montserrat)",
-    fontSerif: "var(--font-playfair)",
+    fontSans: "var(--font-inter), system-ui, sans-serif",
+    fontSerif: "var(--font-inter), system-ui, sans-serif",
   },
   spacing: {
     xs: "0.5rem",

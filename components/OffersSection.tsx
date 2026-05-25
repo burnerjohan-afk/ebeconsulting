@@ -1,98 +1,99 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { content } from "@/lib/content";
+import OfferPhaseCard, { offerPhaseCardVariants } from "./OfferPhaseCard";
 import Button from "./ui/Button";
 import { icons } from "@/lib/icons";
-import { ArrowRight } from "lucide-react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.15 },
+  },
+};
 
 export default function OffersSection() {
+  const { homepageOffers } = content;
+
   return (
-    <section className="section-padding bg-white" aria-labelledby="offers-heading">
-      <div className="container-custom">
+    <section
+      id={homepageOffers.id}
+      className="relative section-padding section-charte-alt section-separator overflow-hidden"
+      aria-labelledby="offers-heading"
+    >
+      <motion.div
+        className="absolute top-1/4 -right-20 w-72 h-72 bg-ebe-orange/[0.04] rounded-full blur-3xl pointer-events-none"
+        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.55, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        aria-hidden
+      />
+
+      <motion.div
+        className="container-custom relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+      >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          variants={offerPhaseCardVariants}
+          className="text-center mb-6 max-w-3xl mx-auto"
         >
-          <h2 id="offers-heading" className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
-            {content.offers.title}
-          </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            {content.offers.subtitle}
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-4">
+            {homepageOffers.eyebrow}
           </p>
+          <h2
+            id="offers-heading"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-ebe-anthraciteDark mb-4 leading-tight"
+          >
+            {homepageOffers.title}{" "}
+            <span className="text-ebe-orange italic">
+              {homepageOffers.titleHighlight}
+            </span>
+          </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {content.offers.list.map((offer, index) => (
-            <motion.div
-              key={offer.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.02, y: -4 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="card-premium h-full group">
-                <div className="mb-6 flex items-center gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1D1D1F] to-black text-white flex items-center justify-center shadow-lg group-hover:from-[#FF9500] group-hover:to-[#E68500] transition-all duration-300">
-                      {offer.id === "clarifier" && (
-                        <icons.offers.clarifier className="w-6 h-6" />
-                      )}
-                      {offer.id === "structurer" && (
-                        <icons.offers.structurer className="w-6 h-6" />
-                      )}
-                      {offer.id === "comprendre" && (
-                        <icons.offers.comprendre className="w-6 h-6" />
-                      )}
-                      {offer.id === "securiser" && (
-                        <icons.offers.securiser className="w-6 h-6" />
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <span className="text-xs font-semibold text-[#FF9500] uppercase tracking-wider block mb-1">
-                      {offer.subtitle}
-                    </span>
-                    <h3 className="text-2xl font-bold text-primary-900">
-                      {offer.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-neutral-700 mb-6 leading-relaxed">
-                  {offer.description}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                  <Button
-                    href={`/contact?subject=${encodeURIComponent(`Offre : ${offer.title}`)}&offer=${offer.id}`}
-                    variant="primary"
-                    icon={icons.cta.arrow}
-                    iconPosition="right"
-                    className="flex-1 text-sm"
-                  >
-                    Demander un devis
-                  </Button>
-                  <Button
-                    href={`/offres/${offer.id}`}
-                    variant="ghost"
-                    icon={ArrowRight}
-                    iconPosition="right"
-                    className="flex-1 text-sm"
-                  >
-                    En savoir plus
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
+        <motion.p
+          variants={offerPhaseCardVariants}
+          className="text-center text-sm md:text-base text-ebe-anthracite/65 max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          {homepageOffers.intro}
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-7xl mx-auto mb-10"
+          variants={containerVariants}
+        >
+          {homepageOffers.phases.map((phase, index) => (
+            <OfferPhaseCard
+              key={phase.id}
+              phase={phase}
+              index={index}
+              variant="preview"
+            />
           ))}
-        </div>
-      </div>
+        </motion.div>
+
+        <motion.div
+          variants={offerPhaseCardVariants}
+          className="text-center"
+        >
+          <Button
+            href="/offres"
+            variant="primary"
+            icon={icons.cta.arrow}
+            iconPosition="right"
+            className="text-base px-8 py-4"
+          >
+            Explorer nos offres en détail
+          </Button>
+          <p className="text-xs text-ebe-anthracite/50 mt-4">
+            Livrables, résultats attendus et modalités sur la page dédiée
+          </p>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
-

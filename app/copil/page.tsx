@@ -33,7 +33,7 @@ export default function COPILPage() {
 
       <div className="pb-16">
         {/* Missions */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
@@ -45,7 +45,7 @@ export default function COPILPage() {
       </section>
 
       {/* Benefits */}
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
@@ -57,7 +57,7 @@ export default function COPILPage() {
       </section>
 
       {/* Modalities */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <Card className="bg-gradient-to-br from-accent-50 to-accent-100 border-2 border-accent-200">
@@ -102,7 +102,7 @@ export default function COPILPage() {
       </section>
 
       {/* Value Proposition */}
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">
             {content.copil.valueProposition.title}
@@ -124,7 +124,7 @@ export default function COPILPage() {
             <Button
               href="/contact?subject=Appui COPIL&offer=copil"
               variant="primary"
-              className="text-lg px-10 py-5 !bg-white !text-accent-700 hover:!bg-neutral-100 hover:!text-accent-800 shadow-xl transform hover:scale-105 transition-all font-bold"
+              className="text-lg px-10 py-5 !bg-white !text-accent-700 hover:!bg-ebe-warmWhite hover:!text-accent-800 shadow-xl transform hover:scale-105 transition-all font-bold"
             >
               <svg
                 className="w-5 h-5 mr-2 inline"
@@ -147,7 +147,7 @@ export default function COPILPage() {
       </section>
 
       {/* CTA Section secondaire */}
-      <section className="section-padding bg-neutral-50">
+      <section className="section-padding section-charte">
         <div className="container-custom text-center">
           <h3 className="text-2xl font-bold text-primary-900 mb-4">
             Besoin de plus d'informations ?

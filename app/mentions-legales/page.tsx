@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function LegalPage() {
   return (
     <div className="pt-32 pb-16">
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto prose prose-lg">
             <h1 className="text-4xl font-bold text-primary-900 mb-8">

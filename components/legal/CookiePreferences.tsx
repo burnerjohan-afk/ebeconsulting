@@ -73,7 +73,7 @@ export default function CookiePreferences() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-[#F5F5F7] border border-[#1D1D1F]/10 rounded-lg p-4">
+      <div className="bg-ebe-warmWhite border border-ebe-anthracite/10 rounded-lg p-4">
         <div className="flex items-start gap-3">
           <Info className="w-5 h-5 text-[#1D1D1F] flex-shrink-0 mt-0.5" />
           <div className="text-sm text-[#1D1D1F]">

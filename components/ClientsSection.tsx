@@ -2,22 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-// Liste des logos clients (ajustez selon vos fichiers)
-const clients = [
-  {
-    name: "Neodisplay",
-    logo: "/image/neodisplay.jpg",
-  },
-  {
-    name: "Select",
-    logo: "/image/select logo.png",
-  },
-];
+import { trustSectionLogos } from "@/lib/client-logos";
 
 export default function ClientsSection() {
   return (
-    <section className="section-padding bg-white" aria-labelledby="clients-heading">
+    <section className="section-padding section-charte section-separator" aria-labelledby="clients-heading">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +23,10 @@ export default function ClientsSection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {clients.map((client, index) => (
+        <motion.div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 max-w-5xl mx-auto">
+          {trustSectionLogos.map((client, index) => (
             <motion.div
-              key={index}
+              key={client.name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -55,7 +44,7 @@ export default function ClientsSection() {
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

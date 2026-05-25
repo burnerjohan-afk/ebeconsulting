@@ -29,8 +29,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/98 backdrop-blur-md shadow-lg border-b border-neutral-200/50"
-          : "bg-white/95 backdrop-blur-sm"
+          ? "bg-ebe-warmWhite/98 backdrop-blur-md shadow-lg border-b border-ebe-anthracite/10"
+          : "bg-ebe-warmWhite/95 backdrop-blur-sm"
       }`}
     >
       <nav className="container-custom">
@@ -231,7 +231,7 @@ function MobileNavLink({
         className={`px-4 py-3 rounded-lg transition-colors flex items-center gap-3 ${
           isActive
             ? "bg-primary-50 text-primary-900 font-semibold border-l-4 border-[#F2A12C]"
-            : "text-neutral-700 hover:bg-neutral-50 hover:text-primary-900"
+            : "text-neutral-700 hover:bg-ebe-anthracite/5 hover:text-primary-900"
         }`}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

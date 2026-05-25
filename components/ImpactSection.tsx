@@ -6,12 +6,7 @@ import { icons } from "@/lib/icons";
 
 export default function ImpactSection() {
   return (
-    <section className="relative section-padding overflow-hidden">
-      {/* Background simple */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-50 via-white to-neutral-50" />
-      </div>
-
+    <section className="relative section-padding section-charte section-separator overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

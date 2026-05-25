@@ -63,9 +63,11 @@ export const icons = {
   },
   // Méthode (4 étapes)
   method: {
+    voir: Eye,
     comprendre: ScanSearch,
-    decider: Gavel,
     structurer: Network,
+    transmettre: Users,
+    decider: Gavel,
     securiser: Shield,
   },
   // Offres

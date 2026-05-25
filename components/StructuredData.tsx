@@ -9,6 +9,7 @@ export default function StructuredData() {
     name: content.company.name,
     legalName: "SELECT SERVICES",
     description: content.company.description,
+    slogan: content.company.tagline,
     url: baseUrl,
     logo: {
       "@type": "ImageObject",

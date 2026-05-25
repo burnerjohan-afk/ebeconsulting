@@ -41,7 +41,7 @@ async function seed() {
           defaultDescription: content.company.description,
         },
         socialLinks: {
-          linkedin: 'https://www.linkedin.com/company/ebe-consulting',
+          linkedin: 'https://www.linkedin.com/company/ebe-consulting/posts/?feedView=all',
           facebook: 'https://www.facebook.com/ebeconsulting',
           instagram: 'https://www.instagram.com/ebeconsulting',
         },
@@ -64,14 +64,14 @@ async function seed() {
       data: {
         hero: {
           h1: content.hero.title,
-          subheadline: content.hero.subtitle,
+          subheadline: `${content.hero.signature} ${content.hero.signatureSuite}`,
           primaryCTA: {
             label: content.hero.ctaPrimary,
             href: '/contact',
           },
           secondaryCTA: {
             label: content.hero.ctaSecondary,
-            href: '/offres',
+            href: content.hero.ctaSecondaryHref,
           },
         },
         proofBadges,
@@ -153,6 +153,10 @@ async function seed() {
     const logoFiles = [
       { name: 'Neodisplay', file: 'neodisplay.jpg' },
       { name: 'SELECT Service', file: 'select logo.png' },
+      { name: 'FlowLab', file: 'flowlab.png' },
+      { name: 'Evolya', file: 'evolya.png' },
+      { name: 'Semas', file: 'semas.png' },
+      { name: 'Securidom', file: 'securidom.png' },
     ]
 
     for (let i = 0; i < logoFiles.length; i++) {

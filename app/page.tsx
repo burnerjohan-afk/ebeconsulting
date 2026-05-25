@@ -1,11 +1,10 @@
 import { Metadata } from "next";
-import { content } from "@/lib/content";
-import Button from "@/components/ui/Button";
-import Card from "@/components/Card";
 import Hero from "@/components/Hero";
 import StickyCTA from "@/components/StickyCTA";
+import SignauxSection from "@/components/SignauxSection";
 import MethodSection from "@/components/MethodSection";
 import OffersSection from "@/components/OffersSection";
+import DifferentiationSection from "@/components/DifferentiationSection";
 import COPILSection from "@/components/COPILSection";
 import ImpactSection from "@/components/ImpactSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -15,16 +14,16 @@ import TargetAudienceSection from "@/components/TargetAudienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 export const metadata: Metadata = {
-  title: "Accompagnement dirigeant TPE/PME - EBE Consulting",
+  title: "Management de transition & conseil opérationnel | EBE Consulting",
   description:
-    "Accompagnement dirigeants TPE/PME : structuration organisationnelle, pilotage stratégique et performance durable. Immersion terrain, décisions sécurisées.",
+    "J'arrive. J'analyse. J'agis. EBE Consulting accompagne les dirigeants TPE/PME : lecture terrain, structuration organisationnelle et remise en mouvement durable.",
   alternates: {
     canonical: "https://ebeconsulting.fr",
   },
   openGraph: {
-    title: "EBE Consulting | Accompagnement dirigeants TPE/PME",
+    title: "EBE Consulting | J'arrive. J'analyse. J'agis.",
     description:
-      "Accompagnement dirigeants TPE/PME : structuration organisationnelle, pilotage stratégique et performance durable. Immersion terrain, décisions sécurisées.",
+      "Management de transition et conseil opérationnel pour des organisations plus claires, plus solides et plus autonomes.",
     url: "https://ebeconsulting.fr",
   },
 };
@@ -32,39 +31,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
       <Hero />
-
-      {/* Badges Section */}
-      <BadgesSection />
-
-      {/* Method Section */}
+      <SignauxSection />
       <MethodSection />
-
-      {/* Offers Section */}
       <OffersSection />
-
-      {/* Clients Section */}
+      <DifferentiationSection />
+      <BadgesSection />
       <ClientsSection />
-
-      {/* COPIL Focus Section */}
       <COPILSection />
-
-      {/* Target Audience Section */}
       <TargetAudienceSection />
-
-      {/* Impact Section */}
       <ImpactSection />
-
-      {/* Testimonials Section */}
       <TestimonialsSection />
-
-      {/* Final CTA Section */}
       <FinalCTA />
-
-      {/* Sticky CTA Button (Mobile) */}
       <StickyCTA />
     </>
   );
 }
-

@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-[#1D1D1F]/10">
+    <footer className="bg-ebe-warmWhite border-t border-ebe-anthracite/10">
       <div className="container-custom py-8 md:py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Company Info */}
@@ -132,9 +132,7 @@ export default function Footer() {
 
         <div className="border-t border-[#1D1D1F]/10 mt-6 pt-4">
           <div className="text-center text-[#1D1D1F]/60 text-xs space-y-2">
-            <p>
-              © {currentYear} {content.company.name}. Tous droits réservés.
-            </p>
+            <p>{content.footer.copyright ?? `© ${currentYear} ${content.company.name}. Tous droits réservés.`}</p>
             <p className="text-[#1D1D1F]/70">
               Données personnelles : le site applique les principes RGPD.{" "}
               <Link

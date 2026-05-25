@@ -31,7 +31,7 @@ export default function ResourcesPage() {
       <div className="pb-16">
 
       {/* Coming Soon */}
-      <section className="section-padding bg-white">
+      <section className="section-padding section-charte">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <ResourcesPageCard />

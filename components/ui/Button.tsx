@@ -39,7 +39,7 @@ export default function Button({
     secondary:
       "bg-[#1D1D1F] text-white border-2 border-[#1D1D1F] hover:bg-black hover:border-black shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus:ring-[#1D1D1F] font-bold",
     ghost:
-      "bg-transparent text-[#1D1D1F] border border-[#1D1D1F] hover:bg-[#F5F5F7] hover:border-[#1D1D1F] focus:border-[#1D1D1F] focus:ring-0 font-semibold",
+      "bg-transparent text-[#1D1D1F] border border-[#1D1D1F] hover:bg-ebe-warmWhite hover:border-[#1D1D1F] focus:border-[#1D1D1F] focus:ring-0 font-semibold",
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

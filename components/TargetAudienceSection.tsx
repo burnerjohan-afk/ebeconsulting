@@ -6,7 +6,7 @@ import Card from "./Card";
 
 export default function TargetAudienceSection() {
   return (
-    <section className="section-padding bg-neutral-50">
+    <section className="section-padding section-charte-alt section-separator">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
