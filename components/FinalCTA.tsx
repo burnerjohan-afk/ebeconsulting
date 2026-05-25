@@ -14,10 +14,10 @@ export default function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative section-padding overflow-hidden bg-ebe-anthraciteDark"
+      className="relative section-padding overflow-hidden bg-ebe-anthraciteDark pb-16 sm:pb-24"
     >
       <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-20 bg-ebe-orange"
+        className="hidden sm:block absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-20 bg-ebe-orange pointer-events-none"
         aria-hidden
       />
 
@@ -63,15 +63,17 @@ export default function FinalCTA() {
                 </Link>
               </div>
 
-              <p className="text-sm text-white/40 tracking-wide">
+              <p className="text-sm text-white/40 tracking-wide px-2 sm:px-0 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-1 sm:gap-0">
                 <a
                   href={`mailto:${contact.email}`}
                   className="text-ebe-orange hover:underline"
                 >
                   {contact.email}
                 </a>
-                <span className="mx-2">·</span>
-                {contact.zones}
+                <span className="hidden sm:inline mx-2" aria-hidden>
+                  ·
+                </span>
+                <span className="text-white/50 sm:text-white/40">{contact.zones}</span>
               </p>
             </motion.div>
           ) : (
