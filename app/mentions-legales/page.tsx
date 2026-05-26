@@ -92,10 +92,10 @@ export default function LegalPage() {
                   Pour exercer ce droit, vous pouvez nous contacter à l'adresse
                   suivante :{" "}
                   <a
-                    href="mailto:eb@ebeconsulting.fr"
+                    href="mailto:contact@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    eb@ebeconsulting.fr
+                    contact@ebeconsulting.fr
                   </a>
                 </p>
                 <p>

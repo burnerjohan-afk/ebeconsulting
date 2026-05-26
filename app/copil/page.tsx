@@ -6,16 +6,16 @@ import PageHero from "@/components/PageHero";
 import { COPILMissions, COPILBenefits, COPILValue } from "@/components/COPILPageCards";
 
 export const metadata: Metadata = {
-  title: "Appui Comité de Pilotage - 3000€ HT/mois",
+  title: "Appui Comité de Pilotage | EBE Consulting",
   description:
-    "Appui stratégique mensuel au Comité de Pilotage : sécurisation décisions, anticipation impacts, traduction stratégie→terrain. Forfait 3000€ HT/mois.",
+    "Appui stratégique mensuel au Comité de Pilotage : sécurisation des décisions, anticipation des impacts, traduction stratégie → terrain.",
   alternates: {
     canonical: "https://ebeconsulting.fr/copil",
   },
   openGraph: {
     title: "Appui Comité de Pilotage | EBE Consulting",
     description:
-      "Appui stratégique mensuel au Comité de Pilotage : sécurisation décisions, anticipation impacts, traduction stratégie→terrain. Forfait 3000€ HT/mois.",
+      "Appui stratégique mensuel au Comité de Pilotage : sécurisation des décisions, anticipation des impacts, traduction stratégie → terrain.",
     url: "https://ebeconsulting.fr/copil",
   },
 };
@@ -66,12 +66,6 @@ export default function COPILPage() {
               </h2>
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                  <span className="font-semibold text-neutral-700">Tarif</span>
-                  <span className="text-2xl font-bold text-primary-900">
-                    {content.copil.modalities.pricing}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-white rounded-lg">
                   <span className="font-semibold text-neutral-700">
                     Facturation
                   </span>
@@ -112,19 +106,19 @@ export default function COPILPage() {
       </section>
 
       {/* CTA Section principale */}
-      <section className="section-padding bg-gradient-to-br from-accent-600 to-accent-700 text-white">
+      <section className="section-padding bg-ebe-anthraciteDark text-white">
         <div className="container-custom text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Prêt à démarrer avec l'appui COPIL ?
             </h2>
-            <p className="text-xl text-accent-100 mb-8">
+            <p className="text-xl text-white/75 mb-8">
               Demandez un devis pour l'appui au Comité de Pilotage et recevez une proposition personnalisée sous 48h.
             </p>
             <Button
               href="/contact?subject=Appui COPIL&offer=copil"
               variant="primary"
-              className="text-lg px-10 py-5 !bg-white !text-accent-700 hover:!bg-ebe-warmWhite hover:!text-accent-800 shadow-xl transform hover:scale-105 transition-all font-bold"
+              className="text-lg px-10 py-5 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-xl font-bold"
             >
               <svg
                 className="w-5 h-5 mr-2 inline"
@@ -139,7 +133,7 @@ export default function COPILPage() {
               </svg>
               Demander un devis gratuit
             </Button>
-            <p className="text-sm text-accent-200 mt-4">
+            <p className="text-sm text-white/50 mt-4">
               Réponse sous 48h ouvrées • Devis gratuit et sans engagement
             </p>
           </div>

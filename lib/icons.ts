@@ -52,6 +52,7 @@ export const icons = {
     home: Home,
     offers: Layers,
     copil: Shield,
+    audits: ClipboardList,
     about: User,
     contact: Mail,
   },

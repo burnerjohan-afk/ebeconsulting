@@ -119,11 +119,15 @@
   }
 
   .overlay-dark {
-    @apply absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/75;
+    @apply absolute inset-0 bg-gradient-to-b from-ebe-anthraciteDark/80 via-ebe-anthracite/70 to-ebe-anthraciteDark/85;
   }
 
   .overlay-gradient {
-    @apply absolute inset-0 bg-gradient-to-br from-[#1D1D1F]/80 via-black/70 to-[#1D1D1F]/80;
+    @apply absolute inset-0 bg-gradient-to-br from-ebe-anthraciteDark/85 via-ebe-anthracite/75 to-ebe-anthraciteDark/90;
+  }
+
+  .section-cta-charte {
+    @apply section-padding bg-ebe-anthraciteDark text-white;
   }
 
   .gradient-text {

@@ -22,7 +22,7 @@ async function seed() {
       data: {
         brandName: content.company.name,
         baseline: content.company.tagline,
-        contactEmail: 'eb@ebeconsulting.fr',
+        contactEmail: 'contact@ebeconsulting.fr',
         footerText: content.footer.description,
         rgpdFooterLine: 'Données personnelles : le site applique les principes RGPD.',
         globalCTAs: {

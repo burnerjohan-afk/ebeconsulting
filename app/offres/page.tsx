@@ -50,10 +50,7 @@ export default function OffersPage() {
                 <p className="text-base md:text-lg text-white/75 mb-6 max-w-2xl mx-auto">
                   {copil.description}
                 </p>
-                <p className="text-sm text-ebe-orange font-semibold mb-8">
-                  Forfait {copil.modalities.pricing} · {copil.modalities.billing}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
                   <Button
                     href="/contact?subject=Appui COPIL&offer=copil"
                     variant="primary"

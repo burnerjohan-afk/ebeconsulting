@@ -20,10 +20,10 @@ export default function ContactPageInfo() {
         <h3 className="text-xl font-bold text-primary-900 mb-2">Email</h3>
         <p className="text-neutral-700">
           <a
-            href="mailto:contact@ebe-consulting.fr"
+            href="mailto:contact@ebeconsulting.fr"
             className="hover:text-[#F2A12C] transition-colors"
           >
-            contact@ebe-consulting.fr
+            contact@ebeconsulting.fr
           </a>
         </p>
       </motion.div>

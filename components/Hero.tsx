@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { ArrowRight } from "lucide-react";
@@ -18,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950" />
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-[url('/image/reunion-ebe.png')] bg-cover bg-no-repeat bg-[center_24%] sm:bg-[center_22%]"
           aria-hidden
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -85,31 +84,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center lg:items-end gap-10 w-full max-w-[360px] mx-auto lg:mx-0 lg:ml-auto"
+            className="w-full max-w-[360px] mx-auto lg:mx-0 lg:ml-auto"
           >
-            {/* Logo seul — bloc dédié */}
-            <div className="relative">
-              <div
-                className="absolute -inset-8 rounded-[2.5rem] bg-ebe-orange/20 blur-3xl opacity-70 pointer-events-none"
-                aria-hidden
-              />
-              <div className="relative bg-white rounded-3xl p-10 md:p-12 shadow-[0_28px_70px_rgba(0,0,0,0.32)] ring-1 ring-white/80">
-                <Image
-                  src="/image/logo.PNG"
-                  alt="EBE Consulting"
-                  width={200}
-                  height={200}
-                  className="w-32 h-32 md:w-36 md:h-36 object-contain"
-                  priority
-                  unoptimized
-                />
-              </div>
-            </div>
-
             {/* Chiffres clés — bloc séparé */}
             <div className="w-full rounded-2xl border border-white/15 bg-black/30 backdrop-blur-md px-6 py-5 shadow-[0_16px_40px_rgba(0,0,0,0.2)]">
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-5">
-                Notre expérience
+                Mon expérience
               </p>
               <div className="space-y-4">
                 {hero.stats.map((stat) => (

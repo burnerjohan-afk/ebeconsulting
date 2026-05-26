@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { content } from "@/lib/content";
 import Button from "@/components/ui/Button";
 import PageHero from "@/components/PageHero";
@@ -31,8 +32,45 @@ export default function AboutPage() {
       />
 
       <div className="pb-16">
+        {/* Portrait */}
+        <section className="section-padding section-charte section-separator">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
+              <div className="w-full max-w-[20rem] sm:max-w-[22rem] mx-auto lg:mx-0">
+                <Image
+                  src="/image/photo-eb.png"
+                  alt={content.about.profile.imageAlt}
+                  width={731}
+                  height={1024}
+                  sizes="(max-width: 1024px) 352px, 22rem"
+                  className="w-full h-auto rounded-2xl shadow-[0_24px_60px_rgba(62,74,79,0.15)] ring-1 ring-ebe-anthracite/10"
+                  priority
+                />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-4">
+                  {content.about.profile.eyebrow}
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 leading-tight">
+                  {content.about.profile.title}
+                </h2>
+                <div className="space-y-4">
+                  {content.about.profile.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 48)}
+                      className="text-lg text-neutral-700 leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Approach Section */}
-      <section className="section-padding section-charte">
+      <section className="section-padding section-charte-alt section-separator">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-6 text-center">
@@ -48,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="section-padding section-charte">
+      <section className="section-padding section-charte section-separator">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
@@ -72,12 +110,12 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary-900 text-white">
+      <section className="section-padding bg-ebe-anthraciteDark text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">
             En savoir plus sur notre accompagnement
           </h2>
-          <p className="text-lg text-primary-100 mb-8">
+          <p className="text-lg text-white/75 mb-8">
             Découvrez nos offres ou échangeons directement sur votre situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -87,7 +125,7 @@ export default function AboutPage() {
             <Button
               href="/contact"
               variant="primary"
-              className="text-lg px-8 py-4 bg-white text-[#3E4A4F] hover:bg-ebe-warmWhite"
+              className="text-lg px-8 py-4 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-lg font-bold"
             >
               Nous contacter
             </Button>

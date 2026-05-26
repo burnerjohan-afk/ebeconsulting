@@ -393,9 +393,151 @@ export const content = {
       },
     ],
   },
+  audits: {
+    title: "Audits & diagnostic",
+    description:
+      "Avant toute transformation, une lecture lucide de votre situation. Des audits ciblés pour éclairer vos décisions et engager la suite avec méthode.",
+    intro: {
+      eyebrow: "Point de départ recommandé",
+      title: "Commencer par un audit, c'est voir juste avant d'agir",
+      lead:
+        "Beaucoup d'accompagnements échouent parce qu'on traite les symptômes sans avoir clarifié la situation réelle. Un audit n'est pas une formalité : c'est un regard structuré, ancré dans le terrain, qui permet au dirigeant de savoir où il en est — et quoi prioriser.",
+      paragraphs: [
+        "Chez EBE Consulting, l'audit est souvent la première étape : comprendre l'organisation telle qu'elle fonctionne vraiment, identifier les écarts, les forces et les zones de fragilité, puis traduire ce constat en décisions actionnables.",
+        "Selon votre contexte, nous adaptons le périmètre : diagnostic global, audit qualité, lecture des processus, préparation ou suivi de certification APSAD ou ISO. L'objectif reste le même : vous donner une base solide pour décider sereinement.",
+      ],
+    },
+    why: {
+      title: "Pourquoi démarrer par un audit ?",
+      items: [
+        {
+          title: "Décider sur des faits, pas des impressions",
+          description:
+            "Vous disposez d'une photographie claire de la situation : organisation, qualité, processus ou conformité — selon le type d'audit retenu.",
+        },
+        {
+          title: "Prioriser ce qui compte vraiment",
+          description:
+            "Plutôt que de tout traiter en même temps, vous concentrez vos efforts et vos ressources sur les leviers à plus fort impact.",
+        },
+        {
+          title: "Sécuriser investissements et changements",
+          description:
+            "Un audit limite les actions inutiles, évite les reprises et donne du sens aux prochaines étapes d'accompagnement ou de certification.",
+        },
+        {
+          title: "Engager les équipes avec un langage commun",
+          description:
+            "Le constat partagé crée une base de dialogue entre direction, managers et opérationnels — sans jugement, avec exigence.",
+        },
+      ],
+    },
+    approach: {
+      title: "Comment se déroule un audit EBE",
+      steps: [
+        {
+          title: "Cadrage",
+          description:
+            "Échange avec le dirigeant : objectifs, périmètre, contraintes de temps et niveau de confidentialité attendu.",
+        },
+        {
+          title: "Immersion terrain",
+          description:
+            "Entretiens, observation des pratiques réelles, analyse documentaire — au plus près du fonctionnement effectif.",
+        },
+        {
+          title: "Analyse & recoupements",
+          description:
+            "Mise en perspective des constats, identification des écarts, risques et opportunités d'amélioration.",
+        },
+        {
+          title: "Restitution & plan d'action",
+          description:
+            "Synthèse claire, priorisation et recommandations concrètes — exploitables immédiatement par la direction.",
+        },
+      ],
+    },
+    types: {
+      title: "Les types d'audit proposés",
+      subtitle:
+        "Chaque entreprise est différente. Nous combinons ou ciblons les audits selon vos enjeux du moment.",
+      items: [
+        {
+          id: "diagnostic",
+          title: "Audit de situation / diagnostic entreprise",
+          description:
+            "Une lecture globale de l'organisation : pilotage, rôles, coordination, dynamique managériale et signaux de tension. Idéal avant un accompagnement, une croissance ou une reprise de direction.",
+          highlights: [
+            "Vision transverse commerce / exploitation / support",
+            "Identification des priorités et points de blocage",
+            "Base pour un plan d'action réaliste",
+          ],
+        },
+        {
+          id: "qualite",
+          title: "Audit qualité",
+          description:
+            "Évaluation du système qualité tel qu'il est vécu sur le terrain : engagement des équipes, maîtrise des processus, traitement des non-conformités et culture d'amélioration continue.",
+          highlights: [
+            "Écart entre système formalisé et pratique réelle",
+            "Points de vigilance client et opérationnels",
+            "Pistes d'amélioration rapides et durables",
+          ],
+        },
+        {
+          id: "organisation",
+          title: "Audit organisationnel & processus",
+          description:
+            "Analyse des processus clés, des flux, des responsabilités et de l'efficacité opérationnelle. Pour les entreprises qui grandissent, se transforment ou sentent que « ça ne coule plus ».",
+          highlights: [
+            "Cartographie des processus et interfaces",
+            "Clarification des rôles et redevabilités",
+            "Réduction des frictions et des doubles emplois",
+          ],
+        },
+        {
+          id: "apsad",
+          title: "Audit APSAD",
+          description:
+            "Accompagnement autour des exigences APSAD (systèmes de sécurité incendie et intrusion) : état des lieux, écarts par rapport aux référentiels, préparation ou suivi dans une logique de conformité et de sérénité opérationnelle.",
+          highlights: [
+            "Lecture des exigences applicables à votre contexte",
+            "Identification des écarts et actions correctives",
+            "Soutien dans la dynamique certification / maintien",
+          ],
+        },
+        {
+          id: "iso",
+          title: "Audit ISO (ex. ISO 9001)",
+          description:
+            "Analyse de conformité et de performance du système de management : documentation, preuves, audits internes, revues de direction et efficacité du dispositif sur le terrain.",
+          highlights: [
+            "Diagnostic pré-certification ou entre deux audits",
+            "Préparation aux audits de surveillance",
+            "Renforcement du système là où il faiblit",
+          ],
+        },
+      ],
+    },
+    deliverables: {
+      title: "Ce que vous en retirez concrètement",
+      items: [
+        "Un rapport de synthèse clair, orienté décision",
+        "Des constats hiérarchisés par niveau de criticité",
+        "Des recommandations priorisées et réalistes",
+        "Une base pour engager — ou non — un accompagnement structurant",
+        "Une meilleure visibilité pour vos instances de pilotage",
+      ],
+    },
+    cta: {
+      title: "Prêt à faire le point sur votre organisation ?",
+      description:
+        "Échangeons sur votre situation : nous vous proposerons le type d'audit le plus pertinent et un devis adapté à votre périmètre.",
+    },
+  },
   copil: {
     title: "Appui au Comité de Pilotage",
-    subtitle: "Forfait mensuel 3 000 € HT",
+    subtitle: "Accompagnement mensuel renouvelable",
     description:
       "Accompagnement stratégique du Comité de Pilotage pour sécuriser les décisions, anticiper les impacts et traduire la stratégie en actions terrain.",
     missions: [
@@ -549,12 +691,12 @@ export const content = {
       {
         question: "Quels sont vos tarifs ?",
         answer:
-          "Les tarifs varient selon la mission et sa complexité. L'appui COPIL est proposé en forfait mensuel à 3 000 € HT. Pour les autres missions, nous établissons un devis personnalisé après échange sur vos besoins.",
+          "Les tarifs varient selon la mission et sa complexité. Nous établissons un devis personnalisé après échange sur vos besoins et le périmètre retenu.",
       },
       {
         question: "Qu'est-ce que l'appui COPIL ?",
         answer:
-          "L'appui au Comité de Pilotage est un accompagnement stratégique mensuel pour sécuriser les décisions, anticiper les impacts et traduire la stratégie en actions terrain. C'est un forfait mensuel de 3 000 € HT, facturé mensuellement avec engagement renouvelable.",
+          "L'appui au Comité de Pilotage est un accompagnement stratégique mensuel pour sécuriser les décisions, anticiper les impacts et traduire la stratégie en actions terrain. L'engagement est mensuel et renouvelable ; les modalités sont définies sur devis après échange sur vos besoins.",
       },
       {
         question: "Intervenez-vous en Antilles-Guyane uniquement ?",
@@ -568,7 +710,7 @@ export const content = {
     subtitle:
       "Parlons de ce qui se joue réellement dans votre entreprise — et de ce qu'il faut remettre en mouvement. Un premier échange, sans engagement, pour voir juste.",
     phone: "06 96 85 73 02",
-    email: "eb@ebeconsulting.fr",
+    email: "contact@ebeconsulting.fr",
     zones: "Martinique, Guadeloupe, Guyane & France métropolitaine",
     form: {
       name: "Nom",
@@ -591,6 +733,7 @@ export const content = {
       "Offre 3 : Prendre du recul pour comprendre",
       "Offre 4 : Poser le cadre pour sécuriser",
       "Appui COPIL",
+      "Audit / diagnostic",
       "Autre",
     ],
     companySizes: [
@@ -604,6 +747,15 @@ export const content = {
     title: "À propos d'EBE Consulting",
     description:
       "EBE Consulting accompagne les dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle pour une performance durable.",
+    profile: {
+      eyebrow: "Derrière EBE Consulting",
+      title: "Une expérience de direction, pas une posture théorique",
+      paragraphs: [
+        "Plus de 30 ans passés au cœur des organisations : management d'équipes, qualité, relation client, pilotage opérationnel. J'interviens quand le dirigeant sent que le cadre, les rôles ou la dynamique collective ne tiennent plus comme ils devraient.",
+        "Mon approche est terrain, directe et exigeante — pour identifier ce qui bloque, clarifier ce qui doit l'être, et laisser une organisation plus claire, plus solide et plus autonome.",
+      ],
+      imageAlt: "Portrait — EBE Consulting",
+    },
     approach: {
       title: "Notre approche",
       description:

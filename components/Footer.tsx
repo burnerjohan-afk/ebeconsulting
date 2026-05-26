@@ -31,10 +31,10 @@ export default function Footer() {
             <div className="mb-4">
               <p className="text-[#1D1D1F]/90 text-xs mb-2 font-semibold">Contact</p>
               <a
-                href="mailto:eb@ebeconsulting.fr"
+                href="mailto:contact@ebeconsulting.fr"
                 className="text-[#1D1D1F]/70 hover:text-[#FF9500] transition-colors text-sm"
               >
-                eb@ebeconsulting.fr
+                contact@ebeconsulting.fr
               </a>
             </div>
             <div>
@@ -61,6 +61,14 @@ export default function Footer() {
                   className="text-[#1D1D1F]/70 hover:text-[#FF9500] transition-colors text-sm"
                 >
                   {content.footer.links.offers}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/audits"
+                  className="text-[#1D1D1F]/70 hover:text-[#FF9500] transition-colors text-sm"
+                >
+                  Audits
                 </Link>
               </li>
               <li>

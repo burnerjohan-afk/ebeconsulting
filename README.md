@@ -108,7 +108,7 @@ Créer un fichier `.env.local` à la racine du projet :
 # Optionnel : configurer un service d'email (Resend, SendGrid, etc.)
 EMAIL_SERVICE_API_KEY=votre_cle_api
 EMAIL_FROM=noreply@ebe-consulting.fr
-EMAIL_TO=contact@ebe-consulting.fr
+EMAIL_TO=contact@ebeconsulting.fr
 
 # URL du site (pour les métadonnées)
 NEXT_PUBLIC_SITE_URL=https://ebe-consulting.fr
@@ -193,4 +193,4 @@ Propriétaire - EBE Consulting
 
 ## 👤 Support
 
-Pour toute question technique, contactez : contact@ebe-consulting.fr
+Pour toute question technique, contactez : contact@ebeconsulting.fr

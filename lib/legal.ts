@@ -9,8 +9,8 @@ export const legalConfig = {
     legalName: "SELECT SERVICES",
     address: "BATIMENT HORIZON - BOITE 7\n4 RUE DE L'ASTROLABE\n97354 REMIRE-MONTJOLY",
     siret: "92881565300011",
-    email: "contact@ebe-consulting.fr",
-    rgpdEmail: "contact@select.fr", // Email pour exercer les droits RGPD
+    email: "contact@ebeconsulting.fr",
+    rgpdEmail: "contact@ebeconsulting.fr",
   },
   hosting: {
     name: "OVH",
@@ -40,7 +40,7 @@ export const legalConfig = {
     prospects: "3 ans maximum après dernier contact",
     technicalLogs: "12 mois maximum",
   },
-  lastUpdate: "25 mai 2026",
+  lastUpdate: "26 mai 2026",
 };
 
 export type CookieConsent = {

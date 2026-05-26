@@ -34,8 +34,11 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity group -ml-8 md:-ml-6 lg:-ml-10">
+        <div className="flex items-center justify-between gap-3 h-20 md:h-24 min-w-0">
+          <Link
+            href="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity group shrink-0 min-w-0 max-w-[52%] 2xl:max-w-none"
+          >
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -46,24 +49,27 @@ export default function Header() {
                 alt="EBE Consulting - Cabinet conseil accompagnement dirigeants TPE/PME"
                 width={320}
                 height={120}
-                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                className="h-12 sm:h-14 lg:h-16 w-auto max-w-[200px] sm:max-w-[220px] lg:max-w-[240px] object-contain object-left"
                 priority
                 unoptimized
                 aria-label="EBE Consulting - Retour à l'accueil"
               />
             </motion.div>
-            <span className="text-base md:text-lg font-bold text-primary-900 hidden xl:block group-hover:text-accent-600 transition-colors whitespace-nowrap">
+            <span className="text-sm font-bold text-primary-900 hidden 2xl:block group-hover:text-accent-600 transition-colors whitespace-nowrap truncate">
               {content.company.name}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1 ml-8">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0 ml-auto pl-2 xl:pl-4">
             <NavLink href="/" isActive={isActive("/")} icon={icons.navigation.home}>
               Accueil
             </NavLink>
             <NavLink href="/offres" isActive={isActive("/offres")} icon={icons.navigation.offers}>
               Offres
+            </NavLink>
+            <NavLink href="/audits" isActive={isActive("/audits")} icon={icons.navigation.audits}>
+              Audits
             </NavLink>
             <NavLink href="/copil" isActive={isActive("/copil")} icon={icons.navigation.copil}>
               Appui COPIL
@@ -132,6 +138,9 @@ export default function Header() {
                 <MobileNavLink href="/offres" isActive={isActive("/offres")} onClick={() => setIsMobileMenuOpen(false)} icon={icons.navigation.offers}>
                   Offres
                 </MobileNavLink>
+                <MobileNavLink href="/audits" isActive={isActive("/audits")} onClick={() => setIsMobileMenuOpen(false)} icon={icons.navigation.audits}>
+                  Audits
+                </MobileNavLink>
                 <MobileNavLink href="/copil" isActive={isActive("/copil")} onClick={() => setIsMobileMenuOpen(false)} icon={icons.navigation.copil}>
                   Appui COPIL
                 </MobileNavLink>
@@ -184,7 +193,7 @@ function NavLink({
   return (
     <Link href={href}>
       <motion.div
-        className={`relative px-3 py-2 rounded-lg transition-colors flex items-center gap-2 whitespace-nowrap ${
+        className={`relative px-2 xl:px-3 py-2 rounded-lg transition-colors flex items-center gap-1.5 xl:gap-2 whitespace-nowrap text-sm xl:text-base ${
           isActive
             ? "text-primary-900 font-semibold"
             : "text-neutral-700 hover:text-primary-900"
