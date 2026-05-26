@@ -746,7 +746,7 @@ export const content = {
   about: {
     title: "À propos d'EBE Consulting",
     description:
-      "EBE Consulting accompagne les dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle pour une performance durable.",
+      "J'accompagne les dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle pour une performance durable.",
     profile: {
       eyebrow: "Derrière EBE Consulting",
       title: "Une expérience de direction, pas une posture théorique",
@@ -757,32 +757,40 @@ export const content = {
       imageAlt: "Portrait — EBE Consulting",
     },
     approach: {
-      title: "Notre approche",
+      title: "Mon approche",
       description:
-        "Nous croyons que la performance durable se construit avant les chiffres. C'est pourquoi nous commençons toujours par comprendre le travail réel, structurer l'humain, et poser les cadres nécessaires avant de mesurer et piloter.",
+        "Je crois que la performance durable se construit avant les chiffres. C'est pourquoi je commence toujours par comprendre le travail réel, structurer l'humain, et poser les cadres nécessaires avant de mesurer et piloter.",
     },
+    valuesTitle: "Mes valeurs",
     values: [
       {
         title: "Immersion terrain",
         description:
-          "Nous n'agissons jamais avant de comprendre. L'observation du travail réel est au cœur de notre méthode.",
+          "Je n'agis jamais avant de comprendre. L'observation du travail réel est au cœur de ma méthode.",
       },
       {
         title: "Structuration humaine",
         description:
-          "Nous structurons l'humain avant de poser le cadre. Les rôles, responsabilités et le sens du travail sont prioritaires.",
+          "Je structure l'humain avant de poser le cadre. Les rôles, responsabilités et le sens du travail sont prioritaires.",
       },
       {
         title: "Vision transverse",
         description:
-          "Nous articulons commerce, exploitation, finance et qualité pour une vision globale et cohérente.",
+          "J'articule commerce, exploitation, finance et qualité pour une vision globale et cohérente.",
       },
       {
         title: "Expertise certifiée",
         description:
-          "Notre expertise ISO 9001 et APSAD garantit la conformité et l'amélioration continue.",
+          "Mon expertise ISO 9001 et APSAD garantit la conformité et l'amélioration continue.",
       },
     ],
+    cta: {
+      title: "En savoir plus sur mon accompagnement",
+      description:
+        "Découvrez mes offres ou échangeons directement sur votre situation.",
+      offersButton: "Découvrir mes offres",
+      contactButton: "Me contacter",
+    },
   },
   footer: {
     copyright: "© 2026 EBE Consulting · SASU · Martinique · Tous droits réservés",

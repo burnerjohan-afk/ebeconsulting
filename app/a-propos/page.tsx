@@ -90,7 +90,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
-              Nos valeurs
+              {content.about.valuesTitle}
             </h2>
             <AboutValues />
           </div>
@@ -113,21 +113,21 @@ export default function AboutPage() {
       <section className="section-padding bg-ebe-anthraciteDark text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">
-            En savoir plus sur notre accompagnement
+            {content.about.cta.title}
           </h2>
           <p className="text-lg text-white/75 mb-8">
-            Découvrez nos offres ou échangeons directement sur votre situation.
+            {content.about.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/offres" variant="primary" className="text-lg px-8 py-4">
-              Découvrir nos offres
+              {content.about.cta.offersButton}
             </Button>
             <Button
               href="/contact"
               variant="primary"
               className="text-lg px-8 py-4 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-lg font-bold"
             >
-              Nous contacter
+              {content.about.cta.contactButton}
             </Button>
           </div>
         </div>
