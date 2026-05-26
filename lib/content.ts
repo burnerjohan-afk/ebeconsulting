@@ -699,9 +699,9 @@ export const content = {
           "L'appui au Comité de Pilotage est un accompagnement stratégique mensuel pour sécuriser les décisions, anticiper les impacts et traduire la stratégie en actions terrain. L'engagement est mensuel et renouvelable ; les modalités sont définies sur devis après échange sur vos besoins.",
       },
       {
-        question: "Intervenez-vous en Antilles-Guyane uniquement ?",
+        question: "Intervenez-vous uniquement aux Antilles-Guyane ?",
         answer:
-          "Non, EBE Consulting intervient partout en France. L'expérience directionnelle Antilles-Guyane apporte une expertise particulière, mais nous accompagnons des entreprises sur tout le territoire.",
+          "EBE Consulting est ancrée aux Antilles-Guyane (Martinique, Guadeloupe, Guyane) : c'est mon terrain d'expertise et mon expérience directionnelle. J'interviens également en France métropolitaine lorsque la mission le justifie.",
       },
     ],
   },
