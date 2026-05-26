@@ -31,10 +31,10 @@ export default function Footer() {
             <div className="mb-4">
               <p className="text-[#1D1D1F]/90 text-xs mb-2 font-semibold">Contact</p>
               <a
-                href="mailto:contact@ebeconsulting.fr"
+                href="mailto:eb@ebeconsulting.fr"
                 className="text-[#1D1D1F]/70 hover:text-[#FF9500] transition-colors text-sm"
               >
-                contact@ebeconsulting.fr
+                eb@ebeconsulting.fr
               </a>
             </div>
             <div>

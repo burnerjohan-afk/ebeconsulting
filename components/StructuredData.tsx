@@ -28,7 +28,7 @@ export default function StructuredData() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      email: "contact@ebeconsulting.fr",
+      email: "eb@ebeconsulting.fr",
       availableLanguage: ["French", "fr"],
       areaServed: "FR",
     },

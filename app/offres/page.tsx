@@ -3,6 +3,7 @@ import { content } from "@/lib/content";
 import Button from "@/components/ui/Button";
 import PageHero from "@/components/PageHero";
 import OffersPageCards from "@/components/OffersPageCards";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Offres d'accompagnement dirigeant - EBE Consulting",
@@ -27,7 +28,7 @@ export default function OffersPage() {
       <PageHero
         title={offers.title}
         subtitle={offers.subtitle}
-        imageUrl="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070"
+        imageUrl={pageImages.hero.offers}
         overlayOpacity={0.35}
       />
 
@@ -38,7 +39,8 @@ export default function OffersPage() {
 
             <div className="relative overflow-hidden bg-ebe-anthraciteDark rounded-xl p-8 md:p-10 text-white text-center max-w-5xl mx-auto mt-4">
               <div
-                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070')] bg-cover bg-center opacity-20"
+                className="absolute inset-0 bg-cover bg-center opacity-20"
+                style={{ backgroundImage: `url(${pageImages.hero.offersCopilCard})` }}
                 aria-hidden
               />
               <div className="absolute inset-0 bg-ebe-anthraciteDark/85" aria-hidden />

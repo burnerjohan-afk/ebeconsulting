@@ -135,7 +135,7 @@ saveConsent({
 
 ## 📞 Contact RGPD
 
-Email pour exercer les droits RGPD : `contact@ebeconsulting.fr` (configurable dans `lib/legal.ts`)
+Email pour exercer les droits RGPD : `eb@ebeconsulting.fr` (configurable dans `lib/legal.ts`)
 
 ---
 

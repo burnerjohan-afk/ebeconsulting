@@ -12,7 +12,7 @@ export default function COPILSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950" />
         {/* Image de fond */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute inset-0 bg-[url('/image/pages/hero-offers-copil.jpg')] bg-cover bg-center bg-no-repeat" />
         {/* Overlay réduit pour voir plus l'image */}
         <div className="absolute inset-0 bg-black/35" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/50 via-primary-800/40 to-primary-900/60" />

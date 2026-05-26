@@ -59,10 +59,10 @@ export default function PrivacyPage() {
                   <br />
                   Email :{" "}
                   <a
-                    href="mailto:contact@ebeconsulting.fr"
+                    href="mailto:eb@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    contact@ebeconsulting.fr
+                    eb@ebeconsulting.fr
                   </a>
                 </p>
                 <p className="mt-2 text-sm text-neutral-600">
@@ -200,10 +200,10 @@ export default function PrivacyPage() {
                 <p className="mt-4">
                   Pour exercer ces droits, contactez-nous par email à :{" "}
                   <a
-                    href="mailto:contact@ebeconsulting.fr"
+                    href="mailto:eb@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    contact@ebeconsulting.fr
+                    eb@ebeconsulting.fr
                   </a>
                   {" "}en précisant votre demande et en joignant une copie de votre pièce d'identité.
                 </p>
@@ -281,10 +281,10 @@ export default function PrivacyPage() {
                   <br />
                   Email :{" "}
                   <a
-                    href="mailto:contact@ebeconsulting.fr"
+                    href="mailto:eb@ebeconsulting.fr"
                     className="text-primary-900 hover:text-accent-600"
                   >
-                    contact@ebeconsulting.fr
+                    eb@ebeconsulting.fr
                   </a>
                 </p>
               </section>

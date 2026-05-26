@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ResourcesPageCard from "@/components/ResourcesPageCard";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Ressources | EBE Consulting",
@@ -24,7 +25,7 @@ export default function ResourcesPage() {
       <PageHero
         title="Ressources"
         subtitle="Articles, insights et ressources sur l'accompagnement organisationnel et la performance durable."
-        imageUrl="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2128"
+        imageUrl={pageImages.hero.ressources}
         overlayOpacity={0.35}
       />
 

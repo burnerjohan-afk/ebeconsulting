@@ -3,6 +3,7 @@ import { content } from "@/lib/content";
 import ContactFormWrapper from "@/components/ContactFormWrapper";
 import PageHero from "@/components/PageHero";
 import ContactPageInfo from "@/components/ContactPageInfo";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Contact EBE Consulting - Demander un devis",
@@ -26,7 +27,7 @@ export default function ContactPage() {
       <PageHero
         title={content.contact.title}
         subtitle={content.contact.subtitle}
-        imageUrl="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069"
+        imageUrl={pageImages.hero.contact}
         overlayOpacity={0.35}
       />
 

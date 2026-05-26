@@ -4,6 +4,7 @@ import { content } from "@/lib/content";
 import Button from "@/components/ui/Button";
 import PageHero from "@/components/PageHero";
 import { AboutValues, AboutCapabilities } from "@/components/AboutPageCards";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "EBE Consulting - Expert structuration organisationnelle",
@@ -27,7 +28,7 @@ export default function AboutPage() {
       <PageHero
         title={content.about.title}
         subtitle={content.about.description}
-        imageUrl="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084"
+        imageUrl={pageImages.hero.about}
         overlayOpacity={0.35}
       />
 

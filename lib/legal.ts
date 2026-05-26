@@ -9,8 +9,8 @@ export const legalConfig = {
     legalName: "SELECT SERVICES",
     address: "BATIMENT HORIZON - BOITE 7\n4 RUE DE L'ASTROLABE\n97354 REMIRE-MONTJOLY",
     siret: "92881565300011",
-    email: "contact@ebeconsulting.fr",
-    rgpdEmail: "contact@ebeconsulting.fr",
+    email: "eb@ebeconsulting.fr",
+    rgpdEmail: "eb@ebeconsulting.fr",
   },
   hosting: {
     name: "OVH",

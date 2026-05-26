@@ -8,6 +8,7 @@ import {
   AuditTypesGrid,
   AuditDeliverablesList,
 } from "@/components/AuditPageSections";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Audits & diagnostic organisationnel | EBE Consulting",
@@ -32,7 +33,7 @@ export default function AuditsPage() {
       <PageHero
         title={audits.title}
         subtitle={audits.description}
-        imageUrl="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070"
+        imageUrl={pageImages.hero.audits}
         overlayOpacity={0.4}
       />
 

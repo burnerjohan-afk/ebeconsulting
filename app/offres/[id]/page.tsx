@@ -7,19 +7,13 @@ import OfferDetailOverview from "@/components/OfferDetailOverview";
 import OfferDetailObjectives from "@/components/OfferDetailObjectives";
 import BackButton from "@/components/BackButton";
 import { getMergedOfferDetail, offerDetailIds } from "@/lib/offers";
+import { pageImages } from "@/lib/page-images";
 
 interface OfferDetailPageProps {
   params: Promise<{
     id: string;
   }>;
 }
-
-const offerImages: Record<string, string> = {
-  clarifier: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070",
-  structurer: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084",
-  comprendre: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070",
-  securiser: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
-};
 
 export function generateStaticParams() {
   return offerDetailIds.map((id) => ({ id }));
@@ -58,7 +52,7 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
   }
 
   const imageUrl =
-    offerImages[id] ?? "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070";
+    pageImages.offers[id as keyof typeof pageImages.offers] ?? pageImages.offers.default;
 
   return (
     <div className="relative">

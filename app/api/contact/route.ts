@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     
     await resend.emails.send({
       from: process.env.EMAIL_FROM || 'noreply@ebe-consulting.fr',
-      to: process.env.EMAIL_TO || 'contact@ebeconsulting.fr',
+      to: process.env.EMAIL_TO || 'eb@ebeconsulting.fr',
       subject: `Contact EBE Consulting: ${subject}`,
       html: `
         <h2>Nouveau message de contact</h2>

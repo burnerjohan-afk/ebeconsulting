@@ -86,7 +86,7 @@ export default function ContactForm() {
         });
       } else {
         // Fallback to mailto if API fails
-        const mailtoLink = `mailto:contact@ebeconsulting.fr?subject=${encodeURIComponent(
+        const mailtoLink = `mailto:eb@ebeconsulting.fr?subject=${encodeURIComponent(
           formData.subject
         )}&body=${encodeURIComponent(
           `Nom: ${formData.name}\nPrénom: ${formData.firstName}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nSociété: ${formData.company}\nTaille: ${formData.size}\n\nMessage:\n${formData.message}`
@@ -97,7 +97,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       // Fallback to mailto on error
-      const mailtoLink = `mailto:contact@ebeconsulting.fr?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:eb@ebeconsulting.fr?subject=${encodeURIComponent(
         formData.subject
       )}&body=${encodeURIComponent(
         `Nom: ${formData.name}\nPrénom: ${formData.firstName}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nSociété: ${formData.company}\nTaille: ${formData.size}\n\nMessage:\n${formData.message}`

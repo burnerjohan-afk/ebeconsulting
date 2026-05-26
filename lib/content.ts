@@ -710,7 +710,7 @@ export const content = {
     subtitle:
       "Parlons de ce qui se joue réellement dans votre entreprise — et de ce qu'il faut remettre en mouvement. Un premier échange, sans engagement, pour voir juste.",
     phone: "06 96 85 73 02",
-    email: "contact@ebeconsulting.fr",
+    email: "eb@ebeconsulting.fr",
     zones: "Martinique, Guadeloupe, Guyane & France métropolitaine",
     form: {
       name: "Nom",

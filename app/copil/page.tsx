@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import Card from "@/components/Card";
 import PageHero from "@/components/PageHero";
 import { COPILMissions, COPILBenefits, COPILValue } from "@/components/COPILPageCards";
+import { pageImages } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   title: "Appui Comité de Pilotage | EBE Consulting",
@@ -27,7 +28,7 @@ export default function COPILPage() {
       <PageHero
         title={content.copil.title}
         subtitle={content.copil.description}
-        imageUrl="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070"
+        imageUrl={pageImages.hero.copil}
         overlayOpacity={0.4}
       />
 
