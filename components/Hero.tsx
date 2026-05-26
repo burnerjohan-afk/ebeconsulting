@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
 import { ArrowRight } from "lucide-react";
@@ -16,12 +17,18 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950" />
-        <div
-          className="absolute inset-0 bg-[url('/image/reunion-ebe.png')] bg-cover bg-no-repeat bg-[center_24%] sm:bg-[center_22%]"
+        <Image
+          src="/image/reunion-ebe.jpg"
+          alt=""
+          fill
+          priority
+          quality={95}
+          sizes="100vw"
+          className="object-cover object-[center_28%] sm:object-[center_26%] contrast-[1.03] saturate-[1.04]"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/30 via-transparent to-primary-900/50" />
+        <div className="absolute inset-0 bg-black/28" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/15 via-transparent to-primary-900/35" />
       </div>
 
       <div
