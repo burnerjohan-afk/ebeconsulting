@@ -8,6 +8,10 @@ import OfferDetailObjectives from "@/components/OfferDetailObjectives";
 import BackButton from "@/components/BackButton";
 import { getMergedOfferDetail, offerDetailIds } from "@/lib/offers";
 import { pageImages } from "@/lib/page-images";
+import {
+  OFFER_ID_TO_CONTACT_SUBJECT,
+  contactHrefForOffer,
+} from "@/lib/contact-subjects";
 
 interface OfferDetailPageProps {
   params: Promise<{
@@ -112,11 +116,12 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
           <div className="container-custom text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Prêt à démarrer ?</h2>
             <p className="text-lg text-white/75 mb-8">
-              Demandez un devis personnalisé pour « {offer.contactTitle} » et recevez une
+              Demandez un devis personnalisé pour «{" "}
+              {OFFER_ID_TO_CONTACT_SUBJECT[offer.id] ?? offer.contactTitle} » et recevez une
               proposition adaptée à vos besoins sous 48h.
             </p>
             <Button
-              href={`/contact?subject=${encodeURIComponent(`Offre : ${offer.contactTitle}`)}&offer=${offer.id}`}
+              href={contactHrefForOffer(offer.id)}
               variant="primary"
               className="text-lg px-10 py-5 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-xl font-bold"
             >

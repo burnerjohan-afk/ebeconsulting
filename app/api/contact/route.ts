@@ -1,18 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  isContactEmailConfigured,
+  sendContactEmail,
+} from "@/lib/send-contact-email";
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Honeypot check
     if (body.honeypot) {
-      return NextResponse.json(
-        { error: "Spam detected" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Spam detected" }, { status: 400 });
     }
 
-    // Validate required fields
     const { name, firstName, email, subject, message } = body;
     if (!name || !firstName || !email || !subject || !message) {
       return NextResponse.json(
@@ -21,31 +22,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // TODO: Integrate with email service (Resend, SendGrid, etc.)
-    // Example with Resend:
-    /*
-    import { Resend } from 'resend';
-    const resend = new Resend(process.env.EMAIL_SERVICE_API_KEY);
-    
-    await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'noreply@ebe-consulting.fr',
-      to: process.env.EMAIL_TO || 'eb@ebeconsulting.fr',
-      subject: `Contact EBE Consulting: ${subject}`,
-      html: `
-        <h2>Nouveau message de contact</h2>
-        <p><strong>Nom:</strong> ${name} ${firstName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Téléphone:</strong> ${body.phone || 'Non renseigné'}</p>
-        <p><strong>Société:</strong> ${body.company || 'Non renseigné'}</p>
-        <p><strong>Taille:</strong> ${body.size || 'Non renseigné'}</p>
-        <p><strong>Sujet:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-    });
-    */
+    if (!EMAIL_REGEX.test(String(email))) {
+      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    }
 
-    // For now, return success (in production, implement email sending)
+    if (!isContactEmailConfigured()) {
+      console.error(
+        "Contact API: SMTP non configuré (SMTP_HOST, SMTP_USER, SMTP_PASS)"
+      );
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 503 }
+      );
+    }
+
+    await sendContactEmail({
+      name: String(name).trim(),
+      firstName: String(firstName).trim(),
+      email: String(email).trim(),
+      phone: body.phone ? String(body.phone).trim() : undefined,
+      company: body.company ? String(body.company).trim() : undefined,
+      size: body.size ? String(body.size).trim() : undefined,
+      subject: String(subject).trim(),
+      message: String(message).trim(),
+    });
+
     return NextResponse.json(
       { message: "Message sent successfully" },
       { status: 200 }
@@ -58,4 +59,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

@@ -28,7 +28,7 @@ export default function StickyCTA() {
       className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden"
     >
           <Link
-            href="/contact?subject=Demande de devis"
+            href="/contact"
             className="flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-700 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:from-accent-700 hover:to-accent-800 transition-all transform hover:scale-105"
           >
             <svg

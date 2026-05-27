@@ -104,26 +104,30 @@ ebe-consulting/
 Créer un fichier `.env.local` à la racine du projet :
 
 ```env
-# Email (pour le formulaire de contact)
-# Optionnel : configurer un service d'email (Resend, SendGrid, etc.)
-EMAIL_SERVICE_API_KEY=votre_cle_api
-EMAIL_FROM=noreply@ebe-consulting.fr
-EMAIL_TO=eb@ebeconsulting.fr
+# Voir env.local.example pour la liste complète.
 
-# URL du site (pour les métadonnées)
-NEXT_PUBLIC_SITE_URL=https://ebe-consulting.fr
+# SMTP OVH (messagerie eb@ebeconsulting.fr)
+EMAIL_TO=eb@ebeconsulting.fr
+EMAIL_FROM=EBE Consulting <eb@ebeconsulting.fr>
+SMTP_HOST=ssl0.ovh.net
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=eb@ebeconsulting.fr
+SMTP_PASS=mot_de_passe_boite_mail_ovh
+
+NEXT_PUBLIC_SITE_URL=https://ebeconsulting.fr
 ```
 
-## 📧 Configuration du formulaire de contact
+## 📧 Configuration du formulaire de contact (OVH)
 
-Le formulaire de contact utilise actuellement un fallback `mailto:`. Pour une solution plus robuste :
+Le formulaire envoie les demandes via **Nodemailer** et le SMTP OVH (`ssl0.ovh.net`).
 
-1. **Option 1 : API Route Next.js** (recommandé)
-   - Créer `app/api/contact/route.ts`
-   - Intégrer un service d'email (Resend, SendGrid, etc.)
+1. Dans l’[Espace client OVH](https://www.ovh.com/manager/) : **Web Cloud → Emails → ebeconsulting.fr** → compte `eb@ebeconsulting.fr`.
+2. Utiliser le **mot de passe de la boîte mail** (pas celui de l’espace client).
+3. Renseigner les variables dans `.env.local` (local) et dans **Vercel → Settings → Environment Variables** (production).
+4. **Port 587** + `SMTP_SECURE=false` (STARTTLS), ou **port 465** + `SMTP_SECURE=true` si 587 échoue.
 
-2. **Option 2 : Service tiers**
-   - Utiliser un service comme Formspree, Netlify Forms, etc.
+Sans SMTP configuré, le site propose un fallback `mailto:eb@ebeconsulting.fr`.
 
 ## 🎨 Personnalisation
 

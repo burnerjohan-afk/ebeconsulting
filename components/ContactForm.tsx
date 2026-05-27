@@ -3,11 +3,16 @@
 import { useState, FormEvent, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { content } from "@/lib/content";
+import {
+  buildDevisPrefillMessage,
+  resolveContactSubject,
+} from "@/lib/contact-subjects";
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const urlSubject = searchParams.get("subject");
   const urlOffer = searchParams.get("offer");
+  const resolvedSubject = resolveContactSubject(urlSubject, urlOffer);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -16,21 +21,31 @@ export default function ContactForm() {
     phone: "",
     company: "",
     size: "",
-    subject: urlSubject || "",
-    message: urlOffer
-      ? `Bonjour,\n\nJe suis intéressé(e) par l'offre suivante : ${urlSubject || "Demande de devis"}.\n\nPourriez-vous me faire parvenir un devis personnalisé ?\n\nMerci par avance.`
+    subject: resolvedSubject,
+    message: resolvedSubject
+      ? buildDevisPrefillMessage(resolvedSubject)
       : "",
     honeypot: "", // Anti-spam
     rgpdConsent: false, // Consentement RGPD
   });
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  // Mettre à jour le sujet si présent dans l'URL
   useEffect(() => {
-    if (urlSubject && !formData.subject) {
-      setFormData((prev) => ({ ...prev, subject: urlSubject }));
-    }
-  }, [urlSubject, formData.subject]);
+    const subject = resolveContactSubject(urlSubject, urlOffer);
+    if (!subject) return;
+    setFormData((prev) => {
+      if (prev.subject === subject) return prev;
+      return {
+        ...prev,
+        subject,
+        message:
+          prev.message.trim() === "" ||
+          prev.message.startsWith("Bonjour,\n\nJe suis intéressé(e)")
+            ? buildDevisPrefillMessage(subject)
+            : prev.message,
+      };
+    });
+  }, [urlSubject, urlOffer]);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -230,15 +245,20 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-900 focus:border-transparent"
+          className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-900 focus:border-transparent text-sm sm:text-base"
         >
-          <option value="">Sélectionnez un sujet...</option>
+          <option value="">Sélectionnez un accompagnement...</option>
           {content.contact.subjects.map((subject) => (
             <option key={subject} value={subject}>
               {subject}
             </option>
           ))}
         </select>
+        {content.contact.subjectHint && (
+          <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
+            {content.contact.subjectHint}
+          </p>
+        )}
       </div>
 
       <div>

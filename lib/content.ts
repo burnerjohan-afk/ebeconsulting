@@ -1,3 +1,8 @@
+import {
+  CONTACT_SUBJECTS,
+  CONTACT_SUBJECT_HINT,
+} from "./contact-subjects";
+
 export const content = {
   company: {
     name: "EBE Consulting",
@@ -869,23 +874,15 @@ export const content = {
       phone: "Téléphone",
       company: "Société",
       size: "Taille de l'entreprise",
-      subject: "Sujet",
+      subject: "Accompagnement",
       message: "Message",
       submit: "Envoyer",
       success: "Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.",
       error:
         "Une erreur est survenue. Veuillez réessayer ou me contacter directement.",
     },
-    subjects: [
-      "Demande de devis",
-      "Offre 1 : Clarifier pour décider",
-      "Offre 2 : Structurer pour faire grandir",
-      "Offre 3 : Prendre du recul pour comprendre",
-      "Offre 4 : Poser le cadre pour sécuriser",
-      "Appui COPIL",
-      "Audit / diagnostic",
-      "Autre",
-    ],
+    subjects: [...CONTACT_SUBJECTS],
+    subjectHint: CONTACT_SUBJECT_HINT,
     companySizes: [
       "TPE (1-9 salariés)",
       "PME (10-49 salariés)",

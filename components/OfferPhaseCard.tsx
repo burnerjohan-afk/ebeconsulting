@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Button from "./ui/Button";
 import { icons } from "@/lib/icons";
+import { contactHrefForOffer } from "@/lib/contact-subjects";
 
 export type OfferPhase = {
   id: string;
@@ -144,7 +145,7 @@ export default function OfferPhaseCard({
         ) : (
           <>
             <Button
-              href={`/contact?subject=${encodeURIComponent(`Offre : ${phase.title}`)}&offer=${phase.contactOfferId}`}
+              href={contactHrefForOffer(phase.contactOfferId)}
               variant="primary"
               icon={icons.cta.arrow}
               iconPosition="right"

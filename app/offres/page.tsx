@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import PageHero from "@/components/PageHero";
 import OffersPageCards from "@/components/OffersPageCards";
 import { pageImages } from "@/lib/page-images";
+import { contactHrefForOffer } from "@/lib/contact-subjects";
 
 export const metadata: Metadata = {
   title: "Offres d'accompagnement dirigeant - EBE Consulting",
@@ -54,7 +55,7 @@ export default function OffersPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
                   <Button
-                    href="/contact?subject=Appui COPIL&offer=copil"
+                    href={contactHrefForOffer("copil")}
                     variant="primary"
                     className="text-base px-8 py-4"
                   >

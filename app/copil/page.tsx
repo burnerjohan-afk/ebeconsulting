@@ -117,7 +117,7 @@ export default function COPILPage() {
               Demandez un devis pour l'appui au Comité de Pilotage et recevez une proposition personnalisée sous 48h.
             </p>
             <Button
-              href="/contact?subject=Appui COPIL&offer=copil"
+              href="/contact?subject=Appui%20COPIL&offer=copil"
               variant="primary"
               className="text-lg px-10 py-5 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-xl font-bold"
             >
