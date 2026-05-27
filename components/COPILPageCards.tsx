@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import { icons } from "@/lib/icons";
-import { CheckCircle2, FileCheck, Globe, Users, Accessibility, Shield, AlertTriangle, Network, Target } from "lucide-react";
+import { CheckCircle2, FileCheck, Globe, Users, Shield, AlertTriangle, Network, Target, Gauge } from "lucide-react";
 
 interface COPILMissionsProps {
   missions: typeof content.copil.missions;
@@ -88,19 +88,19 @@ export function COPILBenefits({ benefits }: COPILBenefitsProps) {
 }
 
 export function COPILValue() {
-  // Mapping des icônes pour chaque badge (identique à BadgesSection)
   const badgeIcons = [
-    icons.hero.vision, // Vision transverse
-    FileCheck, // Auditeur interne
-    icons.hero.terrain, // Approche terrain
-    Globe, // Expérience directionnelle
-    Accessibility, // Référent handicap
+    icons.hero.vision,
+    FileCheck,
+    icons.hero.terrain,
+    Gauge,
+    Users,
+    Globe,
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 max-w-7xl mx-auto">
       {content.badges.map((badge, index) => {
-        const Icon = badgeIcons[index];
+        const Icon = badgeIcons[index] ?? Target;
 
         return (
           <motion.div
