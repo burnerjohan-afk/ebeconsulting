@@ -3,20 +3,27 @@ export const content = {
     name: "EBE Consulting",
     tagline: "J'arrive. J'analyse. J'agis.",
     mission:
-      "Conseil terrain et management de transition — immersion, observation et pilotage opérationnel au service d'organisations plus claires et autonomes.",
+      "Terrain, fonctionnement réel et pilotage opérationnel — pour des organisations plus claires, plus fluides et plus autonomes.",
     description:
       "J'accompagne les dirigeants TPE/PME en immersion dans leur fonctionnement réel : observation du travail effectif, présence auprès des équipes, identification des blocages et remise en mouvement durable.",
   },
   hero: {
-    eyebrow: "Conseil terrain · Management de transition",
-    title: "Quand l'organisation perd de la clarté, la performance s'essouffle.",
-    titleHighlight: "perd de la clarté",
+    eyebrow: "Terrain · Pilotage · Fonctionnement réel",
+    title: "Je remets de la ",
+    titleHighlight: "clarté, du pilotage et du fonctionnement",
+    titleRest: " dans les organisations.",
+    tagline:
+      "Une entreprise peut travailler beaucoup… sans fonctionner réellement.",
     signature: "J'arrive. J'analyse. J'agis.",
     signatureHighlight: "J'analyse.",
     signatureSuite:
-      "Immersion, observation et pilotage opérationnel — pour une organisation plus claire, plus solide et plus autonome.",
-    description:
-      "J'interviens sur le terrain, au plus près du fonctionnement réel : observation des pratiques, écoute des équipes, lecture des écarts entre l'organisation prévue et l'organisation vécue — puis remise en mouvement durable.",
+      "J'interviens quand l'entreprise avance… mais sans véritable pilotage.",
+    highlights: [
+      "Observation du fonctionnement réel avant toute recommandation",
+      "Présence auprès des équipes et des managers sur le terrain",
+      "Pilotage opérationnel et décisions ancrées dans le réel",
+    ],
+    description: "",
     ctaPrimary: "Parlons de votre situation",
     ctaSecondary: "Découvrir l'approche",
     ctaSecondaryHref: "#methode",
@@ -71,9 +78,9 @@ export const content = {
     title: "Sans dépendance.",
     titleAccent: "Avec impact.",
     subtitle:
-      "Pas de slides depuis un bureau : immersion, observation et présence auprès des équipes pour lire le fonctionnement réel.",
+      "Pas de conseil depuis un bureau : immersion, fonctionnement réel et pilotage opérationnel.",
     quote:
-      "J'interviens quand l'entreprise continue d'avancer, mais que le dirigeant sent que le cadre, les rôles, les décisions ou la dynamique collective ne tiennent plus — parce que le fonctionnement réel ne suit plus l'organisation prévue.",
+      "Le terrain d'abord. Les équipes au centre. Le pilotage comme fil conducteur.",
     points: [
       {
         title: "30 ans de terrain, pas une posture théorique",
@@ -202,7 +209,9 @@ export const content = {
     eyebrow: "Ma méthode terrain",
     title: "Voir. Comprendre. Structurer. Transmettre.",
     subtitle:
-      "« Une organisation performante se construit avant les résultats. Je n'agis qu'après avoir observé le fonctionnement réel sur le terrain. »",
+      "J'observe le fonctionnement réel avant de structurer l'organisation.",
+    intro:
+      "Mon approche repose sur l'immersion, l'analyse concrète et le pilotage opérationnel — pas sur un modèle théorique.",
     steps: [
       {
         number: "01",
@@ -285,7 +294,12 @@ export const content = {
     title: "Quatre façons d'intervenir, une seule exigence :",
     titleHighlight: "l'efficacité réelle",
     intro:
-      "Chaque mission démarre par une immersion terrain : observation, entretiens, lecture du fonctionnement réel. Ce qui suit dépend de ce que révèle le terrain — pas d'un catalogue prédéfini.",
+      "Chaque mission part du terrain. Ce qui suit dépend de ce que révèle l'observation — pas d'un catalogue prédéfini.",
+    introPoints: [
+      "Immersion et lecture du fonctionnement réel",
+      "Résultats concrets pour le dirigeant",
+      "Présence auprès des équipes",
+    ],
     phases: [
       {
         id: "diagnostic",
@@ -310,10 +324,12 @@ export const content = {
         id: "structuration",
         number: "02",
         tag: "Structuration",
-        title: "Passer du flou à une organisation claire",
-        hook: "Vos équipes avancent, mais le cadre n'est plus suffisamment posé.",
+        title: "Réduction des retards, responsabilités clarifiées",
+        hook: "Vos équipes avancent, mais le cadre et le pilotage ne suivent plus.",
+        outcome:
+          "Réduction des retards, clarification des responsabilités et amélioration du pilotage.",
         description:
-          "Accompagnement sur le terrain pour clarifier responsabilités, structurer les rituels de management, fiabiliser les processus et renforcer le pilotage opérationnel — en présence auprès des équipes.",
+          "Sur le terrain : rôles, rituels de management, processus et indicateurs utiles — en présence auprès des équipes.",
         deliverables: [
           "Clarification des rôles et responsabilités",
           "Rituels de management opérationnel",
@@ -322,7 +338,7 @@ export const content = {
           "Plan d'action par service ou par sujet",
         ],
         result:
-          "L'organisation gagne en lisibilité, en efficacité et en cohérence collective.",
+          "Retards maîtrisés, responsabilités lisibles, pilotage opérationnel renforcé.",
         contactOfferId: "structurer",
       },
       {
@@ -416,10 +432,10 @@ export const content = {
           "Plan de développement des compétences",
         ],
         benefits: [
-          "Clarté des rôles et responsabilités",
-          "Meilleure coordination des équipes",
-          "Réduction des tensions organisationnelles",
-          "Performance collective améliorée",
+          "Réduction des retards et des frictions",
+          "Responsabilités clarifiées et assumées",
+          "Pilotage opérationnel renforcé",
+          "Organisation plus fluide au quotidien",
         ],
       },
       {
@@ -704,8 +720,55 @@ export const content = {
       },
     ],
   },
+  caseStudies: {
+    id: "cas-terrain",
+    eyebrow: "Cas concrets",
+    title: "Des situations réelles, des résultats observables",
+    intro:
+      "Exemples anonymisés tirés de missions terrain — pour illustrer ce que change une intervention ancrée dans le fonctionnement réel.",
+    items: [
+      {
+        situation: "Entreprise sans indicateurs",
+        outcome:
+          "Mise en place d'outils de pilotage simples, partagés et utilisés au quotidien par les managers.",
+      },
+      {
+        situation: "Organisation désynchronisée",
+        outcome:
+          "Clarification des responsabilités, circuits de décision lisibles et meilleure coordination entre services.",
+      },
+      {
+        situation: "Pilotage commercial absent",
+        outcome:
+          "Création de tableaux de bord utiles, rituels de suivi et visibilité renforcée pour le dirigeant.",
+      },
+    ],
+  },
   impact: {
-    title: "Ce que ça change",
+    title: "Résultats pour le dirigeant",
+    subtitle: "Ce que vous gagnez concrètement",
+    benefits: [
+      {
+        title: "Visibilité renforcée",
+        description: "Une lecture claire de l'activité et des signaux faibles.",
+      },
+      {
+        title: "Maîtrise de l'activité",
+        description: "Des indicateurs et rituels qui servent vraiment à décider.",
+      },
+      {
+        title: "Aide à la décision",
+        description: "Des arbitrages sécurisés, ancrés dans le terrain.",
+      },
+      {
+        title: "Organisation plus fluide",
+        description: "Moins de friction, des rôles et des responsabilités assumés.",
+      },
+      {
+        title: "Réduction des risques",
+        description: "Anticipation des dérives opérationnelles et managériales.",
+      },
+    ],
     before: {
       title: "Avant",
       points: [

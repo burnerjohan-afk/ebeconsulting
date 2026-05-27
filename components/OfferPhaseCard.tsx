@@ -14,6 +14,7 @@ export type OfferPhase = {
   description: string;
   deliverables: string[];
   result: string;
+  outcome?: string;
   contactOfferId: string;
 };
 
@@ -91,7 +92,7 @@ export default function OfferPhaseCard({
 
       {isPreview && (
         <p className="text-sm bg-ebe-orange/[0.07] border-l-2 border-ebe-orange px-4 py-3 rounded-sm text-ebe-anthracite mb-5 flex-1">
-          {phase.result}
+          {phase.outcome ?? phase.result}
         </p>
       )}
 

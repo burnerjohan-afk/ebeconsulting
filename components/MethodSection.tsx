@@ -70,9 +70,14 @@ export default function MethodSection() {
           >
             {method.title}
           </h2>
-          <p className="text-lg italic text-ebe-anthracite/80 border-l-[3px] border-ebe-orange pl-6 leading-relaxed text-left md:text-center md:border-l-0 md:pl-0 md:max-w-2xl md:mx-auto">
+          <p className="text-lg font-semibold text-ebe-anthracite border-l-[3px] border-ebe-orange pl-6 leading-relaxed text-left md:text-center md:border-l-0 md:pl-0 md:max-w-2xl md:mx-auto mb-3">
             {method.subtitle}
           </p>
+          {"intro" in method && method.intro && (
+            <p className="text-base text-ebe-anthracite/75 max-w-2xl md:mx-auto leading-relaxed">
+              {method.intro}
+            </p>
+          )}
         </motion.div>
 
         <motion.div

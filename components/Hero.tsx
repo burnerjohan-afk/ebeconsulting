@@ -56,11 +56,18 @@ export default function Hero() {
               {hero.eyebrow}
             </p>
 
-            <h1 className="text-4xl md:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] mb-5 drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] mb-4 drop-shadow-lg">
               {titleParts[0]}
               <em className="text-ebe-orange not-italic">{hero.titleHighlight}</em>
-              {titleParts[1]}
+              {"titleRest" in hero && hero.titleRest}
+              {!hero.titleRest && titleParts[1]}
             </h1>
+
+            {"tagline" in hero && hero.tagline && (
+              <p className="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-lg mb-6 italic">
+                {hero.tagline}
+              </p>
+            )}
 
             <div className="border-y border-white/20 py-5 mb-6">
               <p className="text-xl md:text-2xl font-semibold text-white leading-snug">
@@ -73,9 +80,22 @@ export default function Hero() {
               </p>
             </div>
 
-            <p className="text-base text-neutral-200 leading-relaxed max-w-lg mb-8">
-              {hero.description}
-            </p>
+            {hero.highlights && hero.highlights.length > 0 && (
+              <ul className="space-y-2.5 mb-8 max-w-lg">
+                {hero.highlights.map((line) => (
+                  <li
+                    key={line}
+                    className="flex items-start gap-2.5 text-sm text-neutral-200 leading-relaxed"
+                  >
+                    <span
+                      className="mt-2 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ebe-orange"
+                      aria-hidden
+                    />
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             <div className="flex flex-wrap items-center gap-4">
               <Link

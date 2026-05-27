@@ -15,11 +15,12 @@ import TargetAudienceSection from "@/components/TargetAudienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FounderSection from "@/components/FounderSection";
 import VisionApproachSection from "@/components/VisionApproachSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 export const metadata: Metadata = {
   title: "Management de transition & conseil opérationnel | EBE Consulting",
   description:
-    "J'arrive. J'analyse. J'agis. Conseil terrain pour dirigeants TPE/PME : immersion, observation du fonctionnement réel et pilotage opérationnel.",
+    "Je remets de la clarté, du pilotage et du fonctionnement dans les organisations. Conseil terrain pour dirigeants TPE/PME.",
   alternates: {
     canonical: "https://ebeconsulting.fr",
   },
@@ -47,6 +48,7 @@ export default function HomePage() {
       <COPILSection />
       <TargetAudienceSection />
       <ImpactSection />
+      <CaseStudiesSection />
       <TestimonialsSection />
       <FinalCTA />
       <StickyCTA />

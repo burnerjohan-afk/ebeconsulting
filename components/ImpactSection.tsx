@@ -13,12 +13,37 @@ export default function ImpactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
             {content.impact.title}
           </h2>
+          {content.impact.subtitle && (
+            <p className="text-lg text-neutral-600">{content.impact.subtitle}</p>
+          )}
         </motion.div>
+
+        {content.impact.benefits && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-14 max-w-6xl mx-auto">
+            {content.impact.benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                className="rounded-xl border border-ebe-anthracite/10 bg-white p-5 text-center shadow-sm"
+              >
+                <h3 className="text-sm font-bold text-ebe-orange uppercase tracking-wide mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Avant */}

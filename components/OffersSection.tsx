@@ -55,12 +55,24 @@ export default function OffersSection() {
           </h2>
         </motion.div>
 
-        <motion.p
+        <motion.div
           variants={offerPhaseCardVariants}
-          className="text-center text-sm md:text-base text-ebe-anthracite/65 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-center max-w-2xl mx-auto mb-10"
         >
-          {homepageOffers.intro}
-        </motion.p>
+          <p className="text-sm md:text-base text-ebe-anthracite/65 mb-4 leading-relaxed">
+            {homepageOffers.intro}
+          </p>
+          {"introPoints" in homepageOffers && homepageOffers.introPoints && (
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-ebe-anthracite/80">
+              {homepageOffers.introPoints.map((point) => (
+                <li key={point} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-ebe-orange" aria-hidden />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          )}
+        </motion.div>
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-7xl mx-auto mb-10"
@@ -87,7 +99,7 @@ export default function OffersSection() {
             iconPosition="right"
             className="text-base px-8 py-4"
           >
-            Explorer nos offres en détail
+            Explorer mes offres en détail
           </Button>
           <p className="text-xs text-ebe-anthracite/50 mt-4">
             Livrables, résultats attendus et modalités sur la page dédiée
