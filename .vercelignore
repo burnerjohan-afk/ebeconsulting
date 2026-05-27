@@ -1,0 +1,9 @@
+scripts/artifact-decoded-full.html
+scripts/artifact-decoded-snippet.html
+scripts/extract-artifact.js
+scripts/extract-region.js
+scripts/parse-artifact-text.js
+scripts/pdf-pages/
+scripts/pdf-to-png.js
+scripts/read-pdf.js
+scripts/read-pdf.mjs
