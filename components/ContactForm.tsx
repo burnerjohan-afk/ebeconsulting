@@ -10,13 +10,26 @@ import {
   syncAccompagnementInMessage,
 } from "@/lib/contact-subjects";
 
+type ContactFormData = {
+  name: string;
+  firstName: string;
+  email: string;
+  phone: string;
+  company: string;
+  size: string;
+  subject: string;
+  message: string;
+  honeypot: string;
+  rgpdConsent: boolean;
+};
+
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const urlSubject = searchParams.get("subject");
   const urlOffer = searchParams.get("offer");
   const resolvedSubject = resolveContactSubject(urlSubject, urlOffer);
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     firstName: "",
     email: "",
