@@ -5,7 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { content } from "@/lib/content";
 import {
   buildDevisPrefillMessage,
+  isDevisPrefillMessage,
   resolveContactSubject,
+  syncAccompagnementInMessage,
 } from "@/lib/contact-subjects";
 
 export default function ContactForm() {
@@ -39,10 +41,9 @@ export default function ContactForm() {
         ...prev,
         subject,
         message:
-          prev.message.trim() === "" ||
-          prev.message.startsWith("Bonjour,\n\nJe suis intéressé(e)")
+          prev.message.trim() === "" || isDevisPrefillMessage(prev.message)
             ? buildDevisPrefillMessage(subject)
-            : prev.message,
+            : syncAccompagnementInMessage(prev.message, subject),
       };
     });
   }, [urlSubject, urlOffer]);
@@ -52,9 +53,23 @@ export default function ContactForm() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    const { name, value } = e.target;
+
+    setFormData((prev) => {
+      if (name !== "subject") {
+        return { ...prev, [name]: value };
+      }
+
+      return {
+        ...prev,
+        subject: value,
+        message:
+          value === ""
+            ? prev.message
+            : isDevisPrefillMessage(prev.message) || prev.message.trim() === ""
+              ? buildDevisPrefillMessage(value)
+              : syncAccompagnementInMessage(prev.message, value),
+      };
     });
   };
 
@@ -74,14 +89,18 @@ export default function ContactForm() {
 
     setStatus("idle");
 
+    const payload = {
+      ...formData,
+      message: syncAccompagnementInMessage(formData.message, formData.subject),
+    };
+
     try {
-      // Try to use API route first
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -102,20 +121,19 @@ export default function ContactForm() {
       } else {
         // Fallback to mailto if API fails
         const mailtoLink = `mailto:eb@ebeconsulting.fr?subject=${encodeURIComponent(
-          formData.subject
+          payload.subject
         )}&body=${encodeURIComponent(
-          `Nom: ${formData.name}\nPrénom: ${formData.firstName}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nSociété: ${formData.company}\nTaille: ${formData.size}\n\nMessage:\n${formData.message}`
+          `Nom: ${payload.name}\nPrénom: ${payload.firstName}\nEmail: ${payload.email}\nTéléphone: ${payload.phone}\nSociété: ${payload.company}\nTaille: ${payload.size}\n\nMessage:\n${payload.message}`
         )}`;
 
         window.location.href = mailtoLink;
         setStatus("success");
       }
     } catch (error) {
-      // Fallback to mailto on error
       const mailtoLink = `mailto:eb@ebeconsulting.fr?subject=${encodeURIComponent(
-        formData.subject
+        payload.subject
       )}&body=${encodeURIComponent(
-        `Nom: ${formData.name}\nPrénom: ${formData.firstName}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nSociété: ${formData.company}\nTaille: ${formData.size}\n\nMessage:\n${formData.message}`
+        `Nom: ${payload.name}\nPrénom: ${payload.firstName}\nEmail: ${payload.email}\nTéléphone: ${payload.phone}\nSociété: ${payload.company}\nTaille: ${payload.size}\n\nMessage:\n${payload.message}`
       )}`;
 
       window.location.href = mailtoLink;

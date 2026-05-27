@@ -68,8 +68,42 @@ export function resolveContactSubject(
   return "";
 }
 
+const ACCOMPAGNEMENT_LINE_REGEX =
+  /^Je suis intéressé\(e\) par l'accompagnement : .+$/m;
+
 export function buildDevisPrefillMessage(subject: string): string {
   return `Bonjour,\n\nJe suis intéressé(e) par l'accompagnement : ${subject}.\n\nPourriez-vous me faire parvenir un devis personnalisé ?\n\nMerci par avance.`;
+}
+
+/** Message généré automatiquement (modèle devis) — pas une saisie libre */
+export function isDevisPrefillMessage(message: string): boolean {
+  const trimmed = message.trim();
+  return (
+    trimmed.startsWith("Bonjour,") &&
+    trimmed.includes("Je suis intéressé(e) par l'accompagnement :") &&
+    trimmed.includes("Pourriez-vous me faire parvenir un devis personnalisé")
+  );
+}
+
+/** Aligne la ligne d'accompagnement dans le message sur le choix du menu */
+export function syncAccompagnementInMessage(
+  message: string,
+  subject: string
+): string {
+  if (!subject.trim()) return message;
+
+  if (isDevisPrefillMessage(message) || message.trim() === "") {
+    return buildDevisPrefillMessage(subject);
+  }
+
+  if (ACCOMPAGNEMENT_LINE_REGEX.test(message)) {
+    return message.replace(
+      ACCOMPAGNEMENT_LINE_REGEX,
+      `Je suis intéressé(e) par l'accompagnement : ${subject}.`
+    );
+  }
+
+  return message;
 }
 
 export function contactHrefForOffer(offerId: string): string {

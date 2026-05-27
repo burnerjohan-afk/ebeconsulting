@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { syncAccompagnementInMessage } from "@/lib/contact-subjects";
 import {
   isContactEmailConfigured,
   sendContactEmail,
@@ -36,6 +37,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const subjectTrimmed = String(subject).trim();
+    const messageTrimmed = syncAccompagnementInMessage(
+      String(message).trim(),
+      subjectTrimmed
+    );
+
     await sendContactEmail({
       name: String(name).trim(),
       firstName: String(firstName).trim(),
@@ -43,8 +50,8 @@ export async function POST(request: NextRequest) {
       phone: body.phone ? String(body.phone).trim() : undefined,
       company: body.company ? String(body.company).trim() : undefined,
       size: body.size ? String(body.size).trim() : undefined,
-      subject: String(subject).trim(),
-      message: String(message).trim(),
+      subject: subjectTrimmed,
+      message: messageTrimmed,
     });
 
     return NextResponse.json(
