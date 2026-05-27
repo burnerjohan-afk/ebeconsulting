@@ -19,11 +19,11 @@ export default function ClientsSection() {
             Ils nous font confiance
           </h2>
           <p className="text-sm text-[#1D1D1F]/70">
-            Entreprises pour lesquelles nous avons effectué des prestations
+            Expériences et collaborations
           </p>
         </motion.div>
 
-        <motion.div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <motion.div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 md:gap-8 max-w-6xl mx-auto">
           {trustSectionLogos.map((client, index) => (
             <motion.div
               key={client.name}
@@ -36,7 +36,7 @@ export default function ClientsSection() {
             >
               <Image
                 src={client.logo}
-                alt={`Logo client ${client.name} - Entreprise accompagnée par EBE Consulting`}
+                alt={`Logo ${client.name} — collaboration EBE Consulting`}
                 width={150}
                 height={80}
                 className="h-full w-auto object-contain"

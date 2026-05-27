@@ -166,7 +166,7 @@ export default function Header() {
                   </Button>
                 </div>
                 <div className="pt-4 border-t border-neutral-200">
-                  <p className="text-sm text-neutral-600 mb-3">Suivez-nous</p>
+                  <p className="text-sm text-neutral-600 mb-3">Suivez-moi</p>
                   <SocialLinks variant="header" />
                 </div>
               </div>

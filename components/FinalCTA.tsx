@@ -52,7 +52,7 @@ export default function FinalCTA() {
                   onClick={() => setIsFormOpen(true)}
                   className="inline-flex items-center justify-center px-10 py-4 text-xs font-semibold uppercase tracking-[0.12em] bg-white text-ebe-anthraciteDark rounded-sm hover:bg-ebe-warmWhite transition-colors"
                 >
-                  Écrire à EBE Consulting
+                  M&apos;écrire
                 </button>
                 <Link
                   href={`tel:${contact.phone.replace(/\s/g, "")}`}

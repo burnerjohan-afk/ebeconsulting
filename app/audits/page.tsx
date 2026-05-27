@@ -13,7 +13,7 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Audits & diagnostic organisationnel | EBE Consulting",
   description:
-    "Commencez par un audit de situation : diagnostic entreprise, audit qualité, processus, APSAD et ISO. Une base solide pour décider et agir.",
+    "Audits terrain : diagnostic entreprise, qualité, processus, APSAD et ISO. Immersion et observation du fonctionnement réel avant de décider.",
   alternates: {
     canonical: "https://ebeconsulting.fr/audits",
   },

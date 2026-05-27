@@ -157,6 +157,7 @@ async function seed() {
       { name: 'Evolya', file: 'evolya.png' },
       { name: 'Semas', file: 'semas.png' },
       { name: 'Securidom', file: 'securidom.png' },
+      { name: 'APS', file: 'aps.png' },
     ]
 
     for (let i = 0; i < logoFiles.length; i++) {

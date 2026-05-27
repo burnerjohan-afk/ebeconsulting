@@ -62,7 +62,7 @@ export default function CookieBanner() {
             <div className="flex-1">
               <p className="text-sm text-[#3E4A4F] leading-relaxed">
                 Ce site utilise des cookies pour améliorer votre expérience de navigation. 
-                Certains cookies sont essentiels au fonctionnement du site, d'autres nous aident à analyser l'utilisation du site. 
+                Certains cookies sont essentiels au fonctionnement du site, d&apos;autres permettent d&apos;analyser son utilisation. 
                 Vous pouvez accepter tous les cookies, les refuser, ou{" "}
                 <Link href="/cookies" className="text-[#FF9500] hover:underline font-medium">
                   personnaliser vos préférences

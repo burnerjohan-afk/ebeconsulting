@@ -299,7 +299,7 @@ export default function ContactForm() {
         </div>
         <p className="text-xs text-[#3E4A4F]/70 italic">
           Les informations collectées sont utilisées uniquement pour répondre à votre demande. 
-          Vous pouvez exercer vos droits (accès, rectification, suppression, opposition) à tout moment en nous contactant.
+          Vous pouvez exercer vos droits (accès, rectification, suppression, opposition) à tout moment en me contactant.
         </p>
       </div>
 

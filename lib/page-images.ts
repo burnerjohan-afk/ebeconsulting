@@ -4,6 +4,30 @@
  * Sources : pexels.com/photo/3184296, 3183197, 7688336, 4427618, 1181519, 3769021
  */
 export const pageImages = {
+  about: {
+    gallery: [
+      {
+        src: "/image/about/gallery-evolution.png",
+        alt: "Accompagnement stratégique — évolution d'activité et indicateurs clés",
+      },
+      {
+        src: "/image/about/gallery-terrain.png",
+        alt: "Intervention terrain — checklist et pilotage opérationnel",
+      },
+      {
+        src: "/image/about/gallery-plan-action.png",
+        alt: "Plan d'action — clarification des priorités et des compétences",
+      },
+      {
+        src: "/image/about/gallery-strategie.png",
+        alt: "Travail collectif — stratégie, vision et prochaines étapes",
+      },
+      {
+        src: "/image/about/gallery-pilotage.png",
+        alt: "Pilotage et résultats — analyse, stratégie et plan d'action",
+      },
+    ],
+  },
   hero: {
     about: "/image/pages/hero-about.jpg",
     offers: "/image/pages/hero-offers.jpg",

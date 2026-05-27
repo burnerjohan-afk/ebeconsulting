@@ -3,27 +3,27 @@ export const content = {
     name: "EBE Consulting",
     tagline: "J'arrive. J'analyse. J'agis.",
     mission:
-      "Management de transition et conseil opérationnel pour des organisations plus claires, plus solides et plus autonomes.",
+      "Conseil terrain et management de transition — immersion, observation et pilotage opérationnel au service d'organisations plus claires et autonomes.",
     description:
-      "EBE Consulting accompagne les dirigeants TPE/PME au cœur du fonctionnement réel de leur organisation : identifier les blocages, clarifier les priorités et remettre les équipes en mouvement — durablement.",
+      "J'accompagne les dirigeants TPE/PME en immersion dans leur fonctionnement réel : observation du travail effectif, présence auprès des équipes, identification des blocages et remise en mouvement durable.",
   },
   hero: {
-    eyebrow: "Management de transition · Conseil opérationnel",
+    eyebrow: "Conseil terrain · Management de transition",
     title: "Quand l'organisation perd de la clarté, la performance s'essouffle.",
     titleHighlight: "perd de la clarté",
     signature: "J'arrive. J'analyse. J'agis.",
     signatureHighlight: "J'analyse.",
     signatureSuite:
-      "Pour laisser une organisation plus claire, plus solide et plus autonome.",
+      "Immersion, observation et pilotage opérationnel — pour une organisation plus claire, plus solide et plus autonome.",
     description:
-      "EBE Consulting intervient au cœur du fonctionnement réel de votre organisation pour identifier ce qui bloque, clarifier ce qui doit l'être, et remettre vos équipes en mouvement — durablement.",
+      "J'interviens sur le terrain, au plus près du fonctionnement réel : observation des pratiques, écoute des équipes, lecture des écarts entre l'organisation prévue et l'organisation vécue — puis remise en mouvement durable.",
     ctaPrimary: "Parlons de votre situation",
     ctaSecondary: "Découvrir l'approche",
     ctaSecondaryHref: "#methode",
     stats: [
       { value: "30+", label: "Ans d'expérience opérationnelle" },
-      { value: "360°", label: "Vision globale de l'organisation" },
-      { value: "Terrain", label: "Lecture directe, pas de théorie" },
+      { value: "360°", label: "Lecture transverse du fonctionnement réel" },
+      { value: "Terrain", label: "Immersion & observation, pas de théorie" },
     ],
   },
   signaux: {
@@ -31,7 +31,7 @@ export const content = {
     eyebrow: "Avant que tout ne décroche",
     title: "Les signaux qui doivent alerter un dirigeant",
     subtitle:
-      "Une organisation ne s'effondre pas du jour au lendemain. Elle envoie des signaux — souvent discrets, toujours révélateurs.",
+      "Une organisation ne s'effondre pas du jour au lendemain. Elle envoie des signaux — souvent visibles sur le terrain, toujours révélateurs du fonctionnement réel.",
     items: [
       {
         title: "Les décisions n'atterrissent plus",
@@ -67,33 +67,109 @@ export const content = {
   },
   differentiation: {
     id: "pourquoi",
-    eyebrow: "Pourquoi EBE Consulting ?",
+    eyebrow: "Pourquoi moi ?",
     title: "Sans dépendance.",
     titleAccent: "Avec impact.",
+    subtitle:
+      "Pas de slides depuis un bureau : immersion, observation et présence auprès des équipes pour lire le fonctionnement réel.",
     quote:
-      "EBE intervient quand l'entreprise continue d'avancer, mais que le dirigeant sent que le cadre, les rôles, les décisions ou la dynamique collective ne tiennent plus comme ils devraient.",
+      "J'interviens quand l'entreprise continue d'avancer, mais que le dirigeant sent que le cadre, les rôles, les décisions ou la dynamique collective ne tiennent plus — parce que le fonctionnement réel ne suit plus l'organisation prévue.",
     points: [
       {
-        title: "Une expérience de direction, pas une posture théorique",
+        title: "30 ans de terrain, pas une posture théorique",
         description:
-          "Plus de 30 ans passés au cœur des organisations : management d'équipes, qualité, relation client, pilotage opérationnel. Je sais ce que vous vivez parce que je l'ai vécu.",
+          "Direction opérationnelle, qualité et management dans des environnements exigeants. Je sais ce que vous vivez parce que j'ai observé, piloté et vécu ces situations sur le terrain.",
       },
       {
-        title: "Une lecture 360° de l'entreprise",
+        title: "Immersion avant recommandation",
         description:
-          "L'intervention relie les enjeux humains, managériaux, organisationnels, commerciaux, qualité et opérationnels. Pas de diagnostic partiel — le fonctionnement réel.",
+          "Entretiens, observation des pratiques, lecture des flux et des interfaces. Je relie les enjeux humains, managériaux, organisationnels et opérationnels — à partir du réel, pas d'un modèle.",
       },
       {
-        title: "Des livrables utiles, pas des rapports décoratifs",
+        title: "Des livrables actionnables, pas des rapports décoratifs",
         description:
-          "Plans d'action, feuille de route, rôles clarifiés, rituels de pilotage, priorités et recommandations directement exploitables dès le lendemain.",
+          "Plans d'action, rôles clarifiés, rituels de pilotage opérationnel, priorités et recommandations directement exploitables — construits à partir de ce qui se joue réellement dans l'entreprise.",
       },
       {
-        title: "Une finalité claire : votre autonomie",
+        title: "Présence auprès des équipes, autonomie en sortie",
         description:
-          "EBE n'a pas vocation à s'installer dans l'entreprise. L'objectif est de laisser une organisation plus claire, plus solide, capable de fonctionner sans dépendance.",
+          "Je m'implique auprès des managers et des opérationnels pour ancrer les changements. L'objectif : vous laisser une organisation plus claire, plus solide, capable de fonctionner sans dépendance.",
       },
     ],
+  },
+  positioning: {
+    visionApproach: {
+      eyebrow: "Vision & approche",
+      vision: {
+        title: "Ma vision",
+        text: "Une organisation performante se construit avant les résultats.",
+      },
+      approach: {
+        title: "Mon approche",
+        text: "Structurer l'organisation pour sécuriser les décisions et les équipes.",
+      },
+      bridge: "Une entreprise avance mieux quand chacun sait où il va.",
+    },
+  },
+  terrainPrinciple: {
+    id: "terrain",
+    eyebrow: "Ma différence",
+    title: "Le terrain avant la théorie",
+    subtitle:
+      "Contrairement aux cabinets de conseil plus théoriques, mon intervention s'appuie sur l'immersion, l'observation du travail réel et un pilotage opérationnel concret.",
+    pillars: [
+      {
+        title: "Immersion",
+        description: "Présence sur site, au cœur des activités et des flux réels.",
+      },
+      {
+        title: "Observation",
+        description: "Lecture du travail effectif, pas seulement des organigrammes.",
+      },
+      {
+        title: "Fonctionnement réel",
+        description: "Écarts entre organisation prévue et organisation vécue.",
+      },
+      {
+        title: "Pilotage opérationnel",
+        description: "Indicateurs utiles, rituels de suivi, décisions ancrées.",
+      },
+      {
+        title: "Présence équipes",
+        description: "Dialogue direct avec managers et opérationnels.",
+      },
+    ],
+  },
+  founder: {
+    eyebrow: "Présentation fondatrice",
+    title: "30 ans de terrain au service des dirigeants",
+    lead:
+      "Après plus de 30 ans de direction opérationnelle, qualité et management dans des environnements exigeants, j'accompagne aujourd'hui les dirigeants qui ont besoin de reprendre de la clarté, du pilotage et du fonctionnement.",
+    portrait: {
+      src: "/image/photo-eb.png",
+      alt: "Portrait — fondateur EBE Consulting",
+    },
+    journey: [
+      {
+        title: "Direction opérationnelle",
+        description:
+          "Management d'équipes, pilotage quotidien, commerce et relation client au cœur d'organisations exigeantes.",
+      },
+      {
+        title: "Qualité & conformité",
+        description:
+          "Audits internes, ISO 9001 et APSAD — aligner le référentiel avec le fonctionnement réel.",
+      },
+      {
+        title: "Conseil terrain & management de transition",
+        description:
+          "Immersion, observation et pilotage opérationnel auprès des dirigeants TPE/PME — aux Antilles-Guyane et en France métropolitaine.",
+      },
+    ],
+    body:
+      "Mon approche est terrain, directe et exigeante : identifier ce qui bloque, clarifier ce qui doit l'être, et laisser une organisation plus claire, plus solide et plus autonome.",
+    ctaLabel: "Découvrir mon parcours",
+    ctaHref: "/a-propos",
   },
   badges: [
     {
@@ -106,23 +182,27 @@ export const content = {
     },
     {
       title: "Approche terrain",
-      description: "Compréhension du travail réel",
+      description: "Immersion · Observation · Travail réel",
+    },
+    {
+      title: "Pilotage opérationnel",
+      description: "Indicateurs utiles · Rituels de suivi",
+    },
+    {
+      title: "Présence auprès des équipes",
+      description: "Managers · Opérationnels · Terrain",
     },
     {
       title: "Expérience directionnelle",
-      description: "Antilles-Guyane",
-    },
-    {
-      title: "Référent handicap",
-      description: "Accompagnement inclusif",
+      description: "Antilles-Guyane · 30+ ans sur le terrain",
     },
   ],
   method: {
     id: "methode",
-    eyebrow: "La méthode EBE",
+    eyebrow: "Ma méthode terrain",
     title: "Voir. Comprendre. Structurer. Transmettre.",
     subtitle:
-      "« Je n'agis jamais avant de comprendre. Je structure l'humain avant de poser le cadre. »",
+      "« Une organisation performante se construit avant les résultats. Je n'agis qu'après avoir observé le fonctionnement réel sur le terrain. »",
     steps: [
       {
         number: "01",
@@ -140,24 +220,24 @@ export const content = {
         number: "02",
         title: "Comprendre les blocages",
         description:
-          "Analyse des rôles, responsabilités, circuits de décision, modes de communication, processus et points de rupture.",
+          "Analyse des rôles, responsabilités, circuits de décision et points de rupture — croisée avec l'observation terrain et les dynamiques humaines réelles.",
         details: [
           "Cartographie des enjeux stratégiques",
-          "Analyse des dynamiques humaines",
+          "Clarifier les rôles et responsabilités",
           "Repérage des points de rupture",
           "Priorisation des chantiers",
         ],
       },
       {
         number: "03",
-        title: "Structurer l'action",
+        title: "Structurer l'organisation humaine",
         description:
-          "Priorisation des chantiers, clarification des responsabilités, formalisation des modes de fonctionnement et plans d'action utiles.",
+          "Redonner du cadre aux équipes : aligner les responsabilités et le fonctionnement, poser les rituels de pilotage et des plans d'action ancrés dans le réel.",
         details: [
-          "Cartographie des rôles et responsabilités",
-          "Plans d'action priorisés",
-          "Rituels de pilotage",
-          "Cadres de travail partagés",
+          "Clarifier les rôles et responsabilités",
+          "Aligner responsabilités et fonctionnement",
+          "Redonner du cadre aux équipes",
+          "Rituels de pilotage opérationnel",
         ],
       },
       {
@@ -176,10 +256,11 @@ export const content = {
     expertises: [
       {
         tag: "Expertise 01",
-        title: "Gouvernance managériale & dynamique humaine",
-        trigger: "Quand l'humain, le management ou la confiance freinent l'action.",
+        title: "Gouvernance managériale & organisation humaine",
+        trigger:
+          "Quand les rôles, le management ou la confiance freinent l'action.",
         description:
-          "Restaurer du cadre, de la redevabilité et une dynamique collective. Des rôles clarifiés, des managers renforcés, des équipes remobilisées.",
+          "Clarifier les rôles et responsabilités, redonner du cadre aux équipes et aligner le fonctionnement — à partir de l'observation du management sur le terrain.",
       },
       {
         tag: "Expertise 02",
@@ -187,24 +268,24 @@ export const content = {
         trigger:
           "Quand l'entreprise fonctionne, mais avec trop d'écarts ou d'urgences.",
         description:
-          "Rendre l'organisation plus lisible, plus fiable et plus pilotable. Des processus clarifiés, des pratiques homogènes, une qualité au service des décisions.",
+          "Rendre l'organisation lisible et pilotable : processus observés sur le terrain, pratiques homogènes, qualité au service des décisions opérationnelles.",
       },
       {
         tag: "Expertise 03",
         title: "Management de transition & accompagnement dirigeant",
         trigger: "Quand il faut stabiliser vite et remettre l'entreprise en mouvement.",
         description:
-          "Sécuriser le fonctionnement, poser les priorités et accompagner les décisions structurantes. Un dirigeant moins isolé, une organisation relancée.",
+          "Intervention sur le terrain pour stabiliser, piloter les priorités et accompagner les décisions — présence auprès des équipes en période sensible.",
       },
     ],
   },
   homepageOffers: {
     id: "offres",
-    eyebrow: "Les offres EBE Consulting",
+    eyebrow: "Mes offres",
     title: "Quatre façons d'intervenir, une seule exigence :",
     titleHighlight: "l'efficacité réelle",
     intro:
-      "Chaque mission démarre par une lecture terrain. Ce qui suit dépend de ce que révèle le réel — pas d'un catalogue prédéfini.",
+      "Chaque mission démarre par une immersion terrain : observation, entretiens, lecture du fonctionnement réel. Ce qui suit dépend de ce que révèle le terrain — pas d'un catalogue prédéfini.",
     phases: [
       {
         id: "diagnostic",
@@ -213,7 +294,7 @@ export const content = {
         title: "Voir clairement avant d'agir",
         hook: "Votre organisation dysfonctionne — mais où, exactement, et pourquoi ?",
         description:
-          "Diagnostic terrain pour comprendre les dysfonctionnements visibles et invisibles : organisation, management, communication, exploitation, qualité, commerce, relation client, dynamique des équipes. Objectif : donner au dirigeant une lecture claire, objective et priorisée de la situation.",
+          "Immersion terrain : observation des pratiques, entretiens avec les équipes, lecture des dysfonctionnements visibles et invisibles. Objectif : une photographie claire et priorisée du fonctionnement réel.",
         deliverables: [
           "Cartographie des points de tension",
           "Analyse des rôles et responsabilités",
@@ -232,7 +313,7 @@ export const content = {
         title: "Passer du flou à une organisation claire",
         hook: "Vos équipes avancent, mais le cadre n'est plus suffisamment posé.",
         description:
-          "Accompagnement pour clarifier les responsabilités, fluidifier les échanges, structurer les rituels, fiabiliser les processus et renforcer le management. Objectif : redonner un cadre sans rigidifier l'organisation.",
+          "Accompagnement sur le terrain pour clarifier responsabilités, structurer les rituels de management, fiabiliser les processus et renforcer le pilotage opérationnel — en présence auprès des équipes.",
         deliverables: [
           "Clarification des rôles et responsabilités",
           "Rituels de management opérationnel",
@@ -251,7 +332,7 @@ export const content = {
         title: "Renforcer la posture managériale",
         hook: "Vous ou vos managers traversez une période de tension, de doute ou de transformation.",
         description:
-          "Soutien ciblé des dirigeants et managers dans les moments où il faut reprendre de la hauteur, poser le bon cadre et décider avec justesse. Objectif : aider les leaders à agir avec plus de clarté et d'autorité.",
+          "Soutien des dirigeants et managers sur le terrain : observation des situations, préparation des arbitrages, renforcement de la posture managériale et du pilotage opérationnel au quotidien.",
         deliverables: [
           "Préparation de prises de parole sensibles",
           "Soutien dans les situations complexes",
@@ -270,7 +351,7 @@ export const content = {
         title: "Stabiliser quand il faut agir vite",
         hook: "Crise managériale, passage de relais, changement de direction : votre organisation doit tenir.",
         description:
-          "Intervention opérationnelle pour reprendre les sujets prioritaires, sécuriser l'exploitation, soutenir les équipes et relancer la dynamique de travail. Objectif : remettre l'organisation en état de fonctionner dans une période sensible.",
+          "Intervention terrain immédiate : reprise des sujets prioritaires, sécurisation de l'exploitation, présence auprès des équipes et relance du pilotage opérationnel en période sensible.",
         deliverables: [
           "Diagnostic de démarrage rapide",
           "Feuille de route priorisée",
@@ -285,18 +366,18 @@ export const content = {
     ],
   },
   offers: {
-    title: "Nos offres d'accompagnement",
+    title: "Mes offres d'accompagnement",
     subtitle:
-      "Diagnostic, structuration, accompagnement dirigeant et management de transition — à partir d'une lecture terrain de votre organisation.",
+      "Diagnostic, structuration, accompagnement dirigeant et management de transition — toujours à partir d'une immersion terrain et d'une lecture du fonctionnement réel.",
     pageIntro:
-      "Quatre modes d'intervention complémentaires, activés selon ce que révèle le terrain. Retrouvez ci-dessous le détail de chaque phase : livrables, résultats attendus et modalités de prise de contact.",
+      "Quatre modes d'intervention complémentaires, activés selon ce que révèle l'observation sur le terrain. Immersion, entretiens, pilotage opérationnel : le détail de chaque phase ci-dessous.",
     list: [
       {
         id: "clarifier",
         title: "Clarifier pour décider",
         subtitle: "Accompagnement dirigeant",
         description:
-          "Aide à la décision stratégique et opérationnelle pour les dirigeants qui portent beaucoup seuls.",
+          "Accompagnement dirigeant ancré dans le fonctionnement réel : immersion, observation et pilotage opérationnel pour les dirigeants qui portent beaucoup seuls.",
         objectives: [
           "Clarifier les enjeux et priorités",
           "Structurer la prise de décision",
@@ -321,7 +402,7 @@ export const content = {
         title: "Structurer pour faire grandir",
         subtitle: "Organisation humaine & managériale",
         description:
-          "Structuration de l'organisation pour accompagner la croissance et libérer le potentiel des équipes.",
+          "Structuration de l'organisation sur le terrain : rôles, management, rituels de pilotage et présence auprès des équipes pour accompagner la croissance.",
         objectives: [
           "Définir les rôles et responsabilités",
           "Structurer les relations managériales",
@@ -346,7 +427,7 @@ export const content = {
         title: "Prendre du recul pour comprendre",
         subtitle: "Lecture organisationnelle terrain",
         description:
-          "Analyse approfondie de l'organisation pour identifier les leviers de performance et les points de blocage.",
+          "Immersion et observation approfondies : analyse du travail réel, des flux, des interfaces et des points de blocage — avant toute recommandation.",
         objectives: [
           "Comprendre le travail réel",
           "Identifier les dysfonctionnements",
@@ -371,7 +452,7 @@ export const content = {
         title: "Poser le cadre pour sécuriser",
         subtitle: "Process, procédures, autonomie",
         description:
-          "Mise en place de processus, procédures et cadres de contrôle pour sécuriser les opérations et garantir la qualité.",
+          "Documentation et sécurisation des opérations à partir de l'observation terrain : processus réels, procédures utiles et pilotage opérationnel au service de la qualité.",
         objectives: [
           "Documenter les processus clés",
           "Mettre en place des procédures",
@@ -396,15 +477,15 @@ export const content = {
   audits: {
     title: "Audits & diagnostic",
     description:
-      "Avant toute transformation, une lecture lucide de votre situation. Des audits ciblés pour éclairer vos décisions et engager la suite avec méthode.",
+      "Avant toute transformation, une lecture lucide du fonctionnement réel. Audits terrain pour éclairer vos décisions et engager la suite avec méthode.",
     intro: {
       eyebrow: "Point de départ recommandé",
       title: "Commencer par un audit, c'est voir juste avant d'agir",
       lead:
         "Beaucoup d'accompagnements échouent parce qu'on traite les symptômes sans avoir clarifié la situation réelle. Un audit n'est pas une formalité : c'est un regard structuré, ancré dans le terrain, qui permet au dirigeant de savoir où il en est — et quoi prioriser.",
       paragraphs: [
-        "Chez EBE Consulting, l'audit est souvent la première étape : comprendre l'organisation telle qu'elle fonctionne vraiment, identifier les écarts, les forces et les zones de fragilité, puis traduire ce constat en décisions actionnables.",
-        "Selon votre contexte, nous adaptons le périmètre : diagnostic global, audit qualité, lecture des processus, préparation ou suivi de certification APSAD ou ISO. L'objectif reste le même : vous donner une base solide pour décider sereinement.",
+        "L'audit est souvent ma première étape : comprendre l'organisation telle qu'elle fonctionne vraiment, identifier les écarts, les forces et les zones de fragilité, puis traduire ce constat en décisions actionnables.",
+        "Selon votre contexte, j'adapte le périmètre : diagnostic global, audit qualité, lecture des processus, préparation ou suivi de certification APSAD ou ISO. L'objectif reste le même : vous donner une base solide pour décider sereinement.",
       ],
     },
     why: {
@@ -413,7 +494,7 @@ export const content = {
         {
           title: "Décider sur des faits, pas des impressions",
           description:
-            "Vous disposez d'une photographie claire de la situation : organisation, qualité, processus ou conformité — selon le type d'audit retenu.",
+            "Photographie du fonctionnement réel : organisation, qualité, processus ou conformité — selon le type d'audit retenu, à partir de l'observation terrain.",
         },
         {
           title: "Prioriser ce qui compte vraiment",
@@ -433,7 +514,7 @@ export const content = {
       ],
     },
     approach: {
-      title: "Comment se déroule un audit EBE",
+      title: "Comment se déroule un audit avec moi",
       steps: [
         {
           title: "Cadrage",
@@ -460,7 +541,7 @@ export const content = {
     types: {
       title: "Les types d'audit proposés",
       subtitle:
-        "Chaque entreprise est différente. Nous combinons ou ciblons les audits selon vos enjeux du moment.",
+        "Chaque entreprise est différente. Je combine ou cible les audits selon vos enjeux du moment.",
       items: [
         {
           id: "diagnostic",
@@ -532,14 +613,14 @@ export const content = {
     cta: {
       title: "Prêt à faire le point sur votre organisation ?",
       description:
-        "Échangeons sur votre situation : nous vous proposerons le type d'audit le plus pertinent et un devis adapté à votre périmètre.",
+        "Échangeons sur votre situation : je vous proposerai le type d'audit le plus pertinent et un devis adapté à votre périmètre.",
     },
   },
   copil: {
     title: "Appui au Comité de Pilotage",
     subtitle: "Accompagnement mensuel renouvelable",
     description:
-      "Accompagnement stratégique du Comité de Pilotage pour sécuriser les décisions, anticiper les impacts et traduire la stratégie en actions terrain.",
+      "Appui stratégique du Comité de Pilotage, ancré dans le terrain : sécuriser les décisions, anticiper les impacts opérationnels et traduire la stratégie en actions concrètes auprès des équipes.",
     missions: [
       {
         title: "Sécurisation des décisions",
@@ -559,7 +640,7 @@ export const content = {
       {
         title: "Accompagnement des directeurs",
         description:
-          "Soutien managérial et opérationnel des directeurs pour renforcer leur autonomie et leur performance.",
+          "Soutien managérial et opérationnel des directeurs sur le terrain — observation, pilotage et renforcement de l'autonomie des équipes.",
       },
       {
         title: "Veille qualité & conformité",
@@ -576,7 +657,7 @@ export const content = {
       "Décisions sécurisées et documentées",
       "Directeurs plus autonomes et performants",
       "Réduction des risques opérationnels et qualité",
-      "Performance durable et amélioration continue",
+      "Pilotage opérationnel et amélioration continue",
       "Vision globale et cohérence stratégique",
     ],
     modalities: {
@@ -586,40 +667,40 @@ export const content = {
       scope: "Appui stratégique du Comité de Pilotage",
     },
     valueProposition: {
-      title: "Valeur ajoutée EBE Consulting",
+      title: "Ma valeur ajoutée",
       points: [
-        "Vision globale commerce/exploitation/finance/qualité",
-        "Auditeur interne",
+        "Immersion terrain et lecture du fonctionnement réel",
+        "Vision transverse commerce/exploitation/finance/qualité",
+        "Auditeur interne ISO 9001 & APSAD",
+        "Pilotage opérationnel et présence auprès des équipes",
         "Expérience directionnelle Antilles-Guyane",
-        "Accompagnement managérial structurant",
-        "Référent handicap",
       ],
     },
   },
   target: {
     title: "Pour qui ?",
     description:
-      "EBE Consulting accompagne les dirigeants et structures qui partagent ces enjeux :",
+      "J'accompagne sur le terrain les dirigeants et structures qui partagent ces enjeux :",
     audiences: [
       {
         title: "Dirigeants TPE/PME",
         description:
-          "Entrepreneurs qui portent beaucoup seuls et cherchent à structurer leur organisation.",
+          "Entrepreneurs qui portent beaucoup seuls et veulent une lecture concrète du fonctionnement réel de leur organisation.",
       },
       {
         title: "Entreprises en croissance",
         description:
-          "Structures qui grandissent et doivent adapter leur organisation et leurs processus.",
+          "Structures en expansion qui doivent adapter organisation, processus et pilotage opérationnel — sans perdre le lien avec le terrain.",
       },
       {
         title: "Entreprises en transformation",
         description:
-          "Organisations qui traversent des changements majeurs et ont besoin d'accompagnement.",
+          "Organisations en changement qui ont besoin d'immersion, d'observation et d'une présence auprès des équipes.",
       },
       {
         title: "Tensions organisationnelles",
         description:
-          "Équipes qui rencontrent des difficultés de coordination, de communication ou de performance.",
+          "Équipes en difficulté de coordination : le constat part du terrain, pas seulement du discours de direction.",
       },
     ],
   },
@@ -628,20 +709,20 @@ export const content = {
     before: {
       title: "Avant",
       points: [
-        "Décisions difficiles à prendre",
-        "Manque de visibilité sur les priorités",
-        "Tensions organisationnelles",
-        "Risques opérationnels non maîtrisés",
+        "Décisions sans appui terrain",
+        "Écart entre organisation prévue et réel",
+        "Pilotage opérationnel insuffisant",
+        "Managers éloignés du fonctionnement effectif",
         "Charge mentale élevée du dirigeant",
       ],
     },
     after: {
       title: "Après",
       points: [
-        "Décisions sécurisées et rapides",
-        "Vision claire des enjeux et priorités",
-        "Organisation fluide et performante",
-        "Risques maîtrisés et contrôlés",
+        "Décisions ancrées dans le fonctionnement réel",
+        "Pilotage opérationnel lisible et partagé",
+        "Présence managériale auprès des équipes",
+        "Organisation fluide et observable sur le terrain",
         "Dirigeant libéré pour la stratégie",
       ],
     },
@@ -650,10 +731,11 @@ export const content = {
     can: {
       title: "Ce que je peux faire",
       items: [
-        "Accompagnement dirigeants et équipes",
+        "Immersion terrain et accompagnement dirigeants",
+        "Observation du fonctionnement réel et pilotage opérationnel",
         "Conseil organisation, management, qualité, performance",
         "Audits qualité, organisation, processus, conformité interne",
-        "Coaching professionnel",
+        "Coaching professionnel ancré sur le terrain",
       ],
     },
     cannot: {
@@ -669,6 +751,11 @@ export const content = {
     title: "Questions fréquentes",
     items: [
       {
+        question: "En quoi votre approche diffère-t-elle d'un cabinet de conseil classique ?",
+        answer:
+          "Je ne produis pas de recommandations depuis un bureau. Chaque mission commence par une immersion terrain : observation des pratiques, entretiens avec les équipes, lecture du fonctionnement réel. Les livrables et le pilotage opérationnel découlent de ce qui est observé — pas d'un modèle théorique.",
+      },
+      {
         question: "Combien de temps dure un accompagnement ?",
         answer:
           "La durée varie selon la mission et les besoins. Un accompagnement peut durer de quelques semaines à plusieurs mois. Pour l'appui COPIL, l'engagement est mensuel et renouvelable.",
@@ -676,7 +763,7 @@ export const content = {
       {
         question: "Comment se déroule un accompagnement ?",
         answer:
-          "L'accompagnement commence toujours par une phase de compréhension (immersion terrain, entretiens). Ensuite, nous définissons ensemble les priorités et le plan d'action. L'accompagnement se fait en mode projet avec des points réguliers et des livrables concrets.",
+          "Je commence par une immersion terrain (observation, entretiens avec dirigeants et équipes). J'accompagne ensuite, avec vous, la définition des priorités et du plan d'action. Le travail se poursuit en présence sur site ou en points réguliers, avec des livrables concrets et un pilotage opérationnel partagé.",
       },
       {
         question: "Quels sont les livrables ?",
@@ -684,14 +771,14 @@ export const content = {
           "Les livrables varient selon l'offre choisie : rapports d'analyse, documentation de processus, fiches de poste, tableaux de bord, plans d'action, etc. Tous les livrables sont adaptés à vos besoins et utilisables immédiatement.",
       },
       {
-        question: "Comment garantissez-vous la confidentialité ?",
+        question: "Comment garantis-je la confidentialité ?",
         answer:
-          "Tous les échanges et documents sont strictement confidentiels. Un accord de confidentialité est signé en début de mission. Les informations partagées ne sont jamais divulguées à des tiers.",
+          "Tous les échanges et documents sont strictement confidentiels. Je signe un accord de confidentialité en début de mission. Les informations partagées ne sont jamais divulguées à des tiers.",
       },
       {
         question: "Quels sont vos tarifs ?",
         answer:
-          "Les tarifs varient selon la mission et sa complexité. Nous établissons un devis personnalisé après échange sur vos besoins et le périmètre retenu.",
+          "Les tarifs varient selon la mission et sa complexité. J'établis un devis personnalisé après échange sur vos besoins et le périmètre retenu.",
       },
       {
         question: "Qu'est-ce que l'appui COPIL ?",
@@ -701,14 +788,14 @@ export const content = {
       {
         question: "Intervenez-vous uniquement aux Antilles-Guyane ?",
         answer:
-          "EBE Consulting est ancrée aux Antilles-Guyane (Martinique, Guadeloupe, Guyane) : c'est mon terrain d'expertise et mon expérience directionnelle. J'interviens également en France métropolitaine lorsque la mission le justifie.",
+          "Je suis ancré aux Antilles-Guyane (Martinique, Guadeloupe, Guyane) : c'est mon terrain d'expertise et mon expérience directionnelle. J'interviens également en France métropolitaine lorsque la mission le justifie.",
       },
     ],
   },
   contact: {
     title: "Vous sentez que votre organisation a besoin de clarté ?",
     subtitle:
-      "Parlons de ce qui se joue réellement dans votre entreprise — et de ce qu'il faut remettre en mouvement. Un premier échange, sans engagement, pour voir juste.",
+      "Parlons de ce qui se joue réellement sur le terrain — fonctionnement, équipes, pilotage. Un premier échange, sans engagement, pour voir juste.",
     phone: "06 96 85 73 02",
     email: "eb@ebeconsulting.fr",
     zones: "Martinique, Guadeloupe, Guyane & France métropolitaine",
@@ -722,9 +809,9 @@ export const content = {
       subject: "Sujet",
       message: "Message",
       submit: "Envoyer",
-      success: "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.",
+      success: "Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.",
       error:
-        "Une erreur est survenue. Veuillez réessayer ou nous contacter directement.",
+        "Une erreur est survenue. Veuillez réessayer ou me contacter directement.",
     },
     subjects: [
       "Demande de devis",
@@ -744,22 +831,23 @@ export const content = {
     ],
   },
   about: {
-    title: "À propos d'EBE Consulting",
+    title: "À propos",
     description:
-      "J'accompagne les dirigeants TPE/PME dans la structuration organisationnelle, managériale et opérationnelle pour une performance durable.",
+      "Après plus de 30 ans de direction opérationnelle, qualité et management, j'accompagne les dirigeants qui ont besoin de reprendre de la clarté, du pilotage et du fonctionnement.",
     profile: {
-      eyebrow: "Derrière EBE Consulting",
+      eyebrow: "Présentation fondatrice",
       title: "Une expérience de direction, pas une posture théorique",
       paragraphs: [
-        "Plus de 30 ans passés au cœur des organisations : management d'équipes, qualité, relation client, pilotage opérationnel. J'interviens quand le dirigeant sent que le cadre, les rôles ou la dynamique collective ne tiennent plus comme ils devraient.",
+        "Après plus de 30 ans de direction opérationnelle, qualité et management dans des environnements exigeants, j'accompagne aujourd'hui les dirigeants qui ont besoin de reprendre de la clarté, du pilotage et du fonctionnement.",
+        "Plus de trois décennies passées au cœur des organisations : management d'équipes, qualité, relation client, pilotage opérationnel. J'interviens quand le dirigeant sent que le cadre, les rôles ou la dynamique collective ne tiennent plus comme ils devraient.",
         "Mon approche est terrain, directe et exigeante — pour identifier ce qui bloque, clarifier ce qui doit l'être, et laisser une organisation plus claire, plus solide et plus autonome.",
       ],
-      imageAlt: "Portrait — EBE Consulting",
+      imageAlt: "Portrait — fondateur EBE Consulting",
     },
     approach: {
       title: "Mon approche",
       description:
-        "Je crois que la performance durable se construit avant les chiffres. C'est pourquoi je commence toujours par comprendre le travail réel, structurer l'humain, et poser les cadres nécessaires avant de mesurer et piloter.",
+        "Structurer l'organisation pour sécuriser les décisions et les équipes : c'est le fil conducteur de mon intervention. Immersion terrain, observation du travail réel et pilotage opérationnel — parce qu'une entreprise avance mieux quand chacun sait où il va.",
     },
     valuesTitle: "Mes valeurs",
     values: [
@@ -769,9 +857,9 @@ export const content = {
           "Je n'agis jamais avant de comprendre. L'observation du travail réel est au cœur de ma méthode.",
       },
       {
-        title: "Structuration humaine",
+        title: "Structurer l'organisation humaine",
         description:
-          "Je structure l'humain avant de poser le cadre. Les rôles, responsabilités et le sens du travail sont prioritaires.",
+          "Clarifier les rôles et responsabilités, redonner du cadre aux équipes et aligner le fonctionnement collectif — avant tout modèle ou processus imposé.",
       },
       {
         title: "Vision transverse",
@@ -795,7 +883,7 @@ export const content = {
   footer: {
     copyright: "© 2026 EBE Consulting · SASU · Martinique · Tous droits réservés",
     description:
-      "Management de transition et conseil opérationnel — organisations plus claires, plus solides et plus autonomes.",
+      "Conseil terrain et management de transition — structurer l'organisation pour sécuriser les décisions, les équipes et le pilotage opérationnel.",
     links: {
       company: "Entreprise",
       offers: "Offres",

@@ -24,11 +24,18 @@ export default function Hero() {
           priority
           quality={95}
           sizes="100vw"
-          className="object-cover object-[center_28%] sm:object-[center_26%] contrast-[1.03] saturate-[1.04]"
+          className="object-cover object-[center_28%] sm:object-[center_26%]"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-black/28" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900/15 via-transparent to-primary-900/35" />
+        <div className="absolute inset-0 bg-black/42" aria-hidden />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/15"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-primary-900/35 via-transparent to-primary-900/50"
+          aria-hidden
+        />
       </div>
 
       <div
@@ -42,14 +49,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:pr-8"
+            className="lg:pr-8 [text-shadow:0_1px_12px_rgba(0,0,0,0.55)]"
           >
             <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-7">
               <span className="block w-8 h-px bg-ebe-orange" aria-hidden />
               {hero.eyebrow}
             </p>
 
-            <h1 className="text-4xl md:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] mb-5 drop-shadow-sm">
+            <h1 className="text-4xl md:text-5xl xl:text-[3.25rem] font-bold text-white leading-[1.12] mb-5 drop-shadow-lg">
               {titleParts[0]}
               <em className="text-ebe-orange not-italic">{hero.titleHighlight}</em>
               {titleParts[1]}

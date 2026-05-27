@@ -8,12 +8,12 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Offres d'accompagnement dirigeant - EBE Consulting",
   description:
-    "Quatre façons d'intervenir pour une efficacité réelle : diagnostic, structuration, accompagnement dirigeant, management de transition. À partir d'une lecture terrain.",
+    "Quatre façons d'intervenir pour une efficacité réelle : diagnostic terrain, structuration, accompagnement dirigeant, management de transition.",
   alternates: {
     canonical: "https://ebeconsulting.fr/offres",
   },
   openGraph: {
-    title: "Les offres EBE Consulting | EBE Consulting",
+    title: "Les offres | EBE Consulting",
     description:
       "Quatre façons d'intervenir, une seule exigence : l'efficacité réelle. Chaque mission démarre par une lecture terrain.",
     url: "https://ebeconsulting.fr/offres",

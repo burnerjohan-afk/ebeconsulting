@@ -1,7 +1,7 @@
 export type ClientLogo = {
   name: string;
   logo: string;
-  /** Affiché uniquement dans « Ils nous font confiance » */
+  /** Affiché uniquement dans « Expériences et collaborations » */
   trustOnly?: boolean;
 };
 
@@ -12,6 +12,7 @@ export const clientLogos: ClientLogo[] = [
   { name: "Evolya", logo: "/image/evolya.png" },
   { name: "Semas", logo: "/image/semas.png", trustOnly: true },
   { name: "Securidom", logo: "/image/securidom.png", trustOnly: true },
+  { name: "APS", logo: "/image/aps.png", trustOnly: true },
 ];
 
 export const trustSectionLogos = clientLogos;

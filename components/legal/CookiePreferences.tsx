@@ -115,7 +115,7 @@ export default function CookiePreferences() {
           <div className="flex-1">
             <h3 className="text-lg font-bold text-[#1D1D1F] mb-1">Mesure d'audience</h3>
             <p className="text-sm text-[#1D1D1F]/70">
-              Ces cookies nous aident à comprendre comment les visiteurs utilisent notre site.
+              Ces cookies permettent de comprendre comment les visiteurs utilisent le site.
             </p>
           </div>
           <button

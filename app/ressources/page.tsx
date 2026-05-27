@@ -6,14 +6,14 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Ressources | EBE Consulting",
   description:
-    "Retrouvez nos articles, insights et ressources sur l'accompagnement organisationnel, le management et la performance durable.",
+    "Retrouvez mes articles et ressources sur l'accompagnement organisationnel, le pilotage opérationnel et le management de terrain.",
   alternates: {
     canonical: "https://ebeconsulting.fr/ressources",
   },
   openGraph: {
     title: "Ressources | EBE Consulting",
     description:
-      "Articles et insights sur la structuration organisationnelle et la performance durable.",
+      "Articles et insights sur la structuration organisationnelle et le pilotage opérationnel.",
     url: "https://ebeconsulting.fr/ressources",
   },
 };
@@ -24,7 +24,7 @@ export default function ResourcesPage() {
       {/* Hero avec image ressources/connaissances */}
       <PageHero
         title="Ressources"
-        subtitle="Articles, insights et ressources sur l'accompagnement organisationnel et la performance durable."
+        subtitle="Articles et ressources sur l'accompagnement organisationnel, le pilotage opérationnel et le management de terrain."
         imageUrl={pageImages.hero.ressources}
         overlayOpacity={0.35}
       />

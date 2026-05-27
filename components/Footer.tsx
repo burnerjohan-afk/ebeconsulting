@@ -38,7 +38,7 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <p className="text-[#1D1D1F]/90 text-xs mb-2 font-semibold">Suivez-nous</p>
+              <p className="text-[#1D1D1F]/90 text-xs mb-2 font-semibold">Suivez-moi</p>
               <SocialLinks variant="footer" />
             </div>
           </div>

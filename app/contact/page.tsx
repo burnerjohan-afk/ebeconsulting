@@ -8,14 +8,14 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Contact EBE Consulting - Demander un devis",
   description:
-    "Contactez EBE Consulting pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
+    "Contactez-moi pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
   alternates: {
     canonical: "https://ebeconsulting.fr/contact",
   },
   openGraph: {
     title: "Contact EBE Consulting - Demander un devis",
     description:
-      "Contactez EBE Consulting pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
+      "Contactez-moi pour un accompagnement sur mesure. Échangez sur vos enjeux et recevez une proposition personnalisée sous 48h.",
     url: "https://ebeconsulting.fr/contact",
   },
 };

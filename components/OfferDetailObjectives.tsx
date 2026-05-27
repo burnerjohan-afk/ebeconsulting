@@ -38,7 +38,7 @@ export default function OfferDetailObjectives({ objectives }: OfferDetailObjecti
         variants={itemVariants}
         className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-3"
       >
-        Ce que nous visons
+        Ce que je vise
       </motion.p>
       <motion.h2
         variants={itemVariants}

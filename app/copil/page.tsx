@@ -9,7 +9,7 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Appui Comité de Pilotage | EBE Consulting",
   description:
-    "Appui stratégique mensuel au Comité de Pilotage : sécurisation des décisions, anticipation des impacts, traduction stratégie → terrain.",
+    "Appui COPIL ancré dans le terrain : sécurisation des décisions, pilotage opérationnel et présence auprès des équipes.",
   alternates: {
     canonical: "https://ebeconsulting.fr/copil",
   },

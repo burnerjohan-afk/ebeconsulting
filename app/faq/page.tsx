@@ -8,14 +8,14 @@ import { pageImages } from "@/lib/page-images";
 export const metadata: Metadata = {
   title: "Questions fréquentes | EBE Consulting",
   description:
-    "Réponses aux questions fréquentes sur l'accompagnement EBE Consulting : durée, déroulé, livrables, tarifs, zone géographique.",
+    "Réponses aux questions fréquentes sur mon accompagnement : durée, déroulé, livrables, tarifs, zone géographique.",
   alternates: {
     canonical: "https://ebeconsulting.fr/faq",
   },
   openGraph: {
     title: "FAQ | EBE Consulting",
     description:
-      "Toutes les réponses à vos questions sur notre accompagnement organisationnel et managérial.",
+      "Toutes les réponses à vos questions sur mon accompagnement organisationnel et managérial.",
     url: "https://ebeconsulting.fr/faq",
   },
 };
@@ -28,7 +28,7 @@ export default function FAQPage() {
         {/* Hero avec image */}
         <PageHero
           title={content.faq.title}
-          subtitle="Toutes les réponses à vos questions sur notre accompagnement"
+          subtitle="Toutes les réponses à vos questions sur mon accompagnement"
           imageUrl={pageImages.hero.faq}
           overlayOpacity={0.35}
         />

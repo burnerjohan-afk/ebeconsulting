@@ -58,7 +58,8 @@ export default function StructuredData() {
       "Structuration managériale",
       "ISO 9001",
       "Conseil en management",
-      "Performance durable",
+      "Pilotage opérationnel",
+      "Organisation performante",
     ],
   };
 

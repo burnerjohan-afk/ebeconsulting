@@ -40,7 +40,7 @@ export const legalConfig = {
     prospects: "3 ans maximum après dernier contact",
     technicalLogs: "12 mois maximum",
   },
-  lastUpdate: "26 mai 2026",
+  lastUpdate: "27 mai 2026",
 };
 
 export type CookieConsent = {

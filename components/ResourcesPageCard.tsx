@@ -24,16 +24,16 @@ export default function ResourcesPageCard() {
           Ressources à venir
         </h2>
         <p className="text-neutral-700 mb-6">
-          Nous préparons actuellement des articles et ressources sur
-          l'accompagnement organisationnel, le management et la performance
-          durable. Revenez bientôt pour découvrir nos insights.
+          Je prépare actuellement des articles et ressources sur
+          l&apos;accompagnement organisationnel, le pilotage opérationnel et le
+          management de terrain. Revenez bientôt pour découvrir mes analyses.
         </p>
         <p className="text-neutral-600 mb-8">
-          En attendant, n'hésitez pas à nous contacter pour échanger sur vos
+          En attendant, n&apos;hésitez pas à me contacter pour échanger sur vos
           enjeux.
         </p>
         <Button href="/contact" variant="primary">
-          Nous contacter
+          Me contacter
         </Button>
       </div>
     </motion.div>

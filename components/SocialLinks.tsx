@@ -61,7 +61,7 @@ export default function SocialLinks({ variant = "header" }: SocialLinksProps) {
           target="_blank"
           rel="noopener noreferrer"
           className={`group relative p-2 rounded-full transition-all duration-300 ${social.color} hover:scale-110 hover:shadow-lg border-0`}
-          aria-label={`Suivez-nous sur ${social.name}`}
+          aria-label={`Suivez-moi sur ${social.name}`}
         >
           {social.icon}
           <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">

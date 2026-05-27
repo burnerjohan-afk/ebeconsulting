@@ -20,13 +20,17 @@ export const metadata: Metadata = {
     template: "%s | EBE Consulting",
   },
   description:
-    "Management de transition et conseil opérationnel pour dirigeants TPE/PME. J'arrive. J'analyse. J'agis. — organisations plus claires, solides et autonomes.",
+    "Conseil terrain et management de transition : immersion, observation du fonctionnement réel et pilotage opérationnel pour dirigeants TPE/PME. Antilles-Guyane et France métropolitaine.",
   keywords: [
+    "conseil terrain",
     "accompagnement dirigeant",
+    "pilotage opérationnel",
+    "fonctionnement réel",
+    "immersion entreprise",
     "audit organisationnel",
     "structuration managériale",
     "ISO 9001",
-    "performance durable",
+    "organisation performante",
     "Antilles-Guyane",
     "TPE PME",
     "comité de pilotage",
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "EBE Consulting",
     title: "EBE Consulting | Accompagnement dirigeants TPE/PME",
     description:
-      "La performance durable se construit avant les chiffres. Accompagnement organisationnel, managérial et opérationnel.",
+      "Conseil terrain : immersion, observation et pilotage opérationnel pour des organisations plus claires et autonomes.",
     images: [
       {
         url: "https://ebeconsulting.fr/image/logo.PNG",
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EBE Consulting | Accompagnement dirigeants TPE/PME",
     description:
-      "La performance durable se construit avant les chiffres.",
+      "Une organisation performante se construit avant les résultats.",
   },
   robots: {
     index: true,

@@ -71,6 +71,11 @@ export default function DifferentiationSection() {
             {differentiation.title}{" "}
             <span className="text-ebe-orange">{differentiation.titleAccent}</span>
           </h2>
+          {differentiation.subtitle ? (
+            <p className="mt-5 text-base md:text-lg text-ebe-anthracite/70 max-w-2xl mx-auto leading-relaxed">
+              {differentiation.subtitle}
+            </p>
+          ) : null}
         </motion.div>
 
         <motion.blockquote

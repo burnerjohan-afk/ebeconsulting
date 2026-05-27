@@ -17,7 +17,7 @@ export default function NotFound() {
             Retour à l'accueil
           </Button>
           <Button href="/contact" variant="secondary">
-            Nous contacter
+            Me contacter
           </Button>
         </div>
       </div>
