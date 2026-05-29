@@ -15,7 +15,6 @@ import ClientsSection from "@/components/ClientsSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FounderSection from "@/components/FounderSection";
-import VisionApproachSection from "@/components/VisionApproachSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     canonical: "https://ebeconsulting.fr",
   },
   openGraph: {
-    title: "EBE Consulting | J'arrive. J'analyse. J'agis.",
+    title: "EBE Consulting | J'arrive. J'évalue. J'agis.",
     description:
       "Management de transition et conseil opérationnel pour des organisations plus claires, plus solides et plus autonomes.",
     url: "https://ebeconsulting.fr",
@@ -39,7 +38,6 @@ export default function HomePage() {
       <Hero />
       <SignauxSection />
       <MethodSection />
-      <VisionApproachSection />
       <TerrainPrincipleSection />
       <OffersSection />
       <DifferentiationSection />

@@ -10,7 +10,7 @@ export const clientLogos: ClientLogo[] = [
   { name: "SELECT Service", logo: "/image/select logo.png" },
   { name: "FlowLab", logo: "/image/flowlab.png" },
   { name: "Evolya", logo: "/image/evolya.png" },
-  { name: "Semas", logo: "/image/semas.png", trustOnly: true },
+  { name: "Semas", logo: "/image/semas.png" },
   { name: "Securidom", logo: "/image/securidom.png", trustOnly: true },
   { name: "APS", logo: "/image/aps.png", trustOnly: true },
 ];

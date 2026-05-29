@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 import OfferPhaseCard, { offerPhaseCardVariants } from "./OfferPhaseCard";
+import { getAllOfferPhases } from "@/lib/offers";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -13,7 +14,8 @@ const containerVariants = {
 };
 
 export default function OffersPageCards() {
-  const { homepageOffers, offers } = content;
+  const { offers } = content;
+  const allPhases = getAllOfferPhases();
 
   return (
     <motion.div
@@ -30,10 +32,10 @@ export default function OffersPageCards() {
       </motion.p>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-7"
         variants={containerVariants}
       >
-        {homepageOffers.phases.map((phase, index) => (
+        {allPhases.map((phase, index) => (
           <OfferPhaseCard key={phase.id} phase={phase} index={index} variant="full" />
         ))}
       </motion.div>

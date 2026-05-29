@@ -74,7 +74,7 @@ export default function SupportNetworkSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-14 md:mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -111,18 +111,49 @@ export default function SupportNetworkSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-2xl mx-auto mb-10"
+          className="max-w-5xl mx-auto mb-10 pt-12 md:pt-14 border-t border-ebe-anthracite/10"
         >
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 md:mb-10">
             <h3 className="text-xl md:text-2xl font-bold text-ebe-anthraciteDark mb-2">
               {supportNetwork.stepsTitle}
             </h3>
-            <p className="text-sm md:text-base text-ebe-anthracite/70 leading-relaxed">
+            <p className="text-sm md:text-base text-ebe-anthracite/80 leading-relaxed max-w-2xl mx-auto">
               {supportNetwork.stepsIntro}
             </p>
           </div>
 
-          <ol className="relative space-y-0" aria-label={supportNetwork.stepsTitle}>
+          {/* Desktop — 3 colonnes, même largeur que « Pourquoi moi ? » */}
+          <ol
+            className="hidden lg:grid lg:grid-cols-3 lg:gap-5"
+            aria-label={supportNetwork.stepsTitle}
+          >
+            {supportNetwork.steps.map((step, index) => {
+              const Icon = stepIcons[index % stepIcons.length];
+              return (
+                <li key={step.title} className="relative flex">
+                  <article className="flex h-full w-full flex-col rounded-lg border border-ebe-anthracite/10 bg-white p-6 shadow-[0_2px_20px_rgba(62,74,79,0.07)]">
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-ebe-orange text-sm font-bold text-white shadow-md">
+                        {index + 1}
+                      </span>
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-ebe-orange/10">
+                        <Icon className="h-4 w-4 text-ebe-orange" aria-hidden />
+                      </span>
+                    </div>
+                    <h4 className="text-base font-bold text-ebe-anthraciteDark mb-2 sm:text-lg">
+                      {step.title}
+                    </h4>
+                    <p className="text-sm md:text-base leading-relaxed text-ebe-anthracite/90">
+                      {step.description}
+                    </p>
+                  </article>
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Mobile — fil chronologique vertical */}
+          <ol className="relative space-y-0 lg:hidden" aria-label={supportNetwork.stepsTitle}>
             {supportNetwork.steps.map((step, index) => {
               const Icon = stepIcons[index % stepIcons.length];
               const isLast = index === supportNetwork.steps.length - 1;
@@ -153,7 +184,7 @@ export default function SupportNetworkSection() {
                         {step.title}
                       </h4>
                     </div>
-                    <p className="text-sm leading-relaxed text-ebe-anthracite/80">
+                    <p className="text-sm md:text-base leading-relaxed text-ebe-anthracite/90">
                       {step.description}
                     </p>
                   </article>
@@ -168,7 +199,7 @@ export default function SupportNetworkSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="text-sm text-ebe-anthracite/65 text-center max-w-3xl mx-auto leading-relaxed rounded-lg bg-white/60 border border-ebe-anthracite/10 px-5 py-4"
+          className="text-sm md:text-base text-ebe-anthracite/80 text-center max-w-5xl mx-auto leading-relaxed rounded-lg bg-white border border-ebe-anthracite/10 px-6 py-5 shadow-sm"
         >
           {supportNetwork.disclaimer}
         </motion.p>

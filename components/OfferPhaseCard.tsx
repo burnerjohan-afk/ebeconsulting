@@ -1,22 +1,16 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Button from "./ui/Button";
 import { icons } from "@/lib/icons";
 import { contactHrefForOffer } from "@/lib/contact-subjects";
+import { content } from "@/lib/content";
 
-export type OfferPhase = {
-  id: string;
-  number: string;
-  tag: string;
-  title: string;
-  hook: string;
-  description: string;
-  deliverables: string[];
-  result: string;
+export type OfferPhase = (typeof content.homepageOffers.phases)[number] & {
+  detailHref?: string;
   outcome?: string;
-  contactOfferId: string;
 };
 
 const cardVariants = {
@@ -35,13 +29,33 @@ interface OfferPhaseCardProps {
   variant?: "preview" | "full";
 }
 
+function OfferBlock({
+  label,
+  children,
+  compact = false,
+}: {
+  label: string;
+  children: ReactNode;
+  compact?: boolean;
+}) {
+  return (
+    <div className={compact ? "mb-3" : "mb-4"}>
+      <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ebe-orange mb-1.5">
+        {label}
+      </p>
+      <div className="text-sm text-ebe-anthracite/80 leading-relaxed">{children}</div>
+    </div>
+  );
+}
+
 export default function OfferPhaseCard({
   phase,
-  index = 0,
   variants = cardVariants,
   variant = "full",
 }: OfferPhaseCardProps) {
   const isPreview = variant === "preview";
+  const labels = content.homepageOffers.structureLabels;
+  const detailHref = phase.detailHref ?? `/offres/${phase.contactOfferId}`;
 
   return (
     <motion.article
@@ -74,32 +88,33 @@ export default function OfferPhaseCard({
           isPreview ? "pr-14 sm:pr-16" : "pr-16 md:pr-20"
         }`}
       >
-        <div className="mb-2">
-          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-ebe-orange mb-3 block">
+        <div className="mb-3">
+          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-ebe-orange mb-2 block">
             {phase.tag}
           </span>
-          <h3 className="text-xl font-bold text-ebe-anthraciteDark mb-2 group-hover:text-ebe-anthracite transition-colors">
+          <h3 className="text-xl font-bold text-ebe-anthraciteDark group-hover:text-ebe-anthracite transition-colors">
             {phase.title}
           </h3>
         </div>
 
-        <p className="text-sm italic text-ebe-orange mb-4">{phase.hook}</p>
+        <OfferBlock label={labels.problem} compact={isPreview}>
+          <p className="italic text-ebe-anthracite/90">{phase.hook}</p>
+        </OfferBlock>
 
-      {!isPreview && (
-        <p className="text-sm text-ebe-anthracite/75 leading-relaxed mb-5 flex-1">
-          {phase.description}
-        </p>
-      )}
+        {!isPreview && (
+          <OfferBlock label={labels.solution}>
+            <p>{phase.description}</p>
+          </OfferBlock>
+        )}
 
-      {isPreview && (
-        <p className="text-sm bg-ebe-orange/[0.07] border-l-2 border-ebe-orange px-4 py-3 rounded-sm text-ebe-anthracite mb-5 flex-1">
-          {phase.outcome ?? phase.result}
-        </p>
-      )}
+        <OfferBlock label={labels.benefit} compact={isPreview}>
+          <p className="bg-ebe-orange/[0.07] border-l-2 border-ebe-orange px-3 py-2.5 rounded-sm text-ebe-anthracite">
+            {phase.result}
+          </p>
+        </OfferBlock>
 
-      {!isPreview && (
-        <>
-          <ul className="space-y-2 mb-6 pt-5 border-t border-ebe-anthracite/10">
+        {!isPreview && phase.deliverables.length > 0 && (
+          <ul className="space-y-2 mb-6 pt-4 mt-1 border-t border-ebe-anthracite/10">
             {phase.deliverables.map((item) => (
               <li
                 key={item}
@@ -113,58 +128,46 @@ export default function OfferPhaseCard({
               </li>
             ))}
           </ul>
+        )}
 
-          <motion.p
-            className="text-sm bg-ebe-orange/[0.07] border-l-2 border-ebe-orange px-4 py-3 rounded-sm text-ebe-anthracite mb-6"
-            whileHover={{ x: 4 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          >
-            <strong className="font-semibold text-ebe-anthraciteDark">
-              Résultat attendu :
-            </strong>{" "}
-            {phase.result}
-          </motion.p>
-        </>
-      )}
-
-      <motion.div
-        className={`flex gap-3 mt-auto ${isPreview ? "flex-col" : "flex-col sm:flex-row"}`}
-        initial={false}
-        whileHover={{ x: 2 }}
-      >
-        {isPreview ? (
-          <Button
-            href={`/offres/${phase.contactOfferId}`}
-            variant="ghost"
-            icon={ArrowRight}
-            iconPosition="right"
-            className="w-full text-sm"
-          >
-            Voir le détail
-          </Button>
-        ) : (
-          <>
+        <motion.div
+          className={`flex gap-3 mt-auto pt-4 ${isPreview ? "flex-col" : "flex-col sm:flex-row"}`}
+          initial={false}
+          whileHover={{ x: 2 }}
+        >
+          {isPreview ? (
             <Button
-              href={contactHrefForOffer(phase.contactOfferId)}
-              variant="primary"
-              icon={icons.cta.arrow}
-              iconPosition="right"
-              className="flex-1 text-sm"
-            >
-              Parlons-en
-            </Button>
-            <Button
-              href={`/offres/${phase.contactOfferId}`}
+              href={detailHref}
               variant="ghost"
               icon={ArrowRight}
               iconPosition="right"
-              className="flex-1 text-sm"
+              className="w-full text-sm"
             >
-              En savoir plus
+              Voir le détail
             </Button>
-          </>
-        )}
-      </motion.div>
+          ) : (
+            <>
+              <Button
+                href={contactHrefForOffer(phase.contactOfferId)}
+                variant="primary"
+                icon={icons.cta.arrow}
+                iconPosition="right"
+                className="flex-1 text-sm"
+              >
+                Parlons-en
+              </Button>
+              <Button
+                href={detailHref}
+                variant="ghost"
+                icon={ArrowRight}
+                iconPosition="right"
+                className="flex-1 text-sm"
+              >
+                En savoir plus
+              </Button>
+            </>
+          )}
+        </motion.div>
       </div>
     </motion.article>
   );

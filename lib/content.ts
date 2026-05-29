@@ -1,7 +1,7 @@
 export const content = {
   company: {
     name: "EBE Consulting",
-    tagline: "J'arrive. J'analyse. J'agis.",
+    tagline: "J'arrive. J'évalue. J'agis.",
     mission:
       "Terrain, fonctionnement réel et pilotage opérationnel — pour des organisations plus claires, plus fluides et plus autonomes.",
     description:
@@ -13,15 +13,15 @@ export const content = {
     titleHighlight: "clarté, du pilotage et du fonctionnement",
     titleRest: " dans les organisations.",
     tagline:
-      "Une entreprise peut travailler beaucoup… sans fonctionner réellement.",
-    signature: "J'arrive. J'analyse. J'agis.",
-    signatureHighlight: "J'analyse.",
+      "Vous avancez, mais le pilotage, les rôles ou la dynamique d'équipe ne suivent plus ?",
+    signature: "J'arrive. J'évalue. J'agis.",
+    signatureHighlight: "J'évalue.",
     signatureSuite:
       "J'interviens quand l'entreprise avance… mais sans véritable pilotage.",
     highlights: [
-      "Observation du fonctionnement réel avant toute recommandation",
-      "Présence auprès des équipes et des managers sur le terrain",
-      "Pilotage opérationnel et décisions ancrées dans le réel",
+      "Un interlocuteur unique — et un réseau d'experts mobilisé au besoin",
+      "Immersion terrain avant toute recommandation",
+      "Des décisions ancrées dans le fonctionnement réel",
     ],
     description: "",
     ctaPrimary: "Parlons de votre situation",
@@ -78,7 +78,7 @@ export const content = {
     title: "Sans dépendance.",
     titleAccent: "Avec impact.",
     subtitle:
-      "Pas de conseil depuis un bureau : immersion, fonctionnement réel et pilotage opérationnel.",
+      "Pas de conseil depuis un bureau : je part de vos problématiques réelles, sur le terrain.",
     quote:
       "Le terrain d'abord. Les équipes au centre. Le pilotage comme fil conducteur.",
     points: [
@@ -268,12 +268,29 @@ export const content = {
   ],
   method: {
     id: "methode",
-    eyebrow: "Ma méthode terrain",
-    title: "Voir. Comprendre. Structurer. Transmettre.",
-    subtitle:
-      "J'observe le fonctionnement réel avant de structurer l'organisation.",
-    intro:
-      "Mon approche repose sur l'immersion, l'analyse concrète et le pilotage opérationnel — pas sur un modèle théorique.",
+    eyebrow: "Ma méthode",
+    signature: "J'arrive. J'évalue. J'agis.",
+    signatureHighlight: "J'évalue.",
+    signatureLead:
+      "Sur le terrain, je lis la situation réelle — puis j'engage l'action avec vous.",
+    signatureSteps: [
+      {
+        label: "J'arrive",
+        description: "Sur le terrain, auprès des équipes et des dirigeants.",
+      },
+      {
+        label: "J'évalue",
+        description: "Lecture lucide du fonctionnement réel et des priorités.",
+      },
+      {
+        label: "J'agis",
+        description: "Plan d'action concret, pilotage partagé, résultats mesurables.",
+      },
+    ],
+    stepsTagline: "Voir · Comprendre · Structurer · Transmettre",
+    /** Alias CMS / seed */
+    title: "Voir · Comprendre · Structurer · Transmettre",
+    subtitle: "Quatre temps de travail, ancrés dans votre réalité opérationnelle.",
     steps: [
       {
         number: "01",
@@ -353,15 +370,15 @@ export const content = {
   homepageOffers: {
     id: "offres",
     eyebrow: "Mes offres",
-    title: "Quatre façons d'intervenir, une seule exigence :",
-    titleHighlight: "l'efficacité réelle",
+    title: "Six réponses à six situations",
+    titleHighlight: "que vivent les dirigeants",
     intro:
-      "Chaque mission part du terrain. Ce qui suit dépend de ce que révèle l'observation — pas d'un catalogue prédéfini.",
-    introPoints: [
-      "Immersion et lecture du fonctionnement réel",
-      "Résultats concrets pour le dirigeant",
-      "Présence auprès des équipes",
-    ],
+      "Chaque offre part d'une problématique concrète — la vôtre — et d'une réponse terrain. Même structure, même clarté.",
+    structureLabels: {
+      problem: "Votre problématique",
+      solution: "Ma réponse",
+      benefit: "Ce que vous gagnez",
+    },
     phases: [
       {
         id: "diagnostic",
@@ -442,13 +459,53 @@ export const content = {
         contactOfferId: "securiser",
       },
     ],
+    supplementaryPhases: [
+      {
+        id: "audit-offer",
+        number: "05",
+        tag: "Audit & diagnostic",
+        title: "Audits & diagnostic",
+        hook:
+          "Vous sentez que quelque chose coince, mais il vous manque une photographie claire et partagée de la situation.",
+        description:
+          "Audit terrain (situation, qualité, processus, APSAD ou ISO) : un constat structuré pour décider sereinement de la suite.",
+        deliverables: [
+          "Rapport de synthèse orienté décision",
+          "Constats hiérarchisés par criticité",
+          "Recommandations priorisées et réalistes",
+        ],
+        result:
+          "Vous savez où vous en êtes, quoi traiter en priorité et comment engager la suite.",
+        contactOfferId: "audit",
+        detailHref: "/audits",
+      },
+      {
+        id: "copil-offer",
+        number: "06",
+        tag: "Appui COPIL",
+        title: "Appui au Comité de Pilotage",
+        hook:
+          "Vos décisions stratégiques peinent à se traduire sur le terrain ou à tenir dans la durée.",
+        description:
+          "Appui mensuel au Comité de Pilotage : sécuriser les arbitrages, anticiper les impacts opérationnels, aligner direction et équipes.",
+        deliverables: [
+          "Préparation et sécurisation des décisions",
+          "Lecture des impacts terrain et opérationnels",
+          "Traduction stratégie → actions concrètes",
+        ],
+        result:
+          "Des décisions documentées, des directeurs plus autonomes, un pilotage cohérent mois après mois.",
+        contactOfferId: "copil",
+        detailHref: "/copil",
+      },
+    ],
   },
   offers: {
     title: "Mes offres d'accompagnement",
     subtitle:
-      "Diagnostic, structuration, accompagnement dirigeant et management de transition — toujours à partir d'une immersion terrain et d'une lecture du fonctionnement réel.",
+      "Six réponses à six problématiques de dirigeant — toujours à partir d'une immersion terrain.",
     pageIntro:
-      "Quatre modes d'intervention complémentaires, activés selon ce que révèle l'observation sur le terrain. Immersion, entretiens, pilotage opérationnel : le détail de chaque phase ci-dessous.",
+      "Même structure pour chaque offre : votre problématique, ma réponse sur le terrain, ce que vous en retirez concrètement.",
     list: [
       {
         id: "clarifier",
@@ -787,22 +844,51 @@ export const content = {
     eyebrow: "Cas concrets",
     title: "Des situations réelles, des résultats observables",
     intro:
-      "Exemples anonymisés tirés de missions terrain — pour illustrer ce que change une intervention ancrée dans le fonctionnement réel.",
+      "Trois exemples anonymisés, tirés de missions terrain. Même logique que sur le terrain : comprendre le contexte, agir là où ça coince, mesurer ce qui change pour le dirigeant et ses équipes.",
+    structureLabels: {
+      context: "Contexte",
+      problem: "Ce qui bloquait",
+      intervention: "Ce que j'ai fait",
+      outcome: "Ce qui a changé",
+    },
+    footnote:
+      "Noms, secteurs et chiffres modifiés pour préserver la confidentialité. Les situations restent fidèles au vécu terrain.",
     items: [
       {
-        situation: "Entreprise sans indicateurs",
+        sector: "PME industrielle · ~80 salariés",
+        situation: "Pilotage au feeling, managers sans repères communs",
+        context:
+          "Dirigeant fondateur encore au centre de tout : production, qualité, achats. Les managers avancent, mais chacun pilote « à sa manière ».",
+        problem:
+          "Aucun indicateur partagé, pas de rituel de suivi commun. Les écarts de performance entre ateliers passaient inaperçus jusqu'à ce qu'ils deviennent des urgences.",
+        intervention:
+          "Immersion sur site, entretiens avec les encadrants, observation des réunions existantes. Construction de cinq indicateurs simples (qualité, délais, charge, absentéisme, encours) et mise en place d'un point hebdomadaire de 30 minutes avec les managers.",
         outcome:
-          "Mise en place d'outils de pilotage simples, partagés et utilisés au quotidien par les managers.",
+          "Tableaux partagés et tenus dans le temps, écarts repérés plus tôt, dirigeant qui délègue le suivi opérationnel tout en gardant la visibilité sur les signaux faibles.",
       },
       {
-        situation: "Organisation désynchronisée",
+        sector: "Services B2B · ~40 personnes",
+        situation: "Croissance rapide, organisation qui n'a plus suivi",
+        context:
+          "Effectifs doublés en deux ans. Nouveaux profils, nouveaux clients, anciennes habitudes de travail encore en place.",
+        problem:
+          "Doublons entre commercial et opérations, décisions qui remontaient systématiquement au dirigeant, tensions récurrentes sur « qui valide quoi » et délais de réponse clients allongés.",
+        intervention:
+          "Cartographie des flux de bout en bout, ateliers avec les responsables de service, définition de circuits de décision et d'un RACI simplifié sur les processus critiques (devis, lancement, SAV).",
         outcome:
-          "Clarification des responsabilités, circuits de décision lisibles et meilleure coordination entre services.",
+          "Responsabilités lisibles pour chaque acteur, moins d'allers-retours, décisions prises au bon niveau — et une coordination commerciale / opérationnelle nettement apaisée.",
       },
       {
-        situation: "Pilotage commercial absent",
+        sector: "TPE commerce & artisanat · ~25 salariés",
+        situation: "CA en hausse, mais visibilité commerciale quasi nulle",
+        context:
+          "Bonne dynamique commerciale portée par le dirigeant et un ou deux commerciers. En parallèle, peu de structure pour suivre le pipe et anticiper les creux.",
+        problem:
+          "Pas de tableau de suivi des devis, pas de visibilité sur les encours ni sur la marge par type de chantier. Le dirigeant découvrait les trous d'activité trop tard pour réagir.",
+        intervention:
+          "Mise en place d'un tableau de bord simple (CA, marge, devis en cours, taux de transformation), définition d'un rituel commercial hebdomadaire de 45 minutes et formation rapide de l'équipe à la saisie et à la lecture des chiffres.",
         outcome:
-          "Création de tableaux de bord utiles, rituels de suivi et visibilité renforcée pour le dirigeant.",
+          "Anticipation des creux d'activité, priorités commerciales partagées, arbitrages plus sereins entre volume et rentabilité — avec une visibilité que le dirigeant consulte chaque semaine.",
       },
     ],
   },
@@ -1064,6 +1150,12 @@ export const content = {
       quote: "Un accompagnement exigeant et pragmatique. EBE Consulting a su identifier nos points de blocage et nous accompagner dans une dynamique de progrès durable, avec des livrables directement exploitables.",
       author: "Direction",
       role: "Evolya",
+    },
+    {
+      company: "Semas",
+      quote: "L'accompagnement d'EBE Consulting nous a apporté de la clarté entre nos équipes terrain et le siège : responsabilités mieux définies, pilotage plus lisible et coordination renforcée sur nos interventions. Une approche concrète, ancrée dans notre réalité de sécurité électronique.",
+      author: "Direction",
+      role: "Semas — sécurité électronique",
     },
   ],
 };

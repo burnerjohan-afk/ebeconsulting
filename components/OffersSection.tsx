@@ -59,23 +59,13 @@ export default function OffersSection() {
           variants={offerPhaseCardVariants}
           className="text-center max-w-2xl mx-auto mb-10"
         >
-          <p className="text-sm md:text-base text-ebe-anthracite/65 mb-4 leading-relaxed">
+          <p className="text-sm md:text-base text-ebe-anthracite/65 leading-relaxed">
             {homepageOffers.intro}
           </p>
-          {"introPoints" in homepageOffers && homepageOffers.introPoints && (
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-ebe-anthracite/80">
-              {homepageOffers.introPoints.map((point) => (
-                <li key={point} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-ebe-orange" aria-hidden />
-                  {point}
-                </li>
-              ))}
-            </ul>
-          )}
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-7xl mx-auto mb-10"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 max-w-7xl mx-auto mb-6"
           variants={containerVariants}
         >
           {homepageOffers.phases.map((phase, index) => (
@@ -102,7 +92,7 @@ export default function OffersSection() {
             Explorer mes offres en détail
           </Button>
           <p className="text-xs text-ebe-anthracite/50 mt-4">
-            Livrables, résultats attendus et modalités sur la page dédiée
+            Audit & diagnostic et appui COPIL : les six offres détaillées sur la page dédiée
           </p>
         </motion.div>
       </motion.div>

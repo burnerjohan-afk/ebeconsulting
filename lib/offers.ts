@@ -1,7 +1,10 @@
 import { content } from "./content";
 
 export type OfferListItem = (typeof content.offers.list)[number];
-export type OfferPhase = (typeof content.homepageOffers.phases)[number];
+export type OfferPhase = (typeof content.homepageOffers.phases)[number] & {
+  detailHref?: string;
+  outcome?: string;
+};
 
 function mergeUniqueItems(primary: string[], secondary: string[]) {
   const normalized = new Set(primary.map((item) => item.toLowerCase().trim()));
@@ -14,8 +17,15 @@ function mergeUniqueItems(primary: string[], secondary: string[]) {
   return [...primary, ...extras];
 }
 
+export function getAllOfferPhases(): OfferPhase[] {
+  return [
+    ...content.homepageOffers.phases,
+    ...(content.homepageOffers.supplementaryPhases ?? []),
+  ];
+}
+
 export function getOfferPhaseById(id: string): OfferPhase | undefined {
-  return content.homepageOffers.phases.find((phase) => phase.contactOfferId === id);
+  return getAllOfferPhases().find((phase) => phase.contactOfferId === id);
 }
 
 export function getOfferListItem(id: string): OfferListItem | undefined {
