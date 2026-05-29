@@ -3,6 +3,7 @@
 import { useState, FormEvent, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { content } from "@/lib/content";
+import { getContactSubjects } from "@/lib/content";
 import {
   buildDevisPrefillMessage,
   isDevisPrefillMessage,
@@ -279,7 +280,7 @@ export default function ContactForm() {
           className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-900 focus:border-transparent text-sm sm:text-base"
         >
           <option value="">Sélectionnez un accompagnement...</option>
-          {content.contact.subjects.map((subject) => (
+          {getContactSubjects().map((subject) => (
             <option key={subject} value={subject}>
               {subject}
             </option>
@@ -288,6 +289,11 @@ export default function ContactForm() {
         {content.contact.subjectHint && (
           <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
             {content.contact.subjectHint}
+          </p>
+        )}
+        {content.contact.multiDomainNote && (
+          <p className="mt-2 text-sm text-ebe-anthracite/70 leading-relaxed border-l-2 border-ebe-orange/60 pl-3">
+            {content.contact.multiDomainNote}
           </p>
         )}
       </div>

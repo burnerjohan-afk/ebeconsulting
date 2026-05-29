@@ -5,6 +5,7 @@ import Card from "@/components/Card";
 import PageHero from "@/components/PageHero";
 import { COPILMissions, COPILBenefits, COPILValue } from "@/components/COPILPageCards";
 import { pageImages } from "@/lib/page-images";
+import { contactHrefForOffer, contactHrefParlons } from "@/lib/contact-subjects";
 
 export const metadata: Metadata = {
   title: "Appui Comité de Pilotage | EBE Consulting",
@@ -117,7 +118,7 @@ export default function COPILPage() {
               Demandez un devis pour l'appui au Comité de Pilotage et recevez une proposition personnalisée sous 48h.
             </p>
             <Button
-              href="/contact?subject=Appui%20COPIL&offer=copil"
+              href={contactHrefForOffer("copil")}
               variant="primary"
               className="text-lg px-10 py-5 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-xl font-bold"
             >
@@ -151,7 +152,7 @@ export default function COPILPage() {
             Échangeons sur vos besoins ou découvrez nos autres offres.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
+            <Button href={contactHrefParlons()} variant="primary" className="text-lg px-8 py-4">
               Parler de votre situation
             </Button>
             <Button

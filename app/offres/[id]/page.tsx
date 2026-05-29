@@ -11,6 +11,7 @@ import { pageImages } from "@/lib/page-images";
 import {
   OFFER_ID_TO_CONTACT_SUBJECT,
   contactHrefForOffer,
+  contactHrefParlons,
 } from "@/lib/contact-subjects";
 
 interface OfferDetailPageProps {
@@ -91,9 +92,18 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
         )}
 
         {offer.deliverables.length > 0 && (
-          <section className="section-padding section-charte section-separator">
+          <section
+            className="section-padding section-charte section-separator"
+            aria-labelledby="offer-deliverables-heading"
+          >
             <div className="container-custom max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-ebe-anthraciteDark mb-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-3">
+                Ce que je livre
+              </p>
+              <h2
+                id="offer-deliverables-heading"
+                className="text-2xl md:text-3xl font-bold text-ebe-anthraciteDark mb-8"
+              >
                 Livrables
               </h2>
               <OfferDetailCards deliverables={offer.deliverables} benefits={[]} />
@@ -102,9 +112,18 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
         )}
 
         {offer.benefits.length > 0 && (
-          <section className="section-padding section-charte-alt section-separator">
+          <section
+            className="section-padding section-charte-alt section-separator"
+            aria-labelledby="offer-benefits-heading"
+          >
             <div className="container-custom max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-ebe-anthraciteDark mb-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ebe-orange mb-3">
+                Ce que vous en retirez
+              </p>
+              <h2
+                id="offer-benefits-heading"
+                className="text-2xl md:text-3xl font-bold text-ebe-anthraciteDark mb-8"
+              >
                 Bénéfices
               </h2>
               <OfferDetailCards deliverables={[]} benefits={offer.benefits} />
@@ -131,7 +150,7 @@ export default async function OfferDetailPage({ params }: OfferDetailPageProps) 
               Réponse sous 48h ouvrées · Devis gratuit et sans engagement
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button href="/contact" variant="secondary" className="text-base px-8 py-4">
+              <Button href={contactHrefParlons()} variant="secondary" className="text-base px-8 py-4">
                 Parler de votre situation
               </Button>
               <Button

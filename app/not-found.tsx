@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import { contactHrefParlons } from "@/lib/contact-subjects";
 
 export default function NotFound() {
   return (
@@ -16,7 +17,7 @@ export default function NotFound() {
           <Button href="/" variant="primary">
             Retour à l'accueil
           </Button>
-          <Button href="/contact" variant="secondary">
+          <Button href={contactHrefParlons()} variant="secondary">
             Me contacter
           </Button>
         </div>

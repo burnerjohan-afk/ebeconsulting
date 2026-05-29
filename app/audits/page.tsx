@@ -9,6 +9,7 @@ import {
   AuditDeliverablesList,
 } from "@/components/AuditPageSections";
 import { pageImages } from "@/lib/page-images";
+import { contactHrefForOffer } from "@/lib/contact-subjects";
 
 export const metadata: Metadata = {
   title: "Audits & diagnostic organisationnel | EBE Consulting",
@@ -106,7 +107,7 @@ export default function AuditsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{audits.cta.title}</h2>
               <p className="text-xl text-white/75 mb-8">{audits.cta.description}</p>
               <Button
-                href="/contact?subject=Audit%20%2F%20Diagnostic&offer=audit"
+                href={contactHrefForOffer("audit")}
                 variant="primary"
                 className="text-lg px-10 py-5 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-xl font-bold"
               >

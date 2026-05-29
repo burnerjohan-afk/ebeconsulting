@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { BookOpen } from "lucide-react";
 import Button from "./ui/Button";
+import { contactHrefParlons } from "@/lib/contact-subjects";
 
 export default function ResourcesPageCard() {
   return (
@@ -32,7 +33,7 @@ export default function ResourcesPageCard() {
           En attendant, n&apos;hésitez pas à me contacter pour échanger sur vos
           enjeux.
         </p>
-        <Button href="/contact" variant="primary">
+        <Button href={contactHrefParlons()} variant="primary">
           Me contacter
         </Button>
       </div>

@@ -6,6 +6,7 @@ import MethodSection from "@/components/MethodSection";
 import TerrainPrincipleSection from "@/components/TerrainPrincipleSection";
 import OffersSection from "@/components/OffersSection";
 import DifferentiationSection from "@/components/DifferentiationSection";
+import SupportNetworkSection from "@/components/SupportNetworkSection";
 import COPILSection from "@/components/COPILSection";
 import ImpactSection from "@/components/ImpactSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -42,6 +43,7 @@ export default function HomePage() {
       <TerrainPrincipleSection />
       <OffersSection />
       <DifferentiationSection />
+      <SupportNetworkSection />
       <FounderSection />
       <BadgesSection />
       <ClientsSection />

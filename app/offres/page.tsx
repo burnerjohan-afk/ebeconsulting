@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 import PageHero from "@/components/PageHero";
 import OffersPageCards from "@/components/OffersPageCards";
 import { pageImages } from "@/lib/page-images";
-import { contactHrefForOffer } from "@/lib/contact-subjects";
+import { contactHrefForOffer, contactHrefParlons } from "@/lib/contact-subjects";
 
 export const metadata: Metadata = {
   title: "Offres d'accompagnement dirigeant - EBE Consulting",
@@ -83,7 +83,7 @@ export default function OffersPage() {
               Échangeons sur votre situation et définissons ensemble la meilleure
               approche — à partir du réel, pas d&apos;un catalogue prédéfini.
             </p>
-            <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
+            <Button href={contactHrefParlons()} variant="primary" className="text-lg px-8 py-4">
               Parler de votre situation
             </Button>
           </div>

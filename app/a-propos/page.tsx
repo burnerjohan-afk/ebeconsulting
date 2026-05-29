@@ -7,7 +7,9 @@ import { AboutValues, AboutCapabilities } from "@/components/AboutPageCards";
 import FounderJourney from "@/components/FounderJourney";
 import TerrainPrincipleSection from "@/components/TerrainPrincipleSection";
 import { pageImages } from "@/lib/page-images";
+import { contactHrefParlons } from "@/lib/contact-subjects";
 import AboutFounderGallery from "@/components/AboutFounderGallery";
+import SupportNetworkSection from "@/components/SupportNetworkSection";
 
 export const metadata: Metadata = {
   title: "À propos | EBE Consulting",
@@ -101,6 +103,8 @@ export default function AboutPage() {
 
         <TerrainPrincipleSection />
 
+        <SupportNetworkSection />
+
         {/* Approach Section */}
       <section className="section-padding section-charte-alt section-separator">
         <div className="container-custom">
@@ -134,7 +138,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-primary-900 mb-12 text-center">
-              Ce que je peux faire / Ce que je ne peux pas faire
+              {content.capabilities.sectionTitle}
             </h2>
             <AboutCapabilities />
           </div>
@@ -155,7 +159,7 @@ export default function AboutPage() {
               {content.about.cta.offersButton}
             </Button>
             <Button
-              href="/contact"
+              href={contactHrefParlons()}
               variant="primary"
               className="text-lg px-8 py-4 !bg-white !text-ebe-anthraciteDark hover:!bg-ebe-warmWhite shadow-lg font-bold"
             >

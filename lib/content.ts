@@ -1,8 +1,3 @@
-import {
-  CONTACT_SUBJECTS,
-  CONTACT_SUBJECT_HINT,
-} from "./contact-subjects";
-
 export const content = {
   company: {
     name: "EBE Consulting",
@@ -106,6 +101,68 @@ export const content = {
         title: "Présence auprès des équipes, autonomie en sortie",
         description:
           "Je m'implique auprès des managers et des opérationnels pour ancrer les changements. L'objectif : vous laisser une organisation plus claire, plus solide, capable de fonctionner sans dépendance.",
+      },
+    ],
+  },
+  supportNetwork: {
+    id: "reseau-appuis",
+    eyebrow: "Un interlocuteur, des appuis ciblés",
+    title: "Un pilotage unique,",
+    titleAccent: "des experts au besoin",
+    subtitle:
+      "Organisation, management et terrain restent mon cœur de mission. Quand votre situation l'exige, je mobilise des spécialistes de confiance — sans que vous perdiez le fil.",
+    disclaimer:
+      "Je reste votre interlocuteur principal sur la mission. Les prestations spécialisées sont réalisées par des professionnels habilités, dans leur domaine, avec votre accord et une facturation claire.",
+    domains: [
+      {
+        title: "Juridique & conformité",
+        description:
+          "Contrats, structuration, risques : j'identifie le besoin sur le terrain et mobilise un conseil juridique adapté.",
+      },
+      {
+        title: "Stratégie & gouvernance",
+        description:
+          "Orientations, comité de pilotage, scénarios : appui stratégique en complément de mon travail d'organisation.",
+      },
+      {
+        title: "Organisation & SI",
+        description:
+          "Processus, outils, SaaS métier : structuration informatique lorsque l'immersion révèle un levier technologique.",
+      },
+      {
+        title: "Finance & comptabilité",
+        description:
+          "Lecture avec votre expert-comptable ou un spécialiste — sans confondre avec mon périmètre (pas d'audit légal des comptes).",
+      },
+      {
+        title: "RH & management",
+        description:
+          "Recrutement, GPEC, situations sensibles : intervention ciblée quand l'enjeu humain dépasse le cadrage organisationnel.",
+      },
+      {
+        title: "Autres besoins terrain",
+        description:
+          "Chaque entreprise est singulière : si un sujet spécifique apparaît, je vous propose l'interlocuteur pertinent.",
+      },
+    ],
+    stepsTitle: "Comment ça se passe pour vous",
+    stepsIntro:
+      "Trois étapes simples : un seul interlocuteur côté dirigeant, des experts mobilisés uniquement quand c'est nécessaire.",
+    steps: [
+      {
+        title: "On part du terrain",
+        description:
+          "Immersion et diagnostic pour identifier le vrai besoin — organisation, management ou autre sujet — avant d'engager quiconque.",
+      },
+      {
+        title: "J'active le bon expert",
+        description:
+          "Juridique, stratégie, informatique, comptabilité… Si le sujet dépasse mon périmètre, je mobilise un spécialiste de confiance, avec votre accord.",
+      },
+      {
+        title: "Vous gardez un seul interlocuteur",
+        description:
+          "Vous n'avez pas à coordonner plusieurs prestataires : j'assure la cohérence entre les expertises et le suivi opérationnel de la mission.",
       },
     ],
   },
@@ -796,8 +853,9 @@ export const content = {
     },
   },
   capabilities: {
-    can: {
-      title: "Ce que je peux faire",
+    sectionTitle: "Mon périmètre et les appuis mobilisés",
+    direct: {
+      title: "Ce que je fais en direct",
       items: [
         "Immersion terrain et accompagnement dirigeants",
         "Observation du fonctionnement réel et pilotage opérationnel",
@@ -806,22 +864,47 @@ export const content = {
         "Coaching professionnel ancré sur le terrain",
       ],
     },
-    cannot: {
-      title: "Ce que je ne peux pas faire",
+    network: {
+      title: "Ce que je fais intervenir avec des partenaires de confiance",
+      items: [
+        "Conseil juridique et conformité",
+        "Accompagnement stratégique spécialisé",
+        "Structuration informatique et outils SaaS métier",
+        "Appui comptable et financier (hors audit légal)",
+        "Expertise RH ciblée lorsque le besoin l'exige",
+      ],
+      footnote:
+        "Vous n'êtes pas livré à vous-même : je reste votre relais et je coordonne les interventions pour qu'elles servent le plan d'action terrain.",
+    },
+    limits: {
+      title: "Ce que je ne réalise pas moi-même",
       items: [
         "Audit légal des comptes",
-        "Expertise comptable",
+        "Expertise comptable en mon nom",
         "Formations certifiantes (accompagnement et transfert de compétences uniquement)",
       ],
+      footnote:
+        "Ces sujets sont traités par des professionnels habilités, que je peux mobiliser ou vers lesquels je vous oriente — toujours en lien avec le diagnostic terrain.",
     },
   },
   faq: {
     title: "Questions fréquentes",
     items: [
       {
+        question: "Travaillez-vous seul ?",
+        answer:
+          "Vous avez un interlocuteur unique sur l'organisation et le pilotage : moi. En revanche, je ne prétends pas tout couvrir seul. Lorsque l'immersion révèle un besoin juridique, stratégique, informatique, comptable ou autre, je mobilise des experts de confiance — avec votre accord — tout en restant votre relais sur la mission.",
+      },
+      {
         question: "En quoi votre approche diffère-t-elle d'un cabinet de conseil classique ?",
         answer:
           "Je ne produis pas de recommandations depuis un bureau. Chaque mission commence par une immersion terrain : observation des pratiques, entretiens avec les équipes, lecture du fonctionnement réel. Les livrables et le pilotage opérationnel découlent de ce qui est observé — pas d'un modèle théorique.",
+      },
+      {
+        question:
+          "Que se passe-t-il si le besoin est juridique, informatique ou comptable ?",
+        answer:
+          "Je le repère pendant le diagnostic terrain, je vous le présente clairement et je propose l'intervention adaptée : conseil juridique, structuration SI/SaaS, échange avec votre expert-comptable ou un spécialiste. Vous gardez la maîtrise des décisions ; je coordonne pour que chaque brique serve le fonctionnement réel de l'entreprise.",
       },
       {
         question: "Combien de temps dure un accompagnement ?",
@@ -841,7 +924,7 @@ export const content = {
       {
         question: "Comment garantis-je la confidentialité ?",
         answer:
-          "Tous les échanges et documents sont strictement confidentiels. Je signe un accord de confidentialité en début de mission. Les informations partagées ne sont jamais divulguées à des tiers.",
+          "Tous les échanges et documents sont strictement confidentiels. Je signe un accord de confidentialité en début de mission. Lorsqu'un expert du réseau intervient, la même exigence de confidentialité s'applique, avec votre accord préalable.",
       },
       {
         question: "Quels sont vos tarifs ?",
@@ -881,8 +964,11 @@ export const content = {
       error:
         "Une erreur est survenue. Veuillez réessayer ou me contacter directement.",
     },
-    subjects: [...CONTACT_SUBJECTS],
-    subjectHint: CONTACT_SUBJECT_HINT,
+    subjects: [] as string[],
+    subjectHint:
+      "Choisissez l'accompagnement correspondant le plus à votre besoin actuel.",
+    multiDomainNote:
+      "Besoin juridique, SI, comptable ou autre en parallèle ? Décrivez-le dans votre message : je cadrerai la mission et les intervenants adaptés.",
     companySizes: [
       "TPE (1-9 salariés)",
       "PME (10-49 salariés)",
@@ -981,4 +1067,16 @@ export const content = {
     },
   ],
 };
+
+/** Aligné sur /offres (4 cartes) + audits + COPIL */
+export function getContactSubjects(): string[] {
+  return [
+    ...content.homepageOffers.phases.map((phase) => phase.title),
+    content.audits.title,
+    content.copil.title,
+    "Autre demande",
+  ];
+}
+
+content.contact.subjects = getContactSubjects();
 

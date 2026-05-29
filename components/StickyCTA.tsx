@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { contactHrefDevis } from "@/lib/contact-subjects";
 
 export default function StickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +29,7 @@ export default function StickyCTA() {
       className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 md:hidden"
     >
           <Link
-            href="/contact"
+            href={contactHrefDevis()}
             className="flex items-center gap-3 bg-gradient-to-r from-accent-600 to-accent-700 text-white px-6 py-4 rounded-full shadow-2xl font-semibold hover:from-accent-700 hover:to-accent-800 transition-all transform hover:scale-105"
           >
             <svg

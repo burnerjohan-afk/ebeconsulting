@@ -9,6 +9,7 @@ import { content } from "@/lib/content";
 import SocialLinks from "./SocialLinks";
 import { icons } from "@/lib/icons";
 import Button from "./ui/Button";
+import { contactHref } from "@/lib/contact-subjects";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -83,7 +84,7 @@ export default function Header() {
             <NavLink href="/faq" isActive={isActive("/faq")} icon={icons.faq.file}>
               FAQ
             </NavLink>
-            <Button href="/contact" variant="primary" icon={icons.navigation.contact} iconPosition="right" className="ml-3">
+            <Button href={contactHref()} variant="primary" icon={icons.navigation.contact} iconPosition="right" className="ml-3">
               Contact
             </Button>
             <div className="ml-3 pl-3 border-l border-neutral-200">
@@ -155,7 +156,7 @@ export default function Header() {
                 </MobileNavLink>
                 <div className="pt-4">
                   <Button
-                    href="/contact"
+                    href={contactHref()}
                     variant="primary"
                     icon={icons.navigation.contact}
                     iconPosition="right"

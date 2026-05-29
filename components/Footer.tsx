@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { content } from "@/lib/content";
+import { contactHref } from "@/lib/contact-subjects";
 import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
@@ -97,7 +98,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href={contactHref()}
                   className="text-[#1D1D1F]/70 hover:text-[#FF9500] transition-colors text-sm"
                 >
                   {content.footer.links.contact}

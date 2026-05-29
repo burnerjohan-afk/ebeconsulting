@@ -1,53 +1,79 @@
-/** Libellés du menu « Demande de devis » — version courte, lisible sur mobile */
-export const CONTACT_SUBJECTS = [
-  "Clarifier & décider",
-  "Structurer & faire grandir",
-  "Comprendre & prendre du recul",
-  "Sécuriser & poser le cadre",
-  "Appui COPIL",
-  "Audit / Diagnostic",
-  "Autre demande",
-] as const;
-
-export type ContactSubject = (typeof CONTACT_SUBJECTS)[number];
+import { content, getContactSubjects } from "./content";
 
 export const CONTACT_SUBJECT_HINT =
   "Choisissez l'accompagnement correspondant le plus à votre besoin actuel.";
 
-export const OFFER_ID_TO_CONTACT_SUBJECT: Record<string, ContactSubject> = {
-  clarifier: "Clarifier & décider",
-  structurer: "Structurer & faire grandir",
-  comprendre: "Comprendre & prendre du recul",
-  securiser: "Sécuriser & poser le cadre",
-  copil: "Appui COPIL",
-  audit: "Audit / Diagnostic",
-};
+export const CONTACT_SUBJECT_OTHER = "Autre demande";
 
-const LEGACY_SUBJECT_ALIASES: Record<string, ContactSubject> = {
-  "demande de devis": "Autre demande",
-  "appui copil": "Appui COPIL",
-  "audit / diagnostic": "Audit / Diagnostic",
-  autre: "Autre demande",
-  "offre 1 : clarifier pour décider": "Clarifier & décider",
-  "offre 2 : structurer pour faire grandir": "Structurer & faire grandir",
-  "offre 3 : prendre du recul pour comprendre": "Comprendre & prendre du recul",
-  "offre 4 : poser le cadre pour sécuriser": "Sécuriser & poser le cadre",
-  "clarifier pour décider": "Clarifier & décider",
-  "structurer pour faire grandir": "Structurer & faire grandir",
-  "prendre du recul pour comprendre": "Comprendre & prendre du recul",
-  "poser le cadre pour sécuriser": "Sécuriser & poser le cadre",
-};
+export type ContactSubject = string;
+
+export function getOfferIdToContactSubject(): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const phase of content.homepageOffers.phases) {
+    map[phase.contactOfferId] = phase.title;
+  }
+  map.copil = content.copil.title;
+  map.audit = content.audits.title;
+  return map;
+}
+
+/** Conservé pour les imports existants */
+export const OFFER_ID_TO_CONTACT_SUBJECT = getOfferIdToContactSubject();
 
 function normalizeSubjectKey(value: string): string {
   return value.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+function buildLegacySubjectAliases(): Record<string, string> {
+  const offerMap = getOfferIdToContactSubject();
+  const aliases: Record<string, string> = {
+    "demande de devis": CONTACT_SUBJECT_OTHER,
+    autre: CONTACT_SUBJECT_OTHER,
+    "autre demande": CONTACT_SUBJECT_OTHER,
+    "clarifier & décider": offerMap.clarifier,
+    "structurer & faire grandir": offerMap.structurer,
+    "comprendre & prendre du recul": offerMap.comprendre,
+    "sécuriser & poser le cadre": offerMap.securiser,
+    "appui copil": offerMap.copil,
+    "audit / diagnostic": offerMap.audit,
+    "offre 1 : clarifier pour décider": offerMap.clarifier,
+    "offre 2 : structurer pour faire grandir": offerMap.structurer,
+    "offre 3 : prendre du recul pour comprendre": offerMap.comprendre,
+    "offre 4 : poser le cadre pour sécuriser": offerMap.securiser,
+    "clarifier pour décider": offerMap.clarifier,
+    "structurer pour faire grandir": offerMap.structurer,
+    "prendre du recul pour comprendre": offerMap.comprendre,
+    "poser le cadre pour sécuriser": offerMap.securiser,
+  };
+
+  for (const offer of content.offers.list) {
+    aliases[normalizeSubjectKey(offer.title)] = offerMap[offer.id];
+    if (offer.subtitle) {
+      aliases[normalizeSubjectKey(offer.subtitle)] = offerMap[offer.id];
+    }
+  }
+
+  for (const phase of content.homepageOffers.phases) {
+    aliases[normalizeSubjectKey(phase.title)] = offerMap[phase.contactOfferId];
+    aliases[normalizeSubjectKey(phase.tag)] = offerMap[phase.contactOfferId];
+  }
+
+  aliases[normalizeSubjectKey(content.copil.title)] = offerMap.copil;
+  aliases[normalizeSubjectKey(content.audits.title)] = offerMap.audit;
+
+  return aliases;
+}
+
+const LEGACY_SUBJECT_ALIASES = buildLegacySubjectAliases();
+
 export function resolveContactSubject(
   urlSubject: string | null,
   urlOffer: string | null
-): ContactSubject | "" {
-  if (urlOffer && OFFER_ID_TO_CONTACT_SUBJECT[urlOffer]) {
-    return OFFER_ID_TO_CONTACT_SUBJECT[urlOffer];
+): string {
+  const offerMap = getOfferIdToContactSubject();
+
+  if (urlOffer && offerMap[urlOffer]) {
+    return offerMap[urlOffer];
   }
 
   if (!urlSubject) return "";
@@ -56,7 +82,7 @@ export function resolveContactSubject(
   const alias = LEGACY_SUBJECT_ALIASES[normalized];
   if (alias) return alias;
 
-  const exact = CONTACT_SUBJECTS.find(
+  const exact = getContactSubjects().find(
     (s) => normalizeSubjectKey(s) === normalized
   );
   if (exact) return exact;
@@ -106,8 +132,27 @@ export function syncAccompagnementInMessage(
   return message;
 }
 
+export const CONTACT_PATH = "/contact";
+
+/** Menu / footer — formulaire vierge */
+export function contactHref(): string {
+  return CONTACT_PATH;
+}
+
+/** Demande de devis ou « Parlons de votre situation » — même préremplissage */
+export function contactHrefDevis(): string {
+  return contactHrefWithSubject(CONTACT_SUBJECT_OTHER);
+}
+
+export const contactHrefParlons = contactHrefDevis;
+
+export function contactHrefWithSubject(subject: string): string {
+  return `${CONTACT_PATH}?subject=${encodeURIComponent(subject)}`;
+}
+
+/** Lien depuis une offre (accueil, fiches offres, Parlons-en) */
 export function contactHrefForOffer(offerId: string): string {
-  const subject =
-    OFFER_ID_TO_CONTACT_SUBJECT[offerId] ?? ("Autre demande" as ContactSubject);
-  return `/contact?subject=${encodeURIComponent(subject)}&offer=${encodeURIComponent(offerId)}`;
+  const offerMap = getOfferIdToContactSubject();
+  const subject = offerMap[offerId] ?? CONTACT_SUBJECT_OTHER;
+  return `${CONTACT_PATH}?subject=${encodeURIComponent(subject)}&offer=${encodeURIComponent(offerId)}`;
 }

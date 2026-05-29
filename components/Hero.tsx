@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { content } from "@/lib/content";
+import { contactHrefParlons } from "@/lib/contact-subjects";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -99,7 +100,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href="/contact"
+                href={contactHrefParlons()}
                 className="inline-flex items-center justify-center px-8 py-4 text-xs font-semibold uppercase tracking-[0.12em] bg-ebe-orange text-white rounded-sm hover:bg-accent-600 transition-colors"
               >
                 {hero.ctaPrimary}
