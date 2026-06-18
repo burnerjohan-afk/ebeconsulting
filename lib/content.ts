@@ -78,7 +78,7 @@ export const content = {
     title: "Sans dépendance.",
     titleAccent: "Avec impact.",
     subtitle:
-      "Pas de conseil depuis un bureau : je part de vos problématiques réelles, sur le terrain.",
+      "Pas de conseil depuis un bureau : je pars de vos problématiques réelles, sur le terrain.",
     quote:
       "Le terrain d'abord. Les équipes au centre. Le pilotage comme fil conducteur.",
     points: [
@@ -185,7 +185,7 @@ export const content = {
     eyebrow: "Ma différence",
     title: "Le terrain avant la théorie",
     subtitle:
-      "Contrairement aux cabinets de conseil plus théoriques, mon intervention s'appuie sur l'immersion, l'observation du travail réel et un pilotage opérationnel concret.",
+      "Mon intervention s'appuie sur l'immersion, l'observation du travail réel et un pilotage opérationnel concret.",
     pillars: [
       {
         title: "Immersion",
